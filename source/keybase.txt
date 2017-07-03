@@ -1,0 +1,55 @@
+==================================================================
+https://keybase.io/mthl
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://mathieu.lirzin.emi.u-bordeaux.fr
+  * I am mthl (https://keybase.io/mthl) on keybase.
+  * I have a public key ASD0-hd2F3HgUXzkesqAmtD5aHw7WYBLz0w920tyeAzTtgo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0120f4fa17761771e0517ce47aca809ad0f9687c3b59804bcf4c3ddb4b72780cd3b60a",
+            "host": "keybase.io",
+            "kid": "0120f4fa17761771e0517ce47aca809ad0f9687c3b59804bcf4c3ddb4b72780cd3b60a",
+            "uid": "4c905844dde5d58eda7e7bcfa3abda19",
+            "username": "mthl"
+        },
+        "merkle_root": {
+            "ctime": 1497920761,
+            "hash": "c6608f3cc437092280c7eba79407d6cfd6134191f9ae62da9f85d7d3ee14d3e2737cc126db8a0722f49e96767724bb89e446d4c7e430fc69b480a30049ad87eb",
+            "hash_meta": "185b29e29ee814fcf88738095021887fc8ea4779748335825c07cbda809a751d",
+            "seqno": 1181451
+        },
+        "service": {
+            "hostname": "mathieu.lirzin.emi.u-bordeaux.fr",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.24"
+    },
+    "ctime": 1497920959,
+    "expire_in": 504576000,
+    "prev": "061957634bc92993c4b57031b45e239f70e2f4320f244a65c13e307dc311ac35",
+    "seqno": 8,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg9PoXdhdx4FF85HrKgJrQ+Wh8O1mAS89MPdtLcngM07YKp3BheWxvYWTFA1N7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwZjRmYTE3NzYxNzcxZTA1MTdjZTQ3YWNhODA5YWQwZjk2ODdjM2I1OTgwNGJjZjRjM2RkYjRiNzI3ODBjZDNiNjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwZjRmYTE3NzYxNzcxZTA1MTdjZTQ3YWNhODA5YWQwZjk2ODdjM2I1OTgwNGJjZjRjM2RkYjRiNzI3ODBjZDNiNjBhIiwidWlkIjoiNGM5MDU4NDRkZGU1ZDU4ZWRhN2U3YmNmYTNhYmRhMTkiLCJ1c2VybmFtZSI6Im10aGwifSwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE0OTc5MjA3NjEsImhhc2giOiJjNjYwOGYzY2M0MzcwOTIyODBjN2ViYTc5NDA3ZDZjZmQ2MTM0MTkxZjlhZTYyZGE5Zjg1ZDdkM2VlMTRkM2UyNzM3Y2MxMjZkYjhhMDcyMmY0OWU5Njc2NzcyNGJiODllNDQ2ZDRjN2U0MzBmYzY5YjQ4MGEzMDA0OWFkODdlYiIsImhhc2hfbWV0YSI6IjE4NWIyOWUyOWVlODE0ZmNmODg3MzgwOTUwMjE4ODdmYzhlYTQ3Nzk3NDgzMzU4MjVjMDdjYmRhODA5YTc1MWQiLCJzZXFubyI6MTE4MTQ1MX0sInNlcnZpY2UiOnsiaG9zdG5hbWUiOiJtYXRoaWV1Lmxpcnppbi5lbWkudS1ib3JkZWF1eC5mciIsInByb3RvY29sIjoiaHR0cDoifSwidHlwZSI6IndlYl9zZXJ2aWNlX2JpbmRpbmciLCJ2ZXJzaW9uIjoxfSwiY2xpZW50Ijp7Im5hbWUiOiJrZXliYXNlLmlvIGdvIGNsaWVudCIsInZlcnNpb24iOiIxLjAuMjQifSwiY3RpbWUiOjE0OTc5MjA5NTksImV4cGlyZV9pbiI6NTA0NTc2MDAwLCJwcmV2IjoiMDYxOTU3NjM0YmM5Mjk5M2M0YjU3MDMxYjQ1ZTIzOWY3MGUyZjQzMjBmMjQ0YTY1YzEzZTMwN2RjMzExYWMzNSIsInNlcW5vIjo4LCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQJI8rrynRKht3IFykG+PnKsAM2a4ivyM+WDV21ljRxuCONnSlUxrhL7Chyro67a+uWlpUzaqBFdft7nAJnTypAqoc2lnX3R5cGUgpGhhc2iCpHR5cGUIpXZhbHVlxCAOKpnCQ+21csFqfOjAG08msfntCaJE09FdX7g7k/bWzqN0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/mthl
+
+==================================================================
