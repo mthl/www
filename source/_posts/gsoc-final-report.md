@@ -66,4 +66,4 @@ The portability is really important in our use case.  As a consequence, I have s
 
 This project has not being merged in Texinfo [SVN repository](https://svn.savannah.gnu.org/viewvc/texinfo/trunk/) yet.  However it should happen in the following months.  Regarding the missing features, probably the most notable one is the abscence of support of Regular expression in the global search.  Additionally the use of the *space bar* and *backspace* keys for navigation has not been investigated.
 
-I would like to thank my mentors Gavin Smith and Per Bothner for their guidance and implication.  Being able to dedicate my summer to this project has been a pleasant experience that allowed me to become more familiar with JavaScript and Web programming in general.
+I would like to thank my mentors Gavin Smith and Per Bothner for their guidance and dedication.  Being able to spend my summer on this project has been a pleasant experience that allowed me to become more familiar with JavaScript and Web programming in general.
