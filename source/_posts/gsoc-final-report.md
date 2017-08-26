@@ -24,7 +24,7 @@ Most of the keyboard shortcuts available in the `info` program have been impleme
 
 ### Basic navigation
 
-The `[` and `]` keys allow the user to navigate the manual linearly. In the `info` program it is possible to do that via the *space bar*, however in a Web browser this is not possible.  The order of navigation is deduced from the table of content which is present in the `index.html`.  The `n` and `p` keys allow navigating through the different sections of the same level, and are based on the links that are statically present on each page.
+The `[` and `]` keys allow the user to navigate the manual linearly.  The order of navigation is deduced from the table of content which is present in the `index.html`.  The `n` and `p` keys allow navigating through the different sections of the same level, and are based on the links that are statically present on each page.
 
 ### Menu navigation
 
@@ -64,6 +64,6 @@ The portability is really important in our use case.  As a consequence, I have s
 
 # Conclusion
 
-This project has not being merged in Texinfo [SVN repository](https://svn.savannah.gnu.org/viewvc/texinfo/trunk/) yet.  However it should happen in the following months.  Regarding the missing features, probably the most notable one is the abscence of support of Regular expression in the global search, otherwise it is pretty complete.
+This project has not being merged in Texinfo [SVN repository](https://svn.savannah.gnu.org/viewvc/texinfo/trunk/) yet.  However it should happen in the following months.  Regarding the missing features, probably the most notable one is the abscence of support of Regular expression in the global search.  Additionally the use of the *space bar* and *backspace* keys for navigation has not been investigated.
 
 I would like to thank my mentors Gavin Smith, and Per Bothner for their guidance and implication.  Being able to dedicate my summer to this project has been a pleasant experience that allowed me to become more familiar with JavaScript, and Web programming in general.
