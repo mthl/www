@@ -8,7 +8,7 @@ tags:
 - javascript
 ---
 
-I spent this summer working on the implementation of the features available of the `info` program and `info-mode` in Emacs to the Web browser using Javascript.  Those features includes the regexp search, the index search, and a efficient keyboard-centric user interface. The code for this project is accessible via the **gsoc-2017** branch of the [Texinfo Git repository](https://git.savannah.gnu.org/cgit/texinfo.git/log/?h=gsoc-2017).
+I spent this summer working on the implementation of the features available of the `info` program and `info-mode` in Emacs to the Web browser using Javascript.  Those features includes the regexp search, the index search, and an efficient keyboard-centric user interface. The code for this project is accessible via the **gsoc-2017** branch of the [Texinfo Git repository](https://git.savannah.gnu.org/cgit/texinfo.git/log/?h=gsoc-2017).
 
 ```sh
 git clone https://git.savannah.gnu.org/git/texinfo.git
@@ -24,7 +24,7 @@ Most of the keyboard shortcuts available in the `info` program have been impleme
 
 ### Basic navigation
 
-The `[` and `]` keys allow the user to navigate the manual linearly.  The order of navigation is deduced from the table of content which is present in the `index.html`.  The `n` and `p` keys allow navigating through the different sections of the same level, and are based on the links that are statically present on each page.
+The `[` and `]` keys allow the user to navigate the manual linearly.  The order of navigation is deduced from the table of content which is present in the `index.html`.  The `n` and `p` keys allow navigating through the different sections of the same level and are based on the links that are statically present on each page.
 
 ### Menu navigation
 
@@ -56,7 +56,7 @@ The first part of this project has been done using a complicated build process b
 
 ### Modularity
 
-Initially I have been using some tools allowing me to separate my code in different modules and to use ECMAScript 2017 syntax.  However those tools were heavily tied to the Node Package Manager (NPM).  The associated distribution paradigm doesn't accomodate well with the GNU Build System and the GNU GPL requirements.  As a consequence I choose to drop them and transition towards a monolithic script written in portable ECMAScript 5.  Even if NPM is not involved in the build process anymore, it can still be used for developer tools such as a linter, and a type checker.
+Initially I have been using some tools allowing me to separate my code in different modules and to use ECMAScript 2017 syntax.  However those tools were heavily tied to the Node Package Manager (NPM).  The associated distribution paradigm doesn't accomodate well with the GNU Build System and the GNU GPL requirements.  As a consequence I choose to drop them and transition towards a monolithic script written in portable ECMAScript 5.  Even if NPM is not involved in the build process anymore, it can still be used for developer tools such as a linter and a type checker.
 
 ### Portability
 
@@ -66,4 +66,4 @@ The portability is really important in our use case.  As a consequence, I have s
 
 This project has not being merged in Texinfo [SVN repository](https://svn.savannah.gnu.org/viewvc/texinfo/trunk/) yet.  However it should happen in the following months.  Regarding the missing features, probably the most notable one is the abscence of support of Regular expression in the global search.  Additionally the use of the *space bar* and *backspace* keys for navigation has not been investigated.
 
-I would like to thank my mentors Gavin Smith, and Per Bothner for their guidance and implication.  Being able to dedicate my summer to this project has been a pleasant experience that allowed me to become more familiar with JavaScript, and Web programming in general.
+I would like to thank my mentors Gavin Smith and Per Bothner for their guidance and implication.  Being able to dedicate my summer to this project has been a pleasant experience that allowed me to become more familiar with JavaScript and Web programming in general.
