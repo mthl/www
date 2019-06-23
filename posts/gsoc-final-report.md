@@ -1,11 +1,7 @@
----
 title: Javascript for info-style navigation - Final report
 date: 2017-08-25 17:32:10
-categories:
-- gsoc
-tags:
-- texinfo
-- javascript
+categories: gsoc
+tags: texinfo, javascript
 ---
 
 I spent this summer working on the implementation of the features available of the `info` program and `info-mode` in Emacs to the Web browser using Javascript.  Those features includes the regexp search, the index search, and an efficient keyboard-centric user interface. The code for this project is accessible via the **gsoc-2017** branch of the [Texinfo Git repository](https://git.savannah.gnu.org/cgit/texinfo.git/log/?h=gsoc-2017).

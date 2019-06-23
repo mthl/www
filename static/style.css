@@ -1,0 +1,10 @@
+img[alt="portrait"] {
+    float: left;
+    width: 250px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+}
+
+footer {
+    clear: left;
+}
