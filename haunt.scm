@@ -139,7 +139,7 @@ experience as a student in 2017."))
      (dd ,(iref "/mthl.asc"
                 "F2A3 8D7E EB2B 6640 5761  070D 0ADE E100 9460 4D37"))
      (dt "Linkedin")
-     (dd ,(xref "https://www.linkedin.com/in/mathieu-lirzin" "mathieu-lirzin"))
+     (dd ,(xref "https://www.linkedin.com/in/mthl" "mathieu-lirzin"))
      (dt "Mastodon")
      (dd ,(xref "https://mstdn.fr/@mthl/" "@mthl")))))
 
