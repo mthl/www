@@ -1,4 +1,5 @@
 (use-modules (ice-9 match)
+             (srfi srfi-1)
              (haunt site)
              (haunt reader)
              (haunt reader commonmark)
@@ -8,6 +9,40 @@
              (haunt page)
              (haunt html)
 	     (haunt post))
+
+(define data
+  '((about . "http://reuz.fr/#me")
+    (email . ("mthl@reuz.fr"
+              "mathieu.lirzin@nereide.fr"
+              "mathieu.lirzin@etu.univ-tours.fr"
+              "mthl@gnu.org"
+              "mthl@apache.org"))
+    (contributes . (((about . "https://ofbiz.apache.org/")
+                     (name . "Apache OFBiz"))))
+    (has-contributed . (((about . "https://www.gnu.org/software/automake")
+                         (name . "Automake"))
+                        ((about . "https://www.gnu.org/software/guix")
+                         (name . "Guix"))
+                        ((about . "https://www.gnu.org/software/jwhois")
+                         (name . "JWhois"))
+                        ((about . "https://www.gnu.org/software/mcron")
+                         (name . "Mcron"))
+                        ((about . "https://www.gnu.org/software/shepherd")
+                         (name . "Shepherd"))
+                        ((about . "https://www.gnu.org/software/texinfo")
+                         (name . "Texinfo"))))
+    (uses-forge . (((about . "https://github.com/mthl")
+                    (name . "Github"))
+                   ((about . "https://gitlab.com/mthl")
+                    (name . "Gitlab"))
+                   ((about . "https://labs.nereide.fr/lmathieu")
+                    (name . "Néréide labs"))
+                   ((about . "https://savannah.gnu.org/users/mthl")
+                    (name . "Savannah"))
+                   ((about . "https://notabug.org/mthl")
+                    (name . "Notabug"))))
+    (works . ((about . "https://nereide.fr/")
+              (name . "Néréide")))))
 
 (define (stylesheet file)
   `(link (@ (rel "stylesheet") (href ,file))))
@@ -75,6 +110,23 @@
   `(a (@ (href ,href))
       ,(or desc `(code ,href))))
 
+(define (mail-to email)
+  (iref (string-append "mailto:" email) email))
+
+(define (dref obj)
+  (xref (assq-ref obj 'about) (assq-ref obj 'name)))
+
+(define (join lst delim)
+  (match lst
+    (() '())
+    ((first . rest)
+     (fold-right (λ (x acc) (cons* x delim acc))
+                 (list first)
+                 rest))))
+
+(define* (describe-links resources #:key (mapper dref))
+  (join (map mapper resources) ", "))
+
 (define research-desc
   (let ((nereide (xref "https://nereide.fr/" "Néréide"))
         (lifat (xref "https://lifat.univ-tours.fr/" "LIFAT"))
@@ -93,23 +145,14 @@ Software Architecture, Software packaging and the World Wide Web.")))
 
 (define free-software-desc
   (let ((ofbiz (xref "https://ofbiz.apache.org/" "Apache OFBiz"))
-        (gnu (xref "https://www.gnu.org/" "GNU")))
+        (gnu (xref "https://www.gnu.org/" "GNU"))
+        (gnu-packages (describe-links (assq-ref data 'has-contributed)))
+        (forges (describe-links (assq-ref data 'uses-forge))))
     `(p "I am contributing to some "
-,(xref "http://dbpedia.org/resource/Free_software" "Free Software") " projects
+        ,(xref "http://dbpedia.org/resource/Free_software" "Free Software") " projects
 but mainly to " ,ofbiz ". I have been involved in the development of some "
-,gnu " packages: "
-,(xref "https://www.gnu.org/software/automake" "Automake") ", "
-,(xref "https://www.gnu.org/software/guix" "Guix") ", "
-,(xref "https://www.gnu.org/software/jwhois" "JWhois") ", "
-,(xref "https://www.gnu.org/software/mcron" "Mcron") ", "
-,(xref "https://www.gnu.org/software/shepherd" "Shepherd") ", "
-,(xref "https://www.gnu.org/software/texinfo" "Texinfo") ". The software I am
-writing is available on various repositories: "
-,(xref "https://github.com/mthl" "Github") ", "
-,(xref "https://gitlab.com/mthl" "Gitlab") ", "
-,(xref "https://labs.nereide.fr/lmathieu" "Néréide labs") ", "
-,(xref "https://savannah.gnu.org/users/mthl" "Savannah") ", "
-,(xref "https://notabug.org/mthl" "Notabug") ".")))
+,gnu " packages: " ,@gnu-packages ". The software I am writing is
+available on various repositories: " ,@forges ".")))
 
 (define blog-desc
   `(p "I have a personal " ,(iref "/blog" "blog") " containing the weekly
@@ -118,30 +161,22 @@ reports I have made during my last "
 experience as a student in 2017."))
 
 (define contact-information
-  `((h4 "Contact information")
-    (dl
-     (dt "Néréide postal address")
-     (dd ,(xref "https://www.openstreetmap.org/node/4999813121" "8 rue des déportés 37000 Tours"))
-     (dt "University postal address")
-     (dd ,(xref "https://www.openstreetmap.org/way/118648970"
-                "UFR Sciences et Techniques, Site universitaire de Blois, 3 place Jean Jaurès 41000 Blois."))
-     (dt "Email")
-     (dd ,(iref "mailto:mthl@reuz.fr" "mthl@reuz.fr")
-         ", "
-         ,(iref "mailto:mthl@reuz.fr" "mathieu.lirzin@nereide.fr")
-         ", "
-         ,(iref "mailto:mthl@reuz.fr" "mathieu.lirzin@etu.univ-tours.fr")
-         ", "
-         ,(iref "mailto:mthl@reuz.fr" "mthl@gnu.org")
-         ", "
-         ,(iref "mailto:mthl@reuz.fr" "mthl@apache.org"))
-     (dt "PGP")
-     (dd ,(iref "/mthl.asc"
-                "F2A3 8D7E EB2B 6640 5761  070D 0ADE E100 9460 4D37"))
-     (dt "Linkedin")
-     (dd ,(xref "https://www.linkedin.com/in/mthl" "mathieu-lirzin"))
-     (dt "Mastodon")
-     (dd ,(xref "https://mstdn.fr/@mthl/" "@mthl")))))
+  (let ((emails (describe-links (assq-ref data 'email) #:mapper mail-to)))
+    `((h4 "Contact information")
+      (dl
+       (dt "Néréide postal address")
+       (dd ,(xref "https://www.openstreetmap.org/node/4999813121" "8 rue des déportés 37000 Tours"))
+       (dt "University postal address")
+       (dd ,(xref "https://www.openstreetmap.org/way/118648970"
+                  "UFR Sciences et Techniques, Site universitaire de Blois, 3 place Jean Jaurès 41000 Blois."))
+       (dt "Email")
+       (dd ,@emails)
+       (dt "PGP")
+       (dd ,(iref "/mthl.asc"
+                  "F2A3 8D7E EB2B 6640 5761  070D 0ADE E100 9460 4D37"))
+       (dt "Social")
+       (dd ,(xref "https://www.linkedin.com/in/mthl" "Linkedin") ", "
+           ,(xref "https://mstdn.fr/@mthl/" "Mastodon"))))))
 
 (define (home-page site title)
   `((header (h1 ,title))
