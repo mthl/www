@@ -15,8 +15,7 @@
     (email . ("mthl@reuz.fr"
               "mathieu.lirzin@nereide.fr"
               "mathieu.lirzin@etu.univ-tours.fr"
-              "mthl@gnu.org"
-              "mthl@apache.org"))
+              "mthl@gnu.org"))
     (contributes . (((about . "https://ofbiz.apache.org/")
                      (name . "Apache OFBiz"))))
     (has-contributed . (((about . "https://www.gnu.org/software/automake")
@@ -144,13 +143,10 @@ Systems. My topics of interest are Programming Languages, Network Based
 Software Architecture, Software packaging and the World Wide Web.")))
 
 (define free-software-desc
-  (let ((ofbiz (xref "https://ofbiz.apache.org/" "Apache OFBiz"))
-        (gnu (xref "https://www.gnu.org/" "GNU"))
+  (let ((gnu (xref "https://www.gnu.org/" "GNU"))
         (gnu-packages (describe-links (assq-ref data 'has-contributed)))
         (forges (describe-links (assq-ref data 'uses-forge))))
-    `(p "I am contributing to some "
-        ,(xref "http://dbpedia.org/resource/Free_software" "Free Software") " projects
-but mainly to " ,ofbiz ". I have been involved in the development of some "
+    `(p "I have been involved in the development of some "
 ,gnu " packages: " ,@gnu-packages ". The software I am writing is
 available on various repositories: " ,@forges ".")))
 
