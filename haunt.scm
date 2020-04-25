@@ -34,7 +34,7 @@
                     (name . "Github"))
                    ((about . "https://gitlab.com/mthl")
                     (name . "Gitlab"))
-                   ((about . "https://labs.nereide.fr/lmathieu")
+                   ((about . "https://labs.nereide.fr/mthl")
                     (name . "Néréide labs"))
                    ((about . "https://savannah.gnu.org/users/mthl")
                     (name . "Savannah"))
