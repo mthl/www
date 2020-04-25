@@ -171,8 +171,7 @@ experience as a student in 2017."))
        (dd ,(iref "/mthl.asc"
                   "F2A3 8D7E EB2B 6640 5761  070D 0ADE E100 9460 4D37"))
        (dt "Social")
-       (dd ,(xref "https://www.linkedin.com/in/mthl" "Linkedin") ", "
-           ,(xref "https://mstdn.fr/@mthl/" "Mastodon"))))))
+       (dd ,(xref "https://keybase.io/mthl" "Keybase"))))))
 
 (define (home-page site title)
   `((header (h1 ,title))
