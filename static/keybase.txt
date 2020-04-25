@@ -4,48 +4,79 @@ https://keybase.io/mthl
 
 I hereby claim:
 
-  * I am an admin of http://mathieu.lirzin.emi.u-bordeaux.fr
+  * I am an admin of https://reuz.fr
   * I am mthl (https://keybase.io/mthl) on keybase.
-  * I have a public key ASD0-hd2F3HgUXzkesqAmtD5aHw7WYBLz0w920tyeAzTtgo
+  * I have a public key with fingerprint F2A3 8D7E EB2B 6640 5761  070D 0ADE E100 9460 4D37
 
 To do so, I am signing this object:
 
 {
-    "body": {
-        "key": {
-            "eldest_kid": "0120f4fa17761771e0517ce47aca809ad0f9687c3b59804bcf4c3ddb4b72780cd3b60a",
-            "host": "keybase.io",
-            "kid": "0120f4fa17761771e0517ce47aca809ad0f9687c3b59804bcf4c3ddb4b72780cd3b60a",
-            "uid": "4c905844dde5d58eda7e7bcfa3abda19",
-            "username": "mthl"
-        },
-        "merkle_root": {
-            "ctime": 1497920761,
-            "hash": "c6608f3cc437092280c7eba79407d6cfd6134191f9ae62da9f85d7d3ee14d3e2737cc126db8a0722f49e96767724bb89e446d4c7e430fc69b480a30049ad87eb",
-            "hash_meta": "185b29e29ee814fcf88738095021887fc8ea4779748335825c07cbda809a751d",
-            "seqno": 1181451
-        },
-        "service": {
-            "hostname": "mathieu.lirzin.emi.u-bordeaux.fr",
-            "protocol": "http:"
-        },
-        "type": "web_service_binding",
-        "version": 1
+  "body": {
+    "key": {
+      "eldest_kid": "0120f4fa17761771e0517ce47aca809ad0f9687c3b59804bcf4c3ddb4b72780cd3b60a",
+      "fingerprint": "f2a38d7eeb2b66405761070d0adee10094604d37",
+      "host": "keybase.io",
+      "key_id": "0adee10094604d37",
+      "kid": "0101f30e16297f89f8e52cf952ff6d149e9a6560ce7f589e0aec439823b2b7afe08a0a",
+      "uid": "4c905844dde5d58eda7e7bcfa3abda19",
+      "username": "mthl"
     },
-    "client": {
-        "name": "keybase.io go client",
-        "version": "1.0.24"
+    "merkle_root": {
+      "ctime": 1587831664,
+      "hash_meta": "156aa48e721bb7f4012ed9c1279282b1d662e2682b508b6ba413e04bb9cac67a",
+      "seqno": 16050050
     },
-    "ctime": 1497920959,
-    "expire_in": 504576000,
-    "prev": "061957634bc92993c4b57031b45e239f70e2f4320f244a65c13e307dc311ac35",
-    "seqno": 8,
-    "tag": "signature"
+    "revoke": {
+      "sig_ids": [
+        "bb24cc9ed8db39c4da2225c4190208a94bbfab820d69ef42a97b4c41f3ce4ac30f"
+      ]
+    },
+    "service": {
+      "hostname": "reuz.fr",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1587831694,
+  "expire_in": 157680000,
+  "prev": "7507c566380e3442e7a9ca74cee25fbbeec0ec9da3b4a881478e0e65551e084b",
+  "seqno": 11,
+  "tag": "signature"
 }
 
 which yields the signature:
 
-hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg9PoXdhdx4FF85HrKgJrQ+Wh8O1mAS89MPdtLcngM07YKp3BheWxvYWTFA1N7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwZjRmYTE3NzYxNzcxZTA1MTdjZTQ3YWNhODA5YWQwZjk2ODdjM2I1OTgwNGJjZjRjM2RkYjRiNzI3ODBjZDNiNjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwZjRmYTE3NzYxNzcxZTA1MTdjZTQ3YWNhODA5YWQwZjk2ODdjM2I1OTgwNGJjZjRjM2RkYjRiNzI3ODBjZDNiNjBhIiwidWlkIjoiNGM5MDU4NDRkZGU1ZDU4ZWRhN2U3YmNmYTNhYmRhMTkiLCJ1c2VybmFtZSI6Im10aGwifSwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE0OTc5MjA3NjEsImhhc2giOiJjNjYwOGYzY2M0MzcwOTIyODBjN2ViYTc5NDA3ZDZjZmQ2MTM0MTkxZjlhZTYyZGE5Zjg1ZDdkM2VlMTRkM2UyNzM3Y2MxMjZkYjhhMDcyMmY0OWU5Njc2NzcyNGJiODllNDQ2ZDRjN2U0MzBmYzY5YjQ4MGEzMDA0OWFkODdlYiIsImhhc2hfbWV0YSI6IjE4NWIyOWUyOWVlODE0ZmNmODg3MzgwOTUwMjE4ODdmYzhlYTQ3Nzk3NDgzMzU4MjVjMDdjYmRhODA5YTc1MWQiLCJzZXFubyI6MTE4MTQ1MX0sInNlcnZpY2UiOnsiaG9zdG5hbWUiOiJtYXRoaWV1Lmxpcnppbi5lbWkudS1ib3JkZWF1eC5mciIsInByb3RvY29sIjoiaHR0cDoifSwidHlwZSI6IndlYl9zZXJ2aWNlX2JpbmRpbmciLCJ2ZXJzaW9uIjoxfSwiY2xpZW50Ijp7Im5hbWUiOiJrZXliYXNlLmlvIGdvIGNsaWVudCIsInZlcnNpb24iOiIxLjAuMjQifSwiY3RpbWUiOjE0OTc5MjA5NTksImV4cGlyZV9pbiI6NTA0NTc2MDAwLCJwcmV2IjoiMDYxOTU3NjM0YmM5Mjk5M2M0YjU3MDMxYjQ1ZTIzOWY3MGUyZjQzMjBmMjQ0YTY1YzEzZTMwN2RjMzExYWMzNSIsInNlcW5vIjo4LCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQJI8rrynRKht3IFykG+PnKsAM2a4ivyM+WDV21ljRxuCONnSlUxrhL7Chyro67a+uWlpUzaqBFdft7nAJnTypAqoc2lnX3R5cGUgpGhhc2iCpHR5cGUIpXZhbHVlxCAOKpnCQ+21csFqfOjAG08msfntCaJE09FdX7g7k/bWzqN0YWfNAgKndmVyc2lvbgE=
+-----BEGIN PGP MESSAGE-----
+
+owFlUwtQFVUYvjydMHxEPsZHypI5CTFnd8++KB+lg0YkaooSwuW8Fna43IW91+sD
+wec42gRjQ6YzZhI44ITmaCZMjpKOpoljU1ra+AiM0YuZSmFWonWWdKapnd3Z3f98
+//d//3f+szE+yhMXEXelw/NuwetaRFsX9uTvIFvLBWzTpUJauVDM+l7MR1kg6C22
+qJAmAFECJjSRqGkqf0QGFFEjDGqIIB0YiALTUHWNyFgxdAAxMSGRKcUQa5KmA0Jl
+rAIkpAim5S9kTqlj+YOc1pSQrFONMSxhVYVA4exAAxQgypgIgAFVAKms8cQiO+Bm
+cHEYBViqZfMY//H+I+//+Me6gWjKgImqZGimbpg6UyRiGopkmioVocEMpCoqIEwz
+Fd1gADECZUOXZK5IQyYDOurTvaiPDhIDKDqElDKFKjqjSGMabxbJCFMkGi4wwBw/
+KmEcXRIs8gkVKUIJc4p9zOvYdtA1lgQtd1lUdE2XRd42bw4FirwlLIh4lqioCEGd
+aZKIsWZCbj2jBhElzZB0CYtUVSUmqfxTATpWMYKizLjl2CCIqJorNsDK/DavoAIF
+8JtLcFjILmZu9YBVyD0LCGm5AsYSJMT43GZUp1g2CKRIkiSFQNEAEu/c4KwmwroE
+qGowE0rI0DDky6bM9x4RGZhCXoVbzwlZpI/e3aZH7Tts0bJU0+F6Sh07aBPbx4NF
+wWBpIM11Jbi01EUtZtj7KN+LLT/l88EzQswJWLaf98CR/zHM4IaxJaWWw7yWi+BD
+owN+uXVYiFNqCtCIoqqyDpgMocQ0xL3RIGFMUkyMGSOAEYMiGUOk6yLUdAaYqigK
+n2sd4n85KHKdqJBzctv8KLjIYUJF3IZIOdoTEecZPTQx+pf6qsqfks0p81G/+Mdn
+KibSPVCeuCcGPY6UDBnYO+BM78GUmWW1I9vCmxuf97XMSRUaZl5ceureiszkxUlf
+lzbE22OvR7338p/dtQ+Wd3dG7B1945MVYxbvXbgpquHBoJWrBxd8Q49sHbq7/v6S
+cTekpt+2Zo9pT9khTroAqyOzuttPVj8n3T3Q622atHfcq+cz5t/Mnjf7sM8ZkJvS
+M3jh8Fk1y3LGX/nQ/qu9Zn9VzyrPgj8SrUN3Trcc+3L4xLyTE/JHrkzqyO06vryg
+PXz2Ej4+7EJTZnZnR5rvmbkndkV3XT9Rfb/zs6dupU1/qzN3TN2bwz4qK5hy0RuM
+KZtfFt3wQv22yT9f23U0uW3L+dUPnarbd4UvTs1tqkiNSg+Vf1B9N6voZOxue3go
+4So5OrC1ru7m0Mv0TMu5ygXFbMvV5p372vHkH06H1ne/fax/T8Ke+3e+P1W3KmP6
+6u9A8oKNkTlZsxNTPh22JmNL7eakN1ovn827NsITSx+Oavk9xld+pSZ/qhRorOrY
+N3N/3CQ/Kcy9tHN78+GO/uNnnPtx3do5Q7r2XyrYkJnRuGZK9vuzpjXNS4hZvikn
+3BBl5WUdGHVCOby2csezEw8cm95zbTt55dfEkqTYpnDv7X4H41t9+YdY+s2xeU+n
+r6ksal5fH5VQJnqmHhmX+9qT77TEtn7c++2cWnHapp1tG9t6I4F1riY7nCmbzQ74
+Kpx+Vn/x/J1to3MaR9yasH1GZ/jengfNL/0N
+=xScQ
+-----END PGP MESSAGE-----
 
 And finally, I am proving ownership of this host by posting or
 appending to this document.
