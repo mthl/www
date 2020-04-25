@@ -184,13 +184,13 @@ experience as a student in 2017."))
 
 (let ((mthl "Mathieu Lirzin"))
   (site #:title mthl
-        #:domain "mthl.reuz.fr"
+        #:domain "reuz.fr"
         #:default-metadata `((author . ,mthl)
                              (email . "mthl@reuz.fr"))
         #:readers (list commonmark-reader)
         #:builders (list
                     (page #:path "index.html"
-                          #:title "Mathieu Lirzin"
+                          #:title mthl
                           #:content home-page)
                     (static-directory "static" "")
                     (blog #:theme blog-theme #:prefix "blog")
