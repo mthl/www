@@ -1,13 +1,16 @@
 (use-modules (ice-9 match)
              (srfi srfi-1)
+             (srfi srfi-26)
              (haunt site)
              (haunt reader)
              (haunt reader commonmark)
              (haunt builder blog)
              (haunt builder atom)
              (haunt builder assets)
+             (haunt asset)
              (haunt page)
              (haunt html)
+             (haunt utils)
 	     (haunt post))
 
 (define data
@@ -179,17 +182,51 @@ experience as a student in 2017."))
           ,blog-desc)
     (footer ,contact-information)))
 
-(let ((mthl "Mathieu Lirzin"))
-  (site #:title mthl
-        #:domain "reuz.fr"
-        #:default-metadata `((author . ,mthl)
-                             (email . "mthl@reuz.fr"))
-        #:readers (list commonmark-reader)
-        #:builders (list
-                    (page #:path "index.html"
-                          #:title mthl
-                          #:content home-page)
-                    (static-directory "static" "")
-                    (blog #:theme blog-theme #:prefix "blog")
-                    (atom-feed)
-                    (atom-feeds-by-tag))))
+(define site
+  (let ((mthl "Mathieu Lirzin"))
+    (site #:title mthl
+          #:domain "reuz.fr"
+          #:default-metadata `((author . ,mthl)
+                               (email . "mthl@reuz.fr"))
+          #:readers (list commonmark-reader)
+          #:builders (list
+                      (page #:path "index.html"
+                            #:title mthl
+                            #:content home-page)
+                      (static-directory "static" "")
+                      (blog #:theme blog-theme #:prefix "blog")
+                      (atom-feed)
+                      (atom-feeds-by-tag)))))
+
+(define (build-site site)
+  "Build SITE in the appropriate build directory."
+  (let* ((mthl "Mathieu Lirzin")
+         (posts (read-posts "posts"
+                            default-file-filter
+                            (list commonmark-reader)
+                            `((author . ,mthl)
+                              (email . "mthl@reuz.fr"))))
+         (build-dir (absolute-file-name "site")))
+    (when (file-exists? build-dir)
+      (delete-file-recursively build-dir)
+      (mkdir build-dir))
+    (for-each (match-lambda
+                ((? page? page)
+                 (format #t "writing page '~a'~%" (page-file-name page))
+                 (write-page page build-dir))
+                ((? asset? asset)
+                 (format #t "copying asset '~a' → '~a'~%"
+                         (asset-source asset)
+                         (asset-target asset))
+                 (install-asset asset build-dir))
+                (obj
+                 (error "unrecognized site object: " obj)))
+              (flat-map (cut <> site posts)
+                        (list
+                         (page #:path "index.html"
+                               #:title mthl
+                               #:content home-page)
+                         (static-directory "static" "")
+                         (blog #:theme blog-theme #:prefix "blog")
+                         (atom-feed)
+                         (atom-feeds-by-tag))))))
