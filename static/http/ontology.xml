@@ -1,0 +1,1569 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://w3id.org/http#"
+     xml:base="http://w3id.org/http"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:http="http://w3id.org/http#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://w3id.org/http#">
+        <rdfs:comment xml:lang="en">A namespace for describing HTTP interactions</rdfs:comment>
+        <rdfs:label xml:lang="en">HTTP Ontology</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/http#notEmptyToken -->
+
+
+    <rdfs:Datatype rdf:about="http://w3id.org/http#notEmptyToken">
+        <rdfs:comment>A token with at least one character</rdfs:comment>
+        <rdfs:label xml:lang="en">Non-empty token</rdfs:label>
+        <owl:equivalentClass>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#token"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:minLength>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </owl:equivalentClass>
+    </rdfs:Datatype>
+    
+
+
+    <!-- http://w3id.org/http#threeDigit -->
+
+
+    <rdfs:Datatype rdf:about="http://w3id.org/http#threeDigit">
+        <rdfs:comment>A positive integer consisting in three digit</rdfs:comment>
+        <rdfs:label xml:lang="en">3-digit integer</rdfs:label>
+        <owl:equivalentClass>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">999</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </owl:equivalentClass>
+    </rdfs:Datatype>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/http#body -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/http#body">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/http#Message"/>
+        <rdfs:range rdf:resource="http://w3id.org/http/content#Content"/>
+        <rdfs:comment xml:lang="en">The entity body of an HTTP message.</rdfs:comment>
+        <rdfs:label xml:lang="en">Entity Body</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/http#headers -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/http#headers">
+        <rdfs:domain rdf:resource="http://w3id.org/http#Message"/>
+        <rdfs:range rdf:resource="http://w3id.org/http#Header"/>
+        <rdfs:comment xml:lang="en">The headers in an HTTP message.</rdfs:comment>
+        <rdfs:label xml:lang="en">Headers</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/http#link -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/http#link">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/http#mthd -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/http#mthd">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/http#Request"/>
+        <rdfs:range rdf:resource="http://w3id.org/http#Method"/>
+        <rdfs:comment xml:lang="en">The HTTP method used for the HTTP request.</rdfs:comment>
+        <rdfs:label xml:lang="en">Method</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/http#queryParams -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/http#queryParams">
+        <rdfs:domain rdf:resource="http://w3id.org/http#URI"/>
+        <rdfs:range rdf:resource="http://w3id.org/http#QueryParam"/>
+        <rdfs:comment xml:lang="en">The parameters found in the query string part of a URL.</rdfs:comment>
+        <rdfs:label xml:lang="en">Query parameters</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/http#requests -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/http#requests">
+        <rdfs:domain rdf:resource="http://w3id.org/http#Connection"/>
+        <rdfs:comment xml:lang="en">The HTTP requests made via a connection.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
+        <rdfs:label xml:lang="en">Requests</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/http#resp -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/http#resp">
+        <rdfs:domain rdf:resource="http://w3id.org/http#Request"/>
+        <rdfs:range rdf:resource="http://w3id.org/http#Response"/>
+        <rdfs:comment xml:lang="en">The HTTP response sent in answer to an HTTP request.</rdfs:comment>
+        <rdfs:label xml:lang="en">Response</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/http#sc -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/http#sc">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/http#Response"/>
+        <rdfs:range rdf:resource="http://w3id.org/http#StatusCode"/>
+        <rdfs:comment xml:lang="en">The status code of an HTTP response.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231#section-6"/>
+        <rdfs:label xml:lang="en">Status code</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/http#uri -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/http#uri">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/http#Request"/>
+        <rdfs:range rdf:resource="http://w3id.org/http#URI"/>
+        <rdfs:label>Effective request URI</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/http/content#about -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/http/content#about">
+        <rdfs:domain rdf:resource="http://w3id.org/http/content#ContentAsRDF"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sparql-service-description#Graph"/>
+        <rdfs:comment xml:lang="en">A property associating an RDF content with its RDF graph</rdfs:comment>
+        <rdfs:label xml:lang="en">RDF Content Graph</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/http/headers#Location -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/http/headers#Location">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://w3id.org/http#headers"/>
+            <rdf:Description rdf:about="http://w3id.org/http/headers#hasLocationHeader"/>
+            <rdf:Description rdf:about="http://w3id.org/http#link"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/http/headers#hasLocationHeader -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/http/headers#hasLocationHeader">
+        <rdfs:domain rdf:resource="http://w3id.org/http#Header"/>
+        <rdfs:range rdf:resource="http://w3id.org/http#Header"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/http#authority -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/http#authority">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment xml:lang="en">The authority part of an URI.</rdfs:comment>
+        <rdfs:label xml:lang="en">Authority</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/http#connectionAuthority -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/http#connectionAuthority">
+        <rdfs:domain rdf:resource="http://w3id.org/http#Connection"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">The authority of a connection used for the HTTP transfer.</rdfs:comment>
+        <rdfs:label xml:lang="en">Connection authority</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/http#fieldValue -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/http#fieldValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/http#Header"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">The value of an HTTP header field.</rdfs:comment>
+        <rdfs:label xml:lang="en">Field value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/http#fragment -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/http#fragment">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment xml:lang="en">The fragment part of an URI.</rdfs:comment>
+        <rdfs:label xml:lang="en">Fragment</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/http#hdrName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/http#hdrName">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/http#Header"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">The name of an HTTP header field.</rdfs:comment>
+        <rdfs:label xml:lang="en">Field name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/http#httpVersion -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/http#httpVersion">
+        <rdfs:domain rdf:resource="http://w3id.org/http#Message"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">The HTTP version of an HTTP message.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
+        <rdfs:label xml:lang="en">HTTP version</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/http#methodName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/http#methodName">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/http#Method"/>
+        <rdfs:range rdf:resource="http://w3id.org/http#notEmptyToken"/>
+        <rdfs:comment xml:lang="en">The HTTP method name used for the HTTP request.</rdfs:comment>
+        <rdfs:label xml:lang="en">Method name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/http#paramName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/http#paramName">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/http#QueryParam"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">The name of a query parameter.</rdfs:comment>
+        <rdfs:label xml:lang="en">Parameter name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/http#paramValue -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/http#paramValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/http#QueryParam"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">The literal value of a query parameter.</rdfs:comment>
+        <rdfs:label xml:lang="en">Parameter value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/http#path -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/http#path">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment xml:lang="en">The path part of an URI.</rdfs:comment>
+        <rdfs:label xml:lang="en">Path</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/http#query -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/http#query">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment xml:lang="en">The query part of an URI.</rdfs:comment>
+        <rdfs:label xml:lang="en">Query</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/http#scheme -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/http#scheme">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment xml:lang="en">The scheme part of an URI.</rdfs:comment>
+        <rdfs:label xml:lang="en">Scheme</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/http#statusCodeNumber -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/http#statusCodeNumber">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/http#StatusCode"/>
+        <rdfs:range rdf:resource="http://w3id.org/http#threeDigit"/>
+        <rdfs:comment xml:lang="en">The status code number.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231#section-6"/>
+        <rdfs:label xml:lang="en">Status code number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/http#Connection -->
+
+
+    <owl:Class rdf:about="http://w3id.org/http#Connection">
+        <rdfs:comment xml:lang="en">A connection used for HTTP transfer.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
+        <rdfs:label xml:lang="en">Connection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/http#FinalResponse -->
+
+
+    <owl:Class rdf:about="http://w3id.org/http#FinalResponse">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/http#Response"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf rdf:resource="http://w3id.org/http#InterimResponse"/>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://w3id.org/http#InterimResponse"/>
+        <rdfs:comment xml:lang="en">A final response.</rdfs:comment>
+        <rdfs:label xml:lang="en">Final</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/http#Header -->
+
+
+    <owl:Class rdf:about="http://w3id.org/http#Header">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/http#fieldValue"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/http#hdrName"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A header in an HTTP message.</rdfs:comment>
+        <rdfs:label xml:lang="en">Message Header</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/http#InterimResponse -->
+
+
+    <owl:Class rdf:about="http://w3id.org/http#InterimResponse">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/http#Response"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/http#sc"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/http/sc#Informational"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An interim response.</rdfs:comment>
+        <rdfs:label xml:lang="en">Interim</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/http#Message -->
+
+
+    <owl:Class rdf:about="http://w3id.org/http#Message">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://w3id.org/http#body"/>
+                        <owl:allValuesFrom rdf:resource="http://w3id.org/http/content#Content"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://w3id.org/http#headers"/>
+                        <owl:allValuesFrom rdf:resource="http://w3id.org/http#Header"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An HTTP message.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
+        <rdfs:label xml:lang="en">Message</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/http#Method -->
+
+
+    <owl:Class rdf:about="http://w3id.org/http#Method">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/http#methodName"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/http#notEmptyToken"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">The HTTP method used for the request.</rdfs:comment>
+        <rdfs:label xml:lang="en">Method</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/http#QueryParam -->
+
+
+    <owl:Class rdf:about="http://w3id.org/http#QueryParam">
+        <rdfs:comment xml:lang="en">A parameter for a part of a header value.</rdfs:comment>
+        <rdfs:label xml:lang="en">Query Parameter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/http#Request -->
+
+
+    <owl:Class rdf:about="http://w3id.org/http#Request">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/http#Message"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://w3id.org/http#mthd"/>
+                        <owl:someValuesFrom rdf:resource="http://w3id.org/http#Method"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://w3id.org/http#uri"/>
+                        <owl:someValuesFrom rdf:resource="http://w3id.org/http#URI"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://w3id.org/http#Response"/>
+        <rdfs:comment xml:lang="en">An HTTP request.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
+        <rdfs:label xml:lang="en">Request</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/http#Response -->
+
+
+    <owl:Class rdf:about="http://w3id.org/http#Response">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/http#Message"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://w3id.org/http#sc"/>
+                        <owl:someValuesFrom rdf:resource="http://w3id.org/http#StatusCode"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An HTTP response.</rdfs:comment>
+        <rdfs:label xml:lang="en">Response</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/http#StatusCode -->
+
+
+    <owl:Class rdf:about="http://w3id.org/http#StatusCode">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/http#statusCodeNumber"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/http#threeDigit"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">The status code of an HTTP response.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231#section-6"/>
+        <rdfs:label xml:lang="en">Status code</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/http#URI -->
+
+
+    <owl:Class rdf:about="http://w3id.org/http#URI">
+        <rdfs:comment xml:lang="en">A semantic description of the syntactic parts composing a URI.</rdfs:comment>
+        <rdfs:label>URI description</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/http/content#Content -->
+
+
+    <owl:Class rdf:about="http://w3id.org/http/content#Content">
+        <rdfs:comment xml:lang="en">Representation of a content which can associated to various formats.</rdfs:comment>
+        <rdfs:label xml:lang="en">Content</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/http/content#ContentAsRDF -->
+
+
+    <owl:Class rdf:about="http://w3id.org/http/content#ContentAsRDF">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/http/content#about"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/http/content#Content"/>
+        <rdfs:comment xml:lang="en">RDF Content embedded in the body of an HTTP message</rdfs:comment>
+        <rdfs:label xml:lang="en">RDF Content</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/http/headers#LocationHeader -->
+
+
+    <owl:Class rdf:about="http://w3id.org/http/headers#LocationHeader">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/http#Header"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://w3id.org/http#hdrName"/>
+                        <owl:hasValue>Location</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/http#link"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/http#URI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/http/headers#hasLocationHeader"/>
+                <owl:hasSelf rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasSelf>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/http/sc#ClientError -->
+
+
+    <owl:Class rdf:about="http://w3id.org/http/sc#ClientError">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/http#StatusCode"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://w3id.org/http#statusCodeNumber"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">400</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">499</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">A status code starting with 4</rdfs:comment>
+        <rdfs:label xml:lang="en">Client Error</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/http/sc#Informational -->
+
+
+    <owl:Class rdf:about="http://w3id.org/http/sc#Informational">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/http#StatusCode"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://w3id.org/http#statusCodeNumber"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">199</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">A status code starting with 1, denoting Status an informational response</rdfs:comment>
+        <rdfs:label xml:lang="en">Informational</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/http/sc#Redirection -->
+
+
+    <owl:Class rdf:about="http://w3id.org/http/sc#Redirection">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/http#StatusCode"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://w3id.org/http#statusCodeNumber"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">399</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">A status code starting with 3</rdfs:comment>
+        <rdfs:label xml:lang="en">Redirection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/http/sc#ServerError -->
+
+
+    <owl:Class rdf:about="http://w3id.org/http/sc#ServerError">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/http#StatusCode"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://w3id.org/http#statusCodeNumber"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">599</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">A status code starting with 5</rdfs:comment>
+        <rdfs:label xml:lang="en">Server Error</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/http/sc#Successful -->
+
+
+    <owl:Class rdf:about="http://w3id.org/http/sc#Successful">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/http#StatusCode"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://w3id.org/http#statusCodeNumber"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">299</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">A status code starting with 2, denoting a successful interaction</rdfs:comment>
+        <rdfs:label xml:lang="en">Successful</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/sparql-service-description#Graph -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sparql-service-description#Graph">
+        <rdfs:comment xml:lang="en">An instance of sd:Graph represents the description of an RDF graph.</rdfs:comment>
+        <rdfs:label xml:lang="en">Graph</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/http/mthd#CONNECT -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/mthd#CONNECT">
+        <rdf:type rdf:resource="http://w3id.org/http#Method"/>
+        <methodName>CONNECT</methodName>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231#section-4.3.6"/>
+        <rdfs:label>CONNECT</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/mthd#DELETE -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/mthd#DELETE">
+        <rdf:type rdf:resource="http://w3id.org/http#Method"/>
+        <methodName>DELETE</methodName>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231#section-4.3.5"/>
+        <rdfs:label>DELETE</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/mthd#GET -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/mthd#GET">
+        <rdf:type rdf:resource="http://w3id.org/http#Method"/>
+        <methodName>GET</methodName>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231#section-4.3.1"/>
+        <rdfs:label>GET</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/mthd#HEAD -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/mthd#HEAD">
+        <rdf:type rdf:resource="http://w3id.org/http#Method"/>
+        <methodName>HEAD</methodName>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231#section-4.3.2"/>
+        <rdfs:label>HEAD</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/mthd#OPTIONS -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/mthd#OPTIONS">
+        <rdf:type rdf:resource="http://w3id.org/http#Method"/>
+        <methodName>OPTIONS</methodName>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231#section-4.3.7"/>
+        <rdfs:label>OPTIONS</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/mthd#PATCH -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/mthd#PATCH">
+        <rdf:type rdf:resource="http://w3id.org/http#Method"/>
+        <methodName>PATCH</methodName>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc5789"/>
+        <rdfs:label>PATCH</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/mthd#POST -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/mthd#POST">
+        <rdf:type rdf:resource="http://w3id.org/http#Method"/>
+        <methodName>POST</methodName>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231#section-4.3.3"/>
+        <rdfs:label>POST</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/mthd#PUT -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/mthd#PUT">
+        <rdf:type rdf:resource="http://w3id.org/http#Method"/>
+        <methodName>PUT</methodName>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231#section-4.3.4"/>
+        <rdfs:label>PUT</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/mthd#TRACE -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/mthd#TRACE">
+        <rdf:type rdf:resource="http://w3id.org/http#Method"/>
+        <methodName>TRACE</methodName>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231#section-4.3.8"/>
+        <rdfs:label>TRACE</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#Accepted -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#Accepted">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">202</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
+        <rdfs:label xml:lang="en">Accepted</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#BadGateway -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#BadGateway">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">502</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
+        <rdfs:label xml:lang="en">Bad Gateway</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#BadRequest -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#BadRequest">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">400</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
+        <rdfs:label xml:lang="en">Bad Request</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#Conflict -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#Conflict">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">409</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
+        <rdfs:label xml:lang="en">Conflict</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#Continue -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#Continue">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
+        <rdfs:label xml:lang="en">Continue</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#Created -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#Created">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">201</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
+        <rdfs:label xml:lang="en">Created</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#ExpectationFailed -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#ExpectationFailed">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">417</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
+        <rdfs:label xml:lang="en">Expectation Failed</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#FailedDependency -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#FailedDependency">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">424</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://www.ietf.org/rfc/rfc4918.txt"/>
+        <rdfs:label xml:lang="en">Failed Dependency</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#Forbidden -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#Forbidden">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">403</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
+        <rdfs:label xml:lang="en">Forbidden</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#Found -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#Found">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">302</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
+        <rdfs:label xml:lang="en">Found</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#GatewayTimeout -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#GatewayTimeout">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">504</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
+        <rdfs:label xml:lang="en">Gateway Timeout</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#Gone -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#Gone">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">410</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
+        <rdfs:label xml:lang="en">Gone</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#HTTPVersionNotSupported -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#HTTPVersionNotSupported">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">505</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
+        <rdfs:label xml:lang="en">HTTP Version Not Supported</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#IMUsed -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#IMUsed">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">226</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://www.ietf.org/rfc/rfc3229.txt"/>
+        <rdfs:label xml:lang="en">IM Used</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#InsufficientStorage -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#InsufficientStorage">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">507</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://www.ietf.org/rfc/rfc4918.txt"/>
+        <rdfs:label xml:lang="en">Insufficient Storage</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#InternalServerError -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#InternalServerError">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
+        <rdfs:label xml:lang="en">Internal Server Error</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#LengthRequired -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#LengthRequired">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">411</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
+        <rdfs:label xml:lang="en">Length Required</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#Locked -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#Locked">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">423</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://www.ietf.org/rfc/rfc4918.txt"/>
+        <rdfs:label xml:lang="en">Locked</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#MethodNotAllowed -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#MethodNotAllowed">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">405</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
+        <rdfs:label xml:lang="en">Method Not Allowed</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#MovedPermanently -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#MovedPermanently">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">301</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
+        <rdfs:label xml:lang="en">Moved Permanently</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#MultiStatus -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#MultiStatus">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">207</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://www.ietf.org/rfc/rfc4918.txt"/>
+        <rdfs:label xml:lang="en">Multi-Status</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#MultipleChoices -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#MultipleChoices">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
+        <rdfs:label xml:lang="en">Multiple Choices</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#NoContent -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#NoContent">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">204</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
+        <rdfs:label xml:lang="en">No Content</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#NonAuthoritativeInformation -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#NonAuthoritativeInformation">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">203</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
+        <rdfs:label xml:lang="en">Non-Authoritative Information</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#NotAcceptable -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#NotAcceptable">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">406</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
+        <rdfs:label xml:lang="en">Not Acceptable</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#NotExtended -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#NotExtended">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">510</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://www.ietf.org/rfc/rfc2774.txt"/>
+        <rdfs:label xml:lang="en">Not Extended</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#NotFound -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#NotFound">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">404</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
+        <rdfs:label xml:lang="en">Not Found</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#NotImplemented -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#NotImplemented">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">501</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
+        <rdfs:label xml:lang="en">Not Implemented</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#NotModified -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#NotModified">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">304</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
+        <rdfs:label xml:lang="en">Not Modified</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#OK -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#OK">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
+        <rdfs:label xml:lang="en">OK</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#PartialContent -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#PartialContent">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">206</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
+        <rdfs:label xml:lang="en">Partial Content</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#PaymentRequired -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#PaymentRequired">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">402</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
+        <rdfs:label xml:lang="en">Payment Required</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#PreconditionFailed -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#PreconditionFailed">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">412</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
+        <rdfs:label xml:lang="en">Precondition Failed</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#Processing -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#Processing">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">102</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://www.ietf.org/rfc/rfc2518.txt"/>
+        <rdfs:label xml:lang="en">Processing</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#ProxyAuthenticationRequired -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#ProxyAuthenticationRequired">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">407</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
+        <rdfs:label xml:lang="en">Proxy Authentication Required</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#RequestEntityTooLarge -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#RequestEntityTooLarge">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">413</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
+        <rdfs:label xml:lang="en">Request Entity Too Large</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#RequestTimeout -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#RequestTimeout">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">408</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
+        <rdfs:label xml:lang="en">Request Timeout</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#RequestURITooLong -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#RequestURITooLong">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">414</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
+        <rdfs:label xml:lang="en">Request-URI Too Long</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#RequestedRangeNotSatisfiable -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#RequestedRangeNotSatisfiable">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">416</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
+        <rdfs:label xml:lang="en">Requested Range Not Satisfiable</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#Reserved -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#Reserved">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">306</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
+        <rdfs:label xml:lang="en">(Reserved)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#ResetContent -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#ResetContent">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">205</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
+        <rdfs:label xml:lang="en">Reset Content</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#SeeOther -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#SeeOther">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">303</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
+        <rdfs:label xml:lang="en">See Other</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#ServiceUnavailable -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#ServiceUnavailable">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">503</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
+        <rdfs:label xml:lang="en">Service Unavailable</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#SwitchingProtocols -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#SwitchingProtocols">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">101</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
+        <rdfs:label xml:lang="en">Switching Protocols</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#TemporaryRedirect -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#TemporaryRedirect">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">307</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
+        <rdfs:label xml:lang="en">Temporary Redirect</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#Unauthorized -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#Unauthorized">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">401</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
+        <rdfs:label xml:lang="en">Unauthorized</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#UnprocessableEntity -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#UnprocessableEntity">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">422</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://www.ietf.org/rfc/rfc4918.txt"/>
+        <rdfs:label xml:lang="en">Unprocessable Entity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#UnsupportedMediaType -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#UnsupportedMediaType">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">415</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
+        <rdfs:label xml:lang="en">Unsupported Media Type</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#UpgradeRequired -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#UpgradeRequired">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">426</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://www.ietf.org/rfc/rfc2817.txt"/>
+        <rdfs:label xml:lang="en">Upgrade Required</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#UseProxy -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#UseProxy">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">305</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
+        <rdfs:label xml:lang="en">Use Proxy</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/http/sc#VariantAlsoNegotiates -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/http/sc#VariantAlsoNegotiates">
+        <rdf:type rdf:resource="http://w3id.org/http#StatusCode"/>
+        <statusCodeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">506</statusCodeNumber>
+        <rdfs:isDefinedBy rdf:resource="http://www.ietf.org/rfc/rfc2295.txt"/>
+        <rdfs:label xml:lang="en">Variant Also Negotiates (Experimental)</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/ -->
+
+

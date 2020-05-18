@@ -1,0 +1,3155 @@
+<h2 id="crossreference" class="list">Cross reference for HTTP Ontology classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by HTTP Ontology.
+<div id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://w3id.org/http/sc#ClientError" title="http://w3id.org/http/sc#ClientError">Client Error</a>
+      </li>
+      <li>
+         <a href="#Connection" title="http://w3id.org/http#Connection">Connection</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/content#Content" title="http://w3id.org/http/content#Content">Content</a>
+      </li>
+      <li>
+         <a href="#FinalResponse" title="http://w3id.org/http#FinalResponse">Final</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/sparql-service-description#Graph"
+            title="http://www.w3.org/ns/sparql-service-description#Graph">Graph</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#Informational" title="http://w3id.org/http/sc#Informational">Informational</a>
+      </li>
+      <li>
+         <a href="#InterimResponse" title="http://w3id.org/http#InterimResponse">Interim</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/headers#LocationHeader" title="http://w3id.org/http/headers#LocationHeader">
+            <span>location header</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Message" title="http://w3id.org/http#Message">Message</a>
+      </li>
+      <li>
+         <a href="#Header" title="http://w3id.org/http#Header">Message Header</a>
+      </li>
+      <li>
+         <a href="#Method" title="http://w3id.org/http#Method">Method</a>
+      </li>
+      <li>
+         <a href="#QueryParam" title="http://w3id.org/http#QueryParam">Query Parameter</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/content#ContentAsRDF" title="http://w3id.org/http/content#ContentAsRDF">RDF Content</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#Redirection" title="http://w3id.org/http/sc#Redirection">Redirection</a>
+      </li>
+      <li>
+         <a href="#Request" title="http://w3id.org/http#Request">Request</a>
+      </li>
+      <li>
+         <a href="#Response" title="http://w3id.org/http#Response">Response</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#ServerError" title="http://w3id.org/http/sc#ServerError">Server Error</a>
+      </li>
+      <li>
+         <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#Successful" title="http://w3id.org/http/sc#Successful">Successful</a>
+      </li>
+      <li>
+         <a href="#URI" title="http://w3id.org/http#URI">URI description</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://w3id.org/http/sc#ClientError">
+      <h3>Client Error<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#ClientError</p>
+      <div class="comment">
+         <span class="markdown">A status code starting with 4</span>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup> 
+            <span class="logic">and</span> (<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">some</span> )</dd>
+      </dl>
+   </div>
+   <div class="entity" id="Connection">
+      <h3>Connection<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http#Connection</p>
+      <div class="comment">
+         <span class="markdown">A connection used for HTTP transfer.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#connectionAuthority" title="http://w3id.org/http#connectionAuthority">Connection authority</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#requests" title="http://w3id.org/http#requests">Requests</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/content#Content">
+      <h3>Content<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/content#Content</p>
+      <div class="comment">
+         <span class="markdown">Representation of a content which can associated to various formats.</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://w3id.org/http/content#ContentAsRDF" title="http://w3id.org/http/content#ContentAsRDF">RDF Content</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#body" title="http://w3id.org/http#body">Entity Body</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FinalResponse">
+      <h3>Final<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http#FinalResponse</p>
+      <div class="comment">
+         <span class="markdown">A final response.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Response" title="http://w3id.org/http#Response">Response</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#InterimResponse" title="http://w3id.org/http#InterimResponse">Interim</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/sparql-service-description#Graph">
+      <h3>Graph<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/sparql-service-description#Graph</p>
+      <div class="comment">
+         <span class="markdown">An instance of sd:Graph represents the description of an RDF graph.</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://w3id.org/http/content#about" title="http://w3id.org/http/content#about">RDF Content Graph</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#Informational">
+      <h3>Informational<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#Informational</p>
+      <div class="comment">
+         <span class="markdown">A status code starting with 1, denoting Status an informational response</span>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup> 
+            <span class="logic">and</span> (<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">some</span> )</dd>
+      </dl>
+   </div>
+   <div class="entity" id="InterimResponse">
+      <h3>Interim<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http#InterimResponse</p>
+      <div class="comment">
+         <span class="markdown">An interim response.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Response" title="http://w3id.org/http#Response">Response</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#FinalResponse" title="http://w3id.org/http#FinalResponse">Final</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/headers#LocationHeader">
+      <h3>location header<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/headers#LocationHeader</p>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#Header" title="http://w3id.org/http#Header">Message Header</a>
+            <sup class="type-c" title="class">c</sup> 
+            <span class="logic">and</span> (<a href="#hdrName" title="http://w3id.org/http#hdrName">Field name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">value</span> Location)</dd>
+         <dt>has super-classes</dt>
+         <dd/>
+      </dl>
+   </div>
+   <div class="entity" id="Message">
+      <h3>Message<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http#Message</p>
+      <div class="comment">
+         <span class="markdown">An HTTP message.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#body" title="http://w3id.org/http#body">Entity Body</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#httpVersion" title="http://w3id.org/http#httpVersion">HTTP version</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#headers" title="http://w3id.org/http#headers">Headers</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Header">
+      <h3>Message Header<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http#Header</p>
+      <div class="comment">
+         <span class="markdown">A header in an HTTP message.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hdrName" title="http://w3id.org/http#hdrName">Field name</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#fieldValue" title="http://w3id.org/http#fieldValue">Field value</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://w3id.org/http/headers#hasLocationHeader" title="http://w3id.org/http/headers#hasLocationHeader">has location header</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#headers" title="http://w3id.org/http#headers">Headers</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://w3id.org/http/headers#hasLocationHeader" title="http://w3id.org/http/headers#hasLocationHeader">has location header</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Method">
+      <h3>Method<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http#Method</p>
+      <div class="comment">
+         <span class="markdown">The HTTP method used for the request.</span>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#methodName" title="http://w3id.org/http#methodName">Method name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">some</span> 
+            <span class="dotted" title="http://w3id.org/http#notEmptyToken">Non-empty token</span>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#methodName" title="http://w3id.org/http#methodName">Method name</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#mthd" title="http://w3id.org/http#mthd">Method</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#http://w3id.org/http/mthd#CONNECT" title="http://w3id.org/http/mthd#CONNECT">CONNECT</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/mthd#DELETE" title="http://w3id.org/http/mthd#DELETE">DELETE</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/mthd#GET" title="http://w3id.org/http/mthd#GET">GET</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/mthd#HEAD" title="http://w3id.org/http/mthd#HEAD">HEAD</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/mthd#OPTIONS" title="http://w3id.org/http/mthd#OPTIONS">OPTIONS</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/mthd#PATCH" title="http://w3id.org/http/mthd#PATCH">PATCH</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/mthd#POST" title="http://w3id.org/http/mthd#POST">POST</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/mthd#PUT" title="http://w3id.org/http/mthd#PUT">PUT</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/mthd#TRACE" title="http://w3id.org/http/mthd#TRACE">TRACE</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="QueryParam">
+      <h3>Query Parameter<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http#QueryParam</p>
+      <div class="comment">
+         <span class="markdown">A parameter for a part of a header value.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#paramName" title="http://w3id.org/http#paramName">Parameter name</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#paramValue" title="http://w3id.org/http#paramValue">Parameter value</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#queryParams" title="http://w3id.org/http#queryParams">Query parameters</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/content#ContentAsRDF">
+      <h3>RDF Content<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/content#ContentAsRDF</p>
+      <div class="comment">
+         <span class="markdown">RDF Content embedded in the body of an HTTP message</span>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#http://w3id.org/http/content#about" title="http://w3id.org/http/content#about">RDF Content Graph</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">exactly</span> 1</dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://w3id.org/http/content#Content" title="http://w3id.org/http/content#Content">Content</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://w3id.org/http/content#about" title="http://w3id.org/http/content#about">RDF Content Graph</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#Redirection">
+      <h3>Redirection<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#Redirection</p>
+      <div class="comment">
+         <span class="markdown">A status code starting with 3</span>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup> 
+            <span class="logic">and</span> (<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">some</span> )</dd>
+      </dl>
+   </div>
+   <div class="entity" id="Request">
+      <h3>Request<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http#Request</p>
+      <div class="comment">
+         <span class="markdown">An HTTP request.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#uri" title="http://w3id.org/http#uri">Effective request URI</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#mthd" title="http://w3id.org/http#mthd">Method</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#resp" title="http://w3id.org/http#resp">Response</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Response" title="http://w3id.org/http#Response">Response</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Response">
+      <h3>Response<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http#Response</p>
+      <div class="comment">
+         <span class="markdown">An HTTP response.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#FinalResponse" title="http://w3id.org/http#FinalResponse">Final</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#InterimResponse" title="http://w3id.org/http#InterimResponse">Interim</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#sc" title="http://w3id.org/http#sc">Status code</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#resp" title="http://w3id.org/http#resp">Response</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Request" title="http://w3id.org/http#Request">Request</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#ServerError">
+      <h3>Server Error<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#ServerError</p>
+      <div class="comment">
+         <span class="markdown">A status code starting with 5</span>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup> 
+            <span class="logic">and</span> (<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">some</span> )</dd>
+      </dl>
+   </div>
+   <div class="entity" id="StatusCode">
+      <h3>Status code<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http#StatusCode</p>
+      <div class="comment">
+         <span class="markdown">The status code of an HTTP response.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231#section-6">http://tools.ietf.org/rfc/rfc7231#section-6</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">some</span> 
+            <span class="dotted" title="http://w3id.org/http#threeDigit">3-digit integer</span>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#sc" title="http://w3id.org/http#sc">Status code</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#http://w3id.org/http/sc#Reserved" title="http://w3id.org/http/sc#Reserved">(Reserved)</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#Accepted" title="http://w3id.org/http/sc#Accepted">Accepted</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#BadGateway" title="http://w3id.org/http/sc#BadGateway">Bad Gateway</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#BadRequest" title="http://w3id.org/http/sc#BadRequest">Bad Request</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#Conflict" title="http://w3id.org/http/sc#Conflict">Conflict</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#Continue" title="http://w3id.org/http/sc#Continue">Continue</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#Created" title="http://w3id.org/http/sc#Created">Created</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#ExpectationFailed" title="http://w3id.org/http/sc#ExpectationFailed">Expectation Failed</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#FailedDependency" title="http://w3id.org/http/sc#FailedDependency">Failed Dependency</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#Forbidden" title="http://w3id.org/http/sc#Forbidden">Forbidden</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#Found" title="http://w3id.org/http/sc#Found">Found</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#GatewayTimeout" title="http://w3id.org/http/sc#GatewayTimeout">Gateway Timeout</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#Gone" title="http://w3id.org/http/sc#Gone">Gone</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#HTTPVersionNotSupported" title="http://w3id.org/http/sc#HTTPVersionNotSupported">HTTP Version Not Supported</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#IMUsed" title="http://w3id.org/http/sc#IMUsed">IM Used</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#InsufficientStorage" title="http://w3id.org/http/sc#InsufficientStorage">Insufficient Storage</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#InternalServerError" title="http://w3id.org/http/sc#InternalServerError">Internal Server Error</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#LengthRequired" title="http://w3id.org/http/sc#LengthRequired">Length Required</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#Locked" title="http://w3id.org/http/sc#Locked">Locked</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#MethodNotAllowed" title="http://w3id.org/http/sc#MethodNotAllowed">Method Not Allowed</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#MovedPermanently" title="http://w3id.org/http/sc#MovedPermanently">Moved Permanently</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#MultiStatus" title="http://w3id.org/http/sc#MultiStatus">Multi-Status</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#MultipleChoices" title="http://w3id.org/http/sc#MultipleChoices">Multiple Choices</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#NoContent" title="http://w3id.org/http/sc#NoContent">No Content</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#NonAuthoritativeInformation"
+               title="http://w3id.org/http/sc#NonAuthoritativeInformation">Non-Authoritative Information</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#NotAcceptable" title="http://w3id.org/http/sc#NotAcceptable">Not Acceptable</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#NotExtended" title="http://w3id.org/http/sc#NotExtended">Not Extended</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#NotFound" title="http://w3id.org/http/sc#NotFound">Not Found</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#NotImplemented" title="http://w3id.org/http/sc#NotImplemented">Not Implemented</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#NotModified" title="http://w3id.org/http/sc#NotModified">Not Modified</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#OK" title="http://w3id.org/http/sc#OK">OK</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#PartialContent" title="http://w3id.org/http/sc#PartialContent">Partial Content</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#PaymentRequired" title="http://w3id.org/http/sc#PaymentRequired">Payment Required</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#PreconditionFailed" title="http://w3id.org/http/sc#PreconditionFailed">Precondition Failed</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#Processing" title="http://w3id.org/http/sc#Processing">Processing</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#ProxyAuthenticationRequired"
+               title="http://w3id.org/http/sc#ProxyAuthenticationRequired">Proxy Authentication Required</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#RequestEntityTooLarge" title="http://w3id.org/http/sc#RequestEntityTooLarge">Request Entity Too Large</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#RequestTimeout" title="http://w3id.org/http/sc#RequestTimeout">Request Timeout</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#RequestURITooLong" title="http://w3id.org/http/sc#RequestURITooLong">Request-URI Too Long</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#RequestedRangeNotSatisfiable"
+               title="http://w3id.org/http/sc#RequestedRangeNotSatisfiable">Requested Range Not Satisfiable</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#ResetContent" title="http://w3id.org/http/sc#ResetContent">Reset Content</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#SeeOther" title="http://w3id.org/http/sc#SeeOther">See Other</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#ServiceUnavailable" title="http://w3id.org/http/sc#ServiceUnavailable">Service Unavailable</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#SwitchingProtocols" title="http://w3id.org/http/sc#SwitchingProtocols">Switching Protocols</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#TemporaryRedirect" title="http://w3id.org/http/sc#TemporaryRedirect">Temporary Redirect</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#Unauthorized" title="http://w3id.org/http/sc#Unauthorized">Unauthorized</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#UnprocessableEntity" title="http://w3id.org/http/sc#UnprocessableEntity">Unprocessable Entity</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#UnsupportedMediaType" title="http://w3id.org/http/sc#UnsupportedMediaType">Unsupported Media Type</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#UpgradeRequired" title="http://w3id.org/http/sc#UpgradeRequired">Upgrade Required</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#UseProxy" title="http://w3id.org/http/sc#UseProxy">Use Proxy</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/sc#VariantAlsoNegotiates" title="http://w3id.org/http/sc#VariantAlsoNegotiates">Variant Also Negotiates (Experimental)</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#Successful">
+      <h3>Successful<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#Successful</p>
+      <div class="comment">
+         <span class="markdown">A status code starting with 2, denoting a successful interaction</span>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup> 
+            <span class="logic">and</span> (<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">some</span> )</dd>
+      </dl>
+   </div>
+   <div class="entity" id="URI">
+      <h3>URI description<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http#URI</p>
+      <div class="comment">
+         <span class="markdown">A semantic description of the syntactic parts composing a URI.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#queryParams" title="http://w3id.org/http#queryParams">Query parameters</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#uri" title="http://w3id.org/http#uri">Effective request URI</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#uri" title="http://w3id.org/http#uri">Effective request URI</a>
+      </li>
+      <li>
+         <a href="#body" title="http://w3id.org/http#body">Entity Body</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/headers#hasLocationHeader" title="http://w3id.org/http/headers#hasLocationHeader">
+            <span>has location header</span>
+         </a>
+      </li>
+      <li>
+         <a href="#headers" title="http://w3id.org/http#headers">Headers</a>
+      </li>
+      <li>
+         <a href="#link" title="http://w3id.org/http#link">
+            <span>link</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/headers#Location" title="http://w3id.org/http/headers#Location">
+            <span>location</span>
+         </a>
+      </li>
+      <li>
+         <a href="#mthd" title="http://w3id.org/http#mthd">Method</a>
+      </li>
+      <li>
+         <a href="#queryParams" title="http://w3id.org/http#queryParams">Query parameters</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/content#about" title="http://w3id.org/http/content#about">RDF Content Graph</a>
+      </li>
+      <li>
+         <a href="#requests" title="http://w3id.org/http#requests">Requests</a>
+      </li>
+      <li>
+         <a href="#resp" title="http://w3id.org/http#resp">Response</a>
+      </li>
+      <li>
+         <a href="#sc" title="http://w3id.org/http#sc">Status code</a>
+      </li>
+   </ul>
+   <div class="entity" id="uri">
+      <h3>Effective request URI<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http#uri</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Request" title="http://w3id.org/http#Request">Request</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#URI" title="http://w3id.org/http#URI">URI description</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="body">
+      <h3>Entity Body<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http#body</p>
+      <div class="comment">
+         <span class="markdown">The entity body of an HTTP message.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Message" title="http://w3id.org/http#Message">Message</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://w3id.org/http/content#Content" title="http://w3id.org/http/content#Content">Content</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://w3id.org/http/headers#hasLocationHeader">
+      <h3>has location header<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/headers#hasLocationHeader</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Header" title="http://w3id.org/http#Header">Message Header</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Header" title="http://w3id.org/http#Header">Message Header</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="headers">
+      <h3>Headers<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http#headers</p>
+      <div class="comment">
+         <span class="markdown">The headers in an HTTP message.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Message" title="http://w3id.org/http#Message">Message</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Header" title="http://w3id.org/http#Header">Message Header</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="link">
+      <h3>link<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http#link</p>
+   </div>
+   <div class="entity" id="http://w3id.org/http/headers#Location">
+      <h3>location<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/headers#Location</p>
+      <div class="description">
+         <dl>
+            <dt>has sub-property chains</dt>
+            <dd>
+               <a href="#headers" title="http://w3id.org/http#headers">Headers</a>
+               <sup class="type-op" title="object property">op</sup> 
+               <span class="logic">o</span> 
+               <a href="#http://w3id.org/http/headers#hasLocationHeader" title="http://w3id.org/http/headers#hasLocationHeader">has location header</a>
+               <sup class="type-op" title="object property">op</sup> 
+               <span class="logic">o</span> 
+               <a href="#link" title="http://w3id.org/http#link">link</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="mthd">
+      <h3>Method<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http#mthd</p>
+      <div class="comment">
+         <span class="markdown">The HTTP method used for the HTTP request.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Request" title="http://w3id.org/http#Request">Request</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Method" title="http://w3id.org/http#Method">Method</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="queryParams">
+      <h3>Query parameters<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http#queryParams</p>
+      <div class="comment">
+         <span class="markdown">The parameters found in the query string part of a URL.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#URI" title="http://w3id.org/http#URI">URI description</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#QueryParam" title="http://w3id.org/http#QueryParam">Query Parameter</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://w3id.org/http/content#about">
+      <h3>RDF Content Graph<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/content#about</p>
+      <div class="comment">
+         <span class="markdown">A property associating an RDF content with its RDF graph</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://w3id.org/http/content#ContentAsRDF" title="http://w3id.org/http/content#ContentAsRDF">RDF Content</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://www.w3.org/ns/sparql-service-description#Graph"
+                  title="http://www.w3.org/ns/sparql-service-description#Graph">Graph</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="requests">
+      <h3>Requests<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http#requests</p>
+      <div class="comment">
+         <span class="markdown">The HTTP requests made via a connection.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Connection" title="http://w3id.org/http#Connection">Connection</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="resp">
+      <h3>Response<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http#resp</p>
+      <div class="comment">
+         <span class="markdown">The HTTP response sent in answer to an HTTP request.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Request" title="http://w3id.org/http#Request">Request</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Response" title="http://w3id.org/http#Response">Response</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="sc">
+      <h3>Status code<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http#sc</p>
+      <div class="comment">
+         <span class="markdown">The status code of an HTTP response.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231#section-6">http://tools.ietf.org/rfc/rfc7231#section-6</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Response" title="http://w3id.org/http#Response">Response</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#authority" title="http://w3id.org/http#authority">Authority</a>
+      </li>
+      <li>
+         <a href="#connectionAuthority" title="http://w3id.org/http#connectionAuthority">Connection authority</a>
+      </li>
+      <li>
+         <a href="#hdrName" title="http://w3id.org/http#hdrName">Field name</a>
+      </li>
+      <li>
+         <a href="#fieldValue" title="http://w3id.org/http#fieldValue">Field value</a>
+      </li>
+      <li>
+         <a href="#fragment" title="http://w3id.org/http#fragment">Fragment</a>
+      </li>
+      <li>
+         <a href="#httpVersion" title="http://w3id.org/http#httpVersion">HTTP version</a>
+      </li>
+      <li>
+         <a href="#methodName" title="http://w3id.org/http#methodName">Method name</a>
+      </li>
+      <li>
+         <a href="#paramName" title="http://w3id.org/http#paramName">Parameter name</a>
+      </li>
+      <li>
+         <a href="#paramValue" title="http://w3id.org/http#paramValue">Parameter value</a>
+      </li>
+      <li>
+         <a href="#path" title="http://w3id.org/http#path">Path</a>
+      </li>
+      <li>
+         <a href="#query" title="http://w3id.org/http#query">Query</a>
+      </li>
+      <li>
+         <a href="#scheme" title="http://w3id.org/http#scheme">Scheme</a>
+      </li>
+      <li>
+         <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+      </li>
+   </ul>
+   <div class="entity" id="authority">
+      <h3>Authority<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http#authority</p>
+      <div class="comment">
+         <span class="markdown">The authority part of an URI.</span>
+      </div>
+   </div>
+   <div class="entity" id="connectionAuthority">
+      <h3>Connection authority<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http#connectionAuthority</p>
+      <div class="comment">
+         <span class="markdown">The authority of a connection used for the HTTP transfer.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Connection" title="http://w3id.org/http#Connection">Connection</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hdrName">
+      <h3>Field name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http#hdrName</p>
+      <div class="comment">
+         <span class="markdown">The name of an HTTP header field.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Header" title="http://w3id.org/http#Header">Message Header</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="fieldValue">
+      <h3>Field value<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http#fieldValue</p>
+      <div class="comment">
+         <span class="markdown">The value of an HTTP header field.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Header" title="http://w3id.org/http#Header">Message Header</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="fragment">
+      <h3>Fragment<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http#fragment</p>
+      <div class="comment">
+         <span class="markdown">The fragment part of an URI.</span>
+      </div>
+   </div>
+   <div class="entity" id="httpVersion">
+      <h3>HTTP version<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http#httpVersion</p>
+      <div class="comment">
+         <span class="markdown">The HTTP version of an HTTP message.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Message" title="http://w3id.org/http#Message">Message</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="methodName">
+      <h3>Method name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http#methodName</p>
+      <div class="comment">
+         <span class="markdown">The HTTP method name used for the HTTP request.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Method" title="http://w3id.org/http#Method">Method</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://w3id.org/http#notEmptyToken">Non-empty token</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="paramName">
+      <h3>Parameter name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http#paramName</p>
+      <div class="comment">
+         <span class="markdown">The name of a query parameter.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#QueryParam" title="http://w3id.org/http#QueryParam">Query Parameter</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="paramValue">
+      <h3>Parameter value<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http#paramValue</p>
+      <div class="comment">
+         <span class="markdown">The literal value of a query parameter.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#QueryParam" title="http://w3id.org/http#QueryParam">Query Parameter</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="path">
+      <h3>Path<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http#path</p>
+      <div class="comment">
+         <span class="markdown">The path part of an URI.</span>
+      </div>
+   </div>
+   <div class="entity" id="query">
+      <h3>Query<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http#query</p>
+      <div class="comment">
+         <span class="markdown">The query part of an URI.</span>
+      </div>
+   </div>
+   <div class="entity" id="scheme">
+      <h3>Scheme<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http#scheme</p>
+      <div class="comment">
+         <span class="markdown">The scheme part of an URI.</span>
+      </div>
+   </div>
+   <div class="entity" id="statusCodeNumber">
+      <h3>Status code number<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http#statusCodeNumber</p>
+      <div class="comment">
+         <span class="markdown">The status code number.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231#section-6">http://tools.ietf.org/rfc/rfc7231#section-6</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://w3id.org/http#threeDigit">3-digit integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://w3id.org/http/sc#Reserved" title="http://w3id.org/http/sc#Reserved">(Reserved)</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#Accepted" title="http://w3id.org/http/sc#Accepted">Accepted</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#BadGateway" title="http://w3id.org/http/sc#BadGateway">Bad Gateway</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#BadRequest" title="http://w3id.org/http/sc#BadRequest">Bad Request</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#Conflict" title="http://w3id.org/http/sc#Conflict">Conflict</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/mthd#CONNECT" title="http://w3id.org/http/mthd#CONNECT">CONNECT</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#Continue" title="http://w3id.org/http/sc#Continue">Continue</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#Created" title="http://w3id.org/http/sc#Created">Created</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/mthd#DELETE" title="http://w3id.org/http/mthd#DELETE">DELETE</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#ExpectationFailed" title="http://w3id.org/http/sc#ExpectationFailed">Expectation Failed</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#FailedDependency" title="http://w3id.org/http/sc#FailedDependency">Failed Dependency</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#Forbidden" title="http://w3id.org/http/sc#Forbidden">Forbidden</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#Found" title="http://w3id.org/http/sc#Found">Found</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#GatewayTimeout" title="http://w3id.org/http/sc#GatewayTimeout">Gateway Timeout</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/mthd#GET" title="http://w3id.org/http/mthd#GET">GET</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#Gone" title="http://w3id.org/http/sc#Gone">Gone</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/mthd#HEAD" title="http://w3id.org/http/mthd#HEAD">HEAD</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#HTTPVersionNotSupported" title="http://w3id.org/http/sc#HTTPVersionNotSupported">HTTP Version Not Supported</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#IMUsed" title="http://w3id.org/http/sc#IMUsed">IM Used</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#InsufficientStorage" title="http://w3id.org/http/sc#InsufficientStorage">Insufficient Storage</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#InternalServerError" title="http://w3id.org/http/sc#InternalServerError">Internal Server Error</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#LengthRequired" title="http://w3id.org/http/sc#LengthRequired">Length Required</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#Locked" title="http://w3id.org/http/sc#Locked">Locked</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#MethodNotAllowed" title="http://w3id.org/http/sc#MethodNotAllowed">Method Not Allowed</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#MovedPermanently" title="http://w3id.org/http/sc#MovedPermanently">Moved Permanently</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#MultiStatus" title="http://w3id.org/http/sc#MultiStatus">Multi-Status</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#MultipleChoices" title="http://w3id.org/http/sc#MultipleChoices">Multiple Choices</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#NoContent" title="http://w3id.org/http/sc#NoContent">No Content</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#NonAuthoritativeInformation"
+            title="http://w3id.org/http/sc#NonAuthoritativeInformation">Non-Authoritative Information</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#NotAcceptable" title="http://w3id.org/http/sc#NotAcceptable">Not Acceptable</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#NotExtended" title="http://w3id.org/http/sc#NotExtended">Not Extended</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#NotFound" title="http://w3id.org/http/sc#NotFound">Not Found</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#NotImplemented" title="http://w3id.org/http/sc#NotImplemented">Not Implemented</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#NotModified" title="http://w3id.org/http/sc#NotModified">Not Modified</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#OK" title="http://w3id.org/http/sc#OK">OK</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/mthd#OPTIONS" title="http://w3id.org/http/mthd#OPTIONS">OPTIONS</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#PartialContent" title="http://w3id.org/http/sc#PartialContent">Partial Content</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/mthd#PATCH" title="http://w3id.org/http/mthd#PATCH">PATCH</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#PaymentRequired" title="http://w3id.org/http/sc#PaymentRequired">Payment Required</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/mthd#POST" title="http://w3id.org/http/mthd#POST">POST</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#PreconditionFailed" title="http://w3id.org/http/sc#PreconditionFailed">Precondition Failed</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#Processing" title="http://w3id.org/http/sc#Processing">Processing</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#ProxyAuthenticationRequired"
+            title="http://w3id.org/http/sc#ProxyAuthenticationRequired">Proxy Authentication Required</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/mthd#PUT" title="http://w3id.org/http/mthd#PUT">PUT</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#RequestEntityTooLarge" title="http://w3id.org/http/sc#RequestEntityTooLarge">Request Entity Too Large</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#RequestTimeout" title="http://w3id.org/http/sc#RequestTimeout">Request Timeout</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#RequestURITooLong" title="http://w3id.org/http/sc#RequestURITooLong">Request-URI Too Long</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#RequestedRangeNotSatisfiable"
+            title="http://w3id.org/http/sc#RequestedRangeNotSatisfiable">Requested Range Not Satisfiable</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#ResetContent" title="http://w3id.org/http/sc#ResetContent">Reset Content</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#SeeOther" title="http://w3id.org/http/sc#SeeOther">See Other</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#ServiceUnavailable" title="http://w3id.org/http/sc#ServiceUnavailable">Service Unavailable</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#SwitchingProtocols" title="http://w3id.org/http/sc#SwitchingProtocols">Switching Protocols</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#TemporaryRedirect" title="http://w3id.org/http/sc#TemporaryRedirect">Temporary Redirect</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/mthd#TRACE" title="http://w3id.org/http/mthd#TRACE">TRACE</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#Unauthorized" title="http://w3id.org/http/sc#Unauthorized">Unauthorized</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#UnprocessableEntity" title="http://w3id.org/http/sc#UnprocessableEntity">Unprocessable Entity</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#UnsupportedMediaType" title="http://w3id.org/http/sc#UnsupportedMediaType">Unsupported Media Type</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#UpgradeRequired" title="http://w3id.org/http/sc#UpgradeRequired">Upgrade Required</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#UseProxy" title="http://w3id.org/http/sc#UseProxy">Use Proxy</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/http/sc#VariantAlsoNegotiates" title="http://w3id.org/http/sc#VariantAlsoNegotiates">Variant Also Negotiates (Experimental)</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://w3id.org/http/sc#Reserved">
+      <h3>(Reserved)<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#Reserved</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"306"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#Accepted">
+      <h3>Accepted<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#Accepted</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"202"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#BadGateway">
+      <h3>Bad Gateway<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#BadGateway</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"502"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#BadRequest">
+      <h3>Bad Request<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#BadRequest</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"400"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#Conflict">
+      <h3>Conflict<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#Conflict</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"409"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/mthd#CONNECT">
+      <h3>CONNECT<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/mthd#CONNECT</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231#section-4.3.6">http://tools.ietf.org/rfc/rfc7231#section-4.3.6</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Method" title="http://w3id.org/http#Method">Method</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#methodName" title="http://w3id.org/http#methodName">Method name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"CONNECT"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#Continue">
+      <h3>Continue<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#Continue</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"100"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#Created">
+      <h3>Created<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#Created</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"201"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/mthd#DELETE">
+      <h3>DELETE<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/mthd#DELETE</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231#section-4.3.5">http://tools.ietf.org/rfc/rfc7231#section-4.3.5</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Method" title="http://w3id.org/http#Method">Method</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#methodName" title="http://w3id.org/http#methodName">Method name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"DELETE"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#ExpectationFailed">
+      <h3>Expectation Failed<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#ExpectationFailed</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"417"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#FailedDependency">
+      <h3>Failed Dependency<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#FailedDependency</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.ietf.org/rfc/rfc4918.txt">http://www.ietf.org/rfc/rfc4918.txt</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"424"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#Forbidden">
+      <h3>Forbidden<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#Forbidden</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"403"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#Found">
+      <h3>Found<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#Found</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"302"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#GatewayTimeout">
+      <h3>Gateway Timeout<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#GatewayTimeout</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"504"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/mthd#GET">
+      <h3>GET<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/mthd#GET</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231#section-4.3.1">http://tools.ietf.org/rfc/rfc7231#section-4.3.1</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Method" title="http://w3id.org/http#Method">Method</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#methodName" title="http://w3id.org/http#methodName">Method name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"GET"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#Gone">
+      <h3>Gone<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#Gone</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"410"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/mthd#HEAD">
+      <h3>HEAD<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/mthd#HEAD</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231#section-4.3.2">http://tools.ietf.org/rfc/rfc7231#section-4.3.2</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Method" title="http://w3id.org/http#Method">Method</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#methodName" title="http://w3id.org/http#methodName">Method name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"HEAD"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#HTTPVersionNotSupported">
+      <h3>HTTP Version Not Supported<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#HTTPVersionNotSupported</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"505"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#IMUsed">
+      <h3>IM Used<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#IMUsed</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.ietf.org/rfc/rfc3229.txt">http://www.ietf.org/rfc/rfc3229.txt</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"226"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#InsufficientStorage">
+      <h3>Insufficient Storage<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#InsufficientStorage</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.ietf.org/rfc/rfc4918.txt">http://www.ietf.org/rfc/rfc4918.txt</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"507"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#InternalServerError">
+      <h3>Internal Server Error<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#InternalServerError</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"500"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#LengthRequired">
+      <h3>Length Required<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#LengthRequired</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"411"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#Locked">
+      <h3>Locked<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#Locked</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.ietf.org/rfc/rfc4918.txt">http://www.ietf.org/rfc/rfc4918.txt</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"423"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#MethodNotAllowed">
+      <h3>Method Not Allowed<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#MethodNotAllowed</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"405"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#MovedPermanently">
+      <h3>Moved Permanently<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#MovedPermanently</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"301"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#MultiStatus">
+      <h3>Multi-Status<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#MultiStatus</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.ietf.org/rfc/rfc4918.txt">http://www.ietf.org/rfc/rfc4918.txt</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"207"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#MultipleChoices">
+      <h3>Multiple Choices<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#MultipleChoices</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"300"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#NoContent">
+      <h3>No Content<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#NoContent</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"204"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#NonAuthoritativeInformation">
+      <h3>Non-Authoritative Information<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#NonAuthoritativeInformation</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"203"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#NotAcceptable">
+      <h3>Not Acceptable<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#NotAcceptable</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"406"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#NotExtended">
+      <h3>Not Extended<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#NotExtended</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.ietf.org/rfc/rfc2774.txt">http://www.ietf.org/rfc/rfc2774.txt</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"510"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#NotFound">
+      <h3>Not Found<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#NotFound</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"404"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#NotImplemented">
+      <h3>Not Implemented<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#NotImplemented</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"501"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#NotModified">
+      <h3>Not Modified<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#NotModified</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"304"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#OK">
+      <h3>OK<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#OK</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"200"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/mthd#OPTIONS">
+      <h3>OPTIONS<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/mthd#OPTIONS</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231#section-4.3.7">http://tools.ietf.org/rfc/rfc7231#section-4.3.7</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Method" title="http://w3id.org/http#Method">Method</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#methodName" title="http://w3id.org/http#methodName">Method name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"OPTIONS"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#PartialContent">
+      <h3>Partial Content<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#PartialContent</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"206"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/mthd#PATCH">
+      <h3>PATCH<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/mthd#PATCH</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc5789">http://tools.ietf.org/rfc/rfc5789</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Method" title="http://w3id.org/http#Method">Method</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#methodName" title="http://w3id.org/http#methodName">Method name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"PATCH"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#PaymentRequired">
+      <h3>Payment Required<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#PaymentRequired</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"402"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/mthd#POST">
+      <h3>POST<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/mthd#POST</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231#section-4.3.3">http://tools.ietf.org/rfc/rfc7231#section-4.3.3</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Method" title="http://w3id.org/http#Method">Method</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#methodName" title="http://w3id.org/http#methodName">Method name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"POST"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#PreconditionFailed">
+      <h3>Precondition Failed<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#PreconditionFailed</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"412"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#Processing">
+      <h3>Processing<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#Processing</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.ietf.org/rfc/rfc2518.txt">http://www.ietf.org/rfc/rfc2518.txt</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"102"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#ProxyAuthenticationRequired">
+      <h3>Proxy Authentication Required<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#ProxyAuthenticationRequired</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"407"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/mthd#PUT">
+      <h3>PUT<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/mthd#PUT</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231#section-4.3.4">http://tools.ietf.org/rfc/rfc7231#section-4.3.4</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Method" title="http://w3id.org/http#Method">Method</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#methodName" title="http://w3id.org/http#methodName">Method name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"PUT"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#RequestEntityTooLarge">
+      <h3>Request Entity Too Large<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#RequestEntityTooLarge</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"413"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#RequestTimeout">
+      <h3>Request Timeout<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#RequestTimeout</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"408"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#RequestURITooLong">
+      <h3>Request-URI Too Long<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#RequestURITooLong</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"414"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#RequestedRangeNotSatisfiable">
+      <h3>Requested Range Not Satisfiable<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#RequestedRangeNotSatisfiable</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"416"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#ResetContent">
+      <h3>Reset Content<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#ResetContent</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"205"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#SeeOther">
+      <h3>See Other<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#SeeOther</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"303"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#ServiceUnavailable">
+      <h3>Service Unavailable<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#ServiceUnavailable</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"503"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#SwitchingProtocols">
+      <h3>Switching Protocols<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#SwitchingProtocols</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"101"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#TemporaryRedirect">
+      <h3>Temporary Redirect<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#TemporaryRedirect</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"307"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/mthd#TRACE">
+      <h3>TRACE<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/mthd#TRACE</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231#section-4.3.8">http://tools.ietf.org/rfc/rfc7231#section-4.3.8</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Method" title="http://w3id.org/http#Method">Method</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#methodName" title="http://w3id.org/http#methodName">Method name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"TRACE"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#Unauthorized">
+      <h3>Unauthorized<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#Unauthorized</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"401"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#UnprocessableEntity">
+      <h3>Unprocessable Entity<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#UnprocessableEntity</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.ietf.org/rfc/rfc4918.txt">http://www.ietf.org/rfc/rfc4918.txt</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"422"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#UnsupportedMediaType">
+      <h3>Unsupported Media Type<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#UnsupportedMediaType</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"415"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#UpgradeRequired">
+      <h3>Upgrade Required<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#UpgradeRequired</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.ietf.org/rfc/rfc2817.txt">http://www.ietf.org/rfc/rfc2817.txt</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"426"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#UseProxy">
+      <h3>Use Proxy<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#UseProxy</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"305"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/http/sc#VariantAlsoNegotiates">
+      <h3>Variant Also Negotiates (Experimental)<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/http/sc#VariantAlsoNegotiates</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.ietf.org/rfc/rfc2295.txt">http://www.ietf.org/rfc/rfc2295.txt</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"506"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </span>
+         </dd>
+      </dl>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>

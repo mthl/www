@@ -1,0 +1,336 @@
+<h2 id="overv" class="list">HTTP Ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul class="hlist">
+   <li>
+      <a href="#http://w3id.org/http/sc#ClientError" title="http://w3id.org/http/sc#ClientError">Client Error</a>
+   </li>
+   <li>
+      <a href="#Connection" title="http://w3id.org/http#Connection">Connection</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/content#Content" title="http://w3id.org/http/content#Content">Content</a>
+   </li>
+   <li>
+      <a href="#FinalResponse" title="http://w3id.org/http#FinalResponse">Final</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sparql-service-description#Graph"
+         title="http://www.w3.org/ns/sparql-service-description#Graph">Graph</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#Informational" title="http://w3id.org/http/sc#Informational">Informational</a>
+   </li>
+   <li>
+      <a href="#InterimResponse" title="http://w3id.org/http#InterimResponse">Interim</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/headers#LocationHeader" title="http://w3id.org/http/headers#LocationHeader">
+         <span>location header</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Message" title="http://w3id.org/http#Message">Message</a>
+   </li>
+   <li>
+      <a href="#Header" title="http://w3id.org/http#Header">Message Header</a>
+   </li>
+   <li>
+      <a href="#Method" title="http://w3id.org/http#Method">Method</a>
+   </li>
+   <li>
+      <a href="#QueryParam" title="http://w3id.org/http#QueryParam">Query Parameter</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/content#ContentAsRDF" title="http://w3id.org/http/content#ContentAsRDF">RDF Content</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#Redirection" title="http://w3id.org/http/sc#Redirection">Redirection</a>
+   </li>
+   <li>
+      <a href="#Request" title="http://w3id.org/http#Request">Request</a>
+   </li>
+   <li>
+      <a href="#Response" title="http://w3id.org/http#Response">Response</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#ServerError" title="http://w3id.org/http/sc#ServerError">Server Error</a>
+   </li>
+   <li>
+      <a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#Successful" title="http://w3id.org/http/sc#Successful">Successful</a>
+   </li>
+   <li>
+      <a href="#URI" title="http://w3id.org/http#URI">URI description</a>
+   </li>
+</ul><h4>Object Properties</h4><ul class="hlist">
+   <li>
+      <a href="#uri" title="http://w3id.org/http#uri">Effective request URI</a>
+   </li>
+   <li>
+      <a href="#body" title="http://w3id.org/http#body">Entity Body</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/headers#hasLocationHeader" title="http://w3id.org/http/headers#hasLocationHeader">
+         <span>has location header</span>
+      </a>
+   </li>
+   <li>
+      <a href="#headers" title="http://w3id.org/http#headers">Headers</a>
+   </li>
+   <li>
+      <a href="#link" title="http://w3id.org/http#link">
+         <span>link</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/headers#Location" title="http://w3id.org/http/headers#Location">
+         <span>location</span>
+      </a>
+   </li>
+   <li>
+      <a href="#mthd" title="http://w3id.org/http#mthd">Method</a>
+   </li>
+   <li>
+      <a href="#queryParams" title="http://w3id.org/http#queryParams">Query parameters</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/content#about" title="http://w3id.org/http/content#about">RDF Content Graph</a>
+   </li>
+   <li>
+      <a href="#requests" title="http://w3id.org/http#requests">Requests</a>
+   </li>
+   <li>
+      <a href="#resp" title="http://w3id.org/http#resp">Response</a>
+   </li>
+   <li>
+      <a href="#sc" title="http://w3id.org/http#sc">Status code</a>
+   </li>
+</ul><h4>Data Properties</h4><ul class="hlist">
+   <li>
+      <a href="#authority" title="http://w3id.org/http#authority">Authority</a>
+   </li>
+   <li>
+      <a href="#connectionAuthority" title="http://w3id.org/http#connectionAuthority">Connection authority</a>
+   </li>
+   <li>
+      <a href="#hdrName" title="http://w3id.org/http#hdrName">Field name</a>
+   </li>
+   <li>
+      <a href="#fieldValue" title="http://w3id.org/http#fieldValue">Field value</a>
+   </li>
+   <li>
+      <a href="#fragment" title="http://w3id.org/http#fragment">Fragment</a>
+   </li>
+   <li>
+      <a href="#httpVersion" title="http://w3id.org/http#httpVersion">HTTP version</a>
+   </li>
+   <li>
+      <a href="#methodName" title="http://w3id.org/http#methodName">Method name</a>
+   </li>
+   <li>
+      <a href="#paramName" title="http://w3id.org/http#paramName">Parameter name</a>
+   </li>
+   <li>
+      <a href="#paramValue" title="http://w3id.org/http#paramValue">Parameter value</a>
+   </li>
+   <li>
+      <a href="#path" title="http://w3id.org/http#path">Path</a>
+   </li>
+   <li>
+      <a href="#query" title="http://w3id.org/http#query">Query</a>
+   </li>
+   <li>
+      <a href="#scheme" title="http://w3id.org/http#scheme">Scheme</a>
+   </li>
+   <li>
+      <a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">Status code number</a>
+   </li>
+</ul><h4>Named Individuals</h4><ul class="hlist">
+   <li>
+      <a href="#http://w3id.org/http/sc#Reserved" title="http://w3id.org/http/sc#Reserved">(Reserved)</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#Accepted" title="http://w3id.org/http/sc#Accepted">Accepted</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#BadGateway" title="http://w3id.org/http/sc#BadGateway">Bad Gateway</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#BadRequest" title="http://w3id.org/http/sc#BadRequest">Bad Request</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#Conflict" title="http://w3id.org/http/sc#Conflict">Conflict</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/mthd#CONNECT" title="http://w3id.org/http/mthd#CONNECT">CONNECT</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#Continue" title="http://w3id.org/http/sc#Continue">Continue</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#Created" title="http://w3id.org/http/sc#Created">Created</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/mthd#DELETE" title="http://w3id.org/http/mthd#DELETE">DELETE</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#ExpectationFailed" title="http://w3id.org/http/sc#ExpectationFailed">Expectation Failed</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#FailedDependency" title="http://w3id.org/http/sc#FailedDependency">Failed Dependency</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#Forbidden" title="http://w3id.org/http/sc#Forbidden">Forbidden</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#Found" title="http://w3id.org/http/sc#Found">Found</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#GatewayTimeout" title="http://w3id.org/http/sc#GatewayTimeout">Gateway Timeout</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/mthd#GET" title="http://w3id.org/http/mthd#GET">GET</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#Gone" title="http://w3id.org/http/sc#Gone">Gone</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/mthd#HEAD" title="http://w3id.org/http/mthd#HEAD">HEAD</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#HTTPVersionNotSupported" title="http://w3id.org/http/sc#HTTPVersionNotSupported">HTTP Version Not Supported</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#IMUsed" title="http://w3id.org/http/sc#IMUsed">IM Used</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#InsufficientStorage" title="http://w3id.org/http/sc#InsufficientStorage">Insufficient Storage</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#InternalServerError" title="http://w3id.org/http/sc#InternalServerError">Internal Server Error</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#LengthRequired" title="http://w3id.org/http/sc#LengthRequired">Length Required</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#Locked" title="http://w3id.org/http/sc#Locked">Locked</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#MethodNotAllowed" title="http://w3id.org/http/sc#MethodNotAllowed">Method Not Allowed</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#MovedPermanently" title="http://w3id.org/http/sc#MovedPermanently">Moved Permanently</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#MultiStatus" title="http://w3id.org/http/sc#MultiStatus">Multi-Status</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#MultipleChoices" title="http://w3id.org/http/sc#MultipleChoices">Multiple Choices</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#NoContent" title="http://w3id.org/http/sc#NoContent">No Content</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#NonAuthoritativeInformation"
+         title="http://w3id.org/http/sc#NonAuthoritativeInformation">Non-Authoritative Information</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#NotAcceptable" title="http://w3id.org/http/sc#NotAcceptable">Not Acceptable</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#NotExtended" title="http://w3id.org/http/sc#NotExtended">Not Extended</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#NotFound" title="http://w3id.org/http/sc#NotFound">Not Found</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#NotImplemented" title="http://w3id.org/http/sc#NotImplemented">Not Implemented</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#NotModified" title="http://w3id.org/http/sc#NotModified">Not Modified</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#OK" title="http://w3id.org/http/sc#OK">OK</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/mthd#OPTIONS" title="http://w3id.org/http/mthd#OPTIONS">OPTIONS</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#PartialContent" title="http://w3id.org/http/sc#PartialContent">Partial Content</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/mthd#PATCH" title="http://w3id.org/http/mthd#PATCH">PATCH</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#PaymentRequired" title="http://w3id.org/http/sc#PaymentRequired">Payment Required</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/mthd#POST" title="http://w3id.org/http/mthd#POST">POST</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#PreconditionFailed" title="http://w3id.org/http/sc#PreconditionFailed">Precondition Failed</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#Processing" title="http://w3id.org/http/sc#Processing">Processing</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#ProxyAuthenticationRequired"
+         title="http://w3id.org/http/sc#ProxyAuthenticationRequired">Proxy Authentication Required</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/mthd#PUT" title="http://w3id.org/http/mthd#PUT">PUT</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#RequestEntityTooLarge" title="http://w3id.org/http/sc#RequestEntityTooLarge">Request Entity Too Large</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#RequestTimeout" title="http://w3id.org/http/sc#RequestTimeout">Request Timeout</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#RequestURITooLong" title="http://w3id.org/http/sc#RequestURITooLong">Request-URI Too Long</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#RequestedRangeNotSatisfiable"
+         title="http://w3id.org/http/sc#RequestedRangeNotSatisfiable">Requested Range Not Satisfiable</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#ResetContent" title="http://w3id.org/http/sc#ResetContent">Reset Content</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#SeeOther" title="http://w3id.org/http/sc#SeeOther">See Other</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#ServiceUnavailable" title="http://w3id.org/http/sc#ServiceUnavailable">Service Unavailable</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#SwitchingProtocols" title="http://w3id.org/http/sc#SwitchingProtocols">Switching Protocols</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#TemporaryRedirect" title="http://w3id.org/http/sc#TemporaryRedirect">Temporary Redirect</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/mthd#TRACE" title="http://w3id.org/http/mthd#TRACE">TRACE</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#Unauthorized" title="http://w3id.org/http/sc#Unauthorized">Unauthorized</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#UnprocessableEntity" title="http://w3id.org/http/sc#UnprocessableEntity">Unprocessable Entity</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#UnsupportedMediaType" title="http://w3id.org/http/sc#UnsupportedMediaType">Unsupported Media Type</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#UpgradeRequired" title="http://w3id.org/http/sc#UpgradeRequired">Upgrade Required</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#UseProxy" title="http://w3id.org/http/sc#UseProxy">Use Proxy</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/http/sc#VariantAlsoNegotiates" title="http://w3id.org/http/sc#VariantAlsoNegotiates">Variant Also Negotiates (Experimental)</a>
+   </li>
+</ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe> 
