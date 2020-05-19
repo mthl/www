@@ -239,6 +239,7 @@
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/http#authority">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/http#URI"/>
         <rdfs:comment xml:lang="en">The authority part of an URI.</rdfs:comment>
         <rdfs:label xml:lang="en">Authority</rdfs:label>
     </owl:DatatypeProperty>
@@ -275,6 +276,7 @@
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/http#fragment">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/http#URI"/>
         <rdfs:comment xml:lang="en">The fragment part of an URI.</rdfs:comment>
         <rdfs:label xml:lang="en">Fragment</rdfs:label>
     </owl:DatatypeProperty>
@@ -351,6 +353,7 @@
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/http#path">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/http#URI"/>
         <rdfs:comment xml:lang="en">The path part of an URI.</rdfs:comment>
         <rdfs:label xml:lang="en">Path</rdfs:label>
     </owl:DatatypeProperty>
@@ -362,6 +365,7 @@
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/http#query">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/http#URI"/>
         <rdfs:comment xml:lang="en">The query part of an URI.</rdfs:comment>
         <rdfs:label xml:lang="en">Query</rdfs:label>
     </owl:DatatypeProperty>
@@ -373,6 +377,7 @@
 
     <owl:DatatypeProperty rdf:about="http://w3id.org/http#scheme">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/http#URI"/>
         <rdfs:comment xml:lang="en">The scheme part of an URI.</rdfs:comment>
         <rdfs:label xml:lang="en">Scheme</rdfs:label>
     </owl:DatatypeProperty>

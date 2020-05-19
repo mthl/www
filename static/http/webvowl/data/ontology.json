@@ -29,7 +29,7 @@
     "type" : "owl:complementOf"
   }, {
     "id" : "22",
-    "type" : "rdfs:Literal"
+    "type" : "owl:Thing"
   }, {
     "id" : "23",
     "type" : "rdfs:Literal"
@@ -44,7 +44,7 @@
     "type" : "rdfs:Literal"
   }, {
     "id" : "27",
-    "type" : "owl:Thing"
+    "type" : "rdfs:Literal"
   }, {
     "id" : "28",
     "type" : "rdfs:Literal"
@@ -70,11 +70,11 @@
     "id" : "19",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "7",
-    "type" : "owl:Class"
-  }, {
     "id" : "36",
     "type" : "owl:intersectionOf"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
   }, {
     "id" : "37",
     "type" : "rdfs:Literal"
@@ -94,20 +94,20 @@
     "id" : "46",
     "type" : "owl:intersectionOf"
   }, {
-    "id" : "40",
-    "type" : "owl:Class"
-  }, {
     "id" : "49",
     "type" : "owl:intersectionOf"
+  }, {
+    "id" : "40",
+    "type" : "owl:Class"
   }, {
     "id" : "48",
     "type" : "rdfs:Literal"
   }, {
-    "id" : "18",
-    "type" : "owl:Class"
-  }, {
     "id" : "50",
     "type" : "owl:intersectionOf"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
   }, {
     "id" : "11",
     "type" : "owl:Class"
@@ -176,21 +176,6 @@
         "en" : "No Content"
       }
     }, {
-      "iri" : "http://w3id.org/http/sc#NotModified",
-      "baseIri" : "http://w3id.org/http/sc",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://tools.ietf.org/rfc/rfc7231",
-          "type" : "iri"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "NotModified",
-        "en" : "Not Modified"
-      }
-    }, {
       "iri" : "http://w3id.org/http/sc#RequestEntityTooLarge",
       "baseIri" : "http://w3id.org/http/sc",
       "annotations" : {
@@ -204,6 +189,21 @@
       "labels" : {
         "IRI-based" : "RequestEntityTooLarge",
         "en" : "Request Entity Too Large"
+      }
+    }, {
+      "iri" : "http://w3id.org/http/sc#NotModified",
+      "baseIri" : "http://w3id.org/http/sc",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://tools.ietf.org/rfc/rfc7231",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "NotModified",
+        "en" : "Not Modified"
       }
     }, {
       "iri" : "http://w3id.org/http/sc#NotImplemented",
@@ -386,21 +386,6 @@
         "en" : "Not Acceptable"
       }
     }, {
-      "iri" : "http://w3id.org/http/sc#RequestURITooLong",
-      "baseIri" : "http://w3id.org/http/sc",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://tools.ietf.org/rfc/rfc7231",
-          "type" : "iri"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "RequestURITooLong",
-        "en" : "Request-URI Too Long"
-      }
-    }, {
       "iri" : "http://w3id.org/http/sc#PartialContent",
       "baseIri" : "http://w3id.org/http/sc",
       "annotations" : {
@@ -429,6 +414,21 @@
       "labels" : {
         "IRI-based" : "Conflict",
         "en" : "Conflict"
+      }
+    }, {
+      "iri" : "http://w3id.org/http/sc#RequestURITooLong",
+      "baseIri" : "http://w3id.org/http/sc",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://tools.ietf.org/rfc/rfc7231",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "RequestURITooLong",
+        "en" : "Request-URI Too Long"
       }
     }, {
       "iri" : "http://w3id.org/http/sc#NonAuthoritativeInformation",
@@ -536,21 +536,6 @@
         "en" : "Not Found"
       }
     }, {
-      "iri" : "http://w3id.org/http/sc#RequestTimeout",
-      "baseIri" : "http://w3id.org/http/sc",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://tools.ietf.org/rfc/rfc7231",
-          "type" : "iri"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "RequestTimeout",
-        "en" : "Request Timeout"
-      }
-    }, {
       "iri" : "http://w3id.org/http/sc#InsufficientStorage",
       "baseIri" : "http://w3id.org/http/sc",
       "annotations" : {
@@ -564,6 +549,21 @@
       "labels" : {
         "IRI-based" : "InsufficientStorage",
         "en" : "Insufficient Storage"
+      }
+    }, {
+      "iri" : "http://w3id.org/http/sc#RequestTimeout",
+      "baseIri" : "http://w3id.org/http/sc",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://tools.ietf.org/rfc/rfc7231",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "RequestTimeout",
+        "en" : "Request Timeout"
       }
     }, {
       "iri" : "http://w3id.org/http/sc#UpgradeRequired",
@@ -626,21 +626,6 @@
         "en" : "IM Used"
       }
     }, {
-      "iri" : "http://w3id.org/http/sc#Reserved",
-      "baseIri" : "http://w3id.org/http/sc",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://tools.ietf.org/rfc/rfc7231",
-          "type" : "iri"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "Reserved",
-        "en" : "(Reserved)"
-      }
-    }, {
       "iri" : "http://w3id.org/http/sc#BadRequest",
       "baseIri" : "http://w3id.org/http/sc",
       "annotations" : {
@@ -654,6 +639,21 @@
       "labels" : {
         "IRI-based" : "BadRequest",
         "en" : "Bad Request"
+      }
+    }, {
+      "iri" : "http://w3id.org/http/sc#Reserved",
+      "baseIri" : "http://w3id.org/http/sc",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://tools.ietf.org/rfc/rfc7231",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Reserved",
+        "en" : "(Reserved)"
       }
     }, {
       "iri" : "http://w3id.org/http/sc#Unauthorized",
@@ -686,21 +686,6 @@
         "en" : "HTTP Version Not Supported"
       }
     }, {
-      "iri" : "http://w3id.org/http/sc#Found",
-      "baseIri" : "http://w3id.org/http/sc",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://tools.ietf.org/rfc/rfc7231",
-          "type" : "iri"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "Found",
-        "en" : "Found"
-      }
-    }, {
       "iri" : "http://w3id.org/http/sc#GatewayTimeout",
       "baseIri" : "http://w3id.org/http/sc",
       "annotations" : {
@@ -716,7 +701,7 @@
         "en" : "Gateway Timeout"
       }
     }, {
-      "iri" : "http://w3id.org/http/sc#MultipleChoices",
+      "iri" : "http://w3id.org/http/sc#Found",
       "baseIri" : "http://w3id.org/http/sc",
       "annotations" : {
         "isDefinedBy" : [ {
@@ -727,8 +712,8 @@
         } ]
       },
       "labels" : {
-        "IRI-based" : "MultipleChoices",
-        "en" : "Multiple Choices"
+        "IRI-based" : "Found",
+        "en" : "Found"
       }
     }, {
       "iri" : "http://w3id.org/http/sc#Created",
@@ -744,6 +729,21 @@
       "labels" : {
         "IRI-based" : "Created",
         "en" : "Created"
+      }
+    }, {
+      "iri" : "http://w3id.org/http/sc#MultipleChoices",
+      "baseIri" : "http://w3id.org/http/sc",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://tools.ietf.org/rfc/rfc7231",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "MultipleChoices",
+        "en" : "Multiple Choices"
       }
     }, {
       "iri" : "http://w3id.org/http/sc#MultiStatus",
@@ -821,21 +821,6 @@
         "en" : "Gone"
       }
     }, {
-      "iri" : "http://w3id.org/http/sc#SeeOther",
-      "baseIri" : "http://w3id.org/http/sc",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://tools.ietf.org/rfc/rfc7231",
-          "type" : "iri"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "SeeOther",
-        "en" : "See Other"
-      }
-    }, {
       "iri" : "http://w3id.org/http/sc#ProxyAuthenticationRequired",
       "baseIri" : "http://w3id.org/http/sc",
       "annotations" : {
@@ -849,6 +834,21 @@
       "labels" : {
         "IRI-based" : "ProxyAuthenticationRequired",
         "en" : "Proxy Authentication Required"
+      }
+    }, {
+      "iri" : "http://w3id.org/http/sc#SeeOther",
+      "baseIri" : "http://w3id.org/http/sc",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://tools.ietf.org/rfc/rfc7231",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "SeeOther",
+        "en" : "See Other"
       }
     }, {
       "iri" : "http://w3id.org/http/sc#ExpectationFailed",
@@ -971,11 +971,11 @@
     "complement" : [ "14" ],
     "superClasses" : [ "5" ]
   }, {
-    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
     "id" : "22",
     "label" : {
-      "IRI-based" : "Literal",
-      "undefined" : "Literal"
+      "undefined" : "Thing"
     }
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
@@ -1013,11 +1013,11 @@
       "undefined" : "Literal"
     }
   }, {
-    "iri" : "http://www.w3.org/2002/07/owl#Thing",
-    "baseIri" : "http://owl2vowl.de",
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
     "id" : "27",
     "label" : {
-      "undefined" : "Thing"
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
     }
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
@@ -1082,6 +1082,16 @@
       "en" : "Non-empty token"
     }
   }, {
+    "iri" : "http://w3id.org/http/headers#LocationHeader",
+    "baseIri" : "http://w3id.org/http/headers",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LocationHeader"
+    },
+    "intersection" : [ "9" ],
+    "attributes" : [ "external", "intersection" ],
+    "id" : "36"
+  }, {
     "iri" : "http://w3id.org/http#Connection",
     "baseIri" : "http://w3id.org/http",
     "instances" : 0,
@@ -1101,16 +1111,6 @@
       "en" : "A connection used for HTTP transfer."
     },
     "id" : "7"
-  }, {
-    "iri" : "http://w3id.org/http/headers#LocationHeader",
-    "baseIri" : "http://w3id.org/http/headers",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "LocationHeader"
-    },
-    "intersection" : [ "9" ],
-    "attributes" : [ "external", "intersection" ],
-    "id" : "36"
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
     "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
@@ -1173,18 +1173,6 @@
     "attributes" : [ "external", "intersection" ],
     "id" : "46"
   }, {
-    "iri" : "http://w3id.org/http#URI",
-    "baseIri" : "http://w3id.org/http",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "URI",
-      "undefined" : "URI description"
-    },
-    "comment" : {
-      "en" : "A semantic description of the syntactic parts composing a URI."
-    },
-    "id" : "40"
-  }, {
     "iri" : "http://w3id.org/http/sc#ServerError",
     "baseIri" : "http://w3id.org/http/sc",
     "instances" : 0,
@@ -1199,6 +1187,18 @@
     "attributes" : [ "external", "intersection" ],
     "id" : "49"
   }, {
+    "iri" : "http://w3id.org/http#URI",
+    "baseIri" : "http://w3id.org/http",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "URI",
+      "undefined" : "URI description"
+    },
+    "comment" : {
+      "en" : "A semantic description of the syntactic parts composing a URI."
+    },
+    "id" : "40"
+  }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
     "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
     "id" : "48",
@@ -1206,6 +1206,20 @@
       "IRI-based" : "Literal",
       "undefined" : "Literal"
     }
+  }, {
+    "iri" : "http://w3id.org/http/sc#Redirection",
+    "baseIri" : "http://w3id.org/http/sc",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Redirection",
+      "en" : "Redirection"
+    },
+    "intersection" : [ "2" ],
+    "comment" : {
+      "en" : "A status code starting with 3"
+    },
+    "attributes" : [ "external", "intersection" ],
+    "id" : "50"
   }, {
     "iri" : "http://w3id.org/http#Method",
     "baseIri" : "http://w3id.org/http",
@@ -1275,21 +1289,6 @@
         "undefined" : "TRACE"
       }
     }, {
-      "iri" : "http://w3id.org/http/mthd#HEAD",
-      "baseIri" : "http://w3id.org/http/mthd",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://tools.ietf.org/rfc/rfc7231#section-4.3.2",
-          "type" : "iri"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "HEAD",
-        "undefined" : "HEAD"
-      }
-    }, {
       "iri" : "http://w3id.org/http/mthd#PUT",
       "baseIri" : "http://w3id.org/http/mthd",
       "annotations" : {
@@ -1303,6 +1302,21 @@
       "labels" : {
         "IRI-based" : "PUT",
         "undefined" : "PUT"
+      }
+    }, {
+      "iri" : "http://w3id.org/http/mthd#HEAD",
+      "baseIri" : "http://w3id.org/http/mthd",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://tools.ietf.org/rfc/rfc7231#section-4.3.2",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "HEAD",
+        "undefined" : "HEAD"
       }
     }, {
       "iri" : "http://w3id.org/http/mthd#GET",
@@ -1354,20 +1368,6 @@
       "en" : "The HTTP method used for the request."
     },
     "id" : "18"
-  }, {
-    "iri" : "http://w3id.org/http/sc#Redirection",
-    "baseIri" : "http://w3id.org/http/sc",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Redirection",
-      "en" : "Redirection"
-    },
-    "intersection" : [ "2" ],
-    "comment" : {
-      "en" : "A status code starting with 3"
-    },
-    "attributes" : [ "external", "intersection" ],
-    "id" : "50"
   }, {
     "iri" : "http://w3id.org/http#Message",
     "baseIri" : "http://w3id.org/http",
@@ -1561,10 +1561,10 @@
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "68",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "69",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "70",
     "type" : "owl:objectProperty"
@@ -1623,12 +1623,12 @@
   }, {
     "range" : "5",
     "domain" : "14",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "13"
   }, {
     "range" : "5",
     "domain" : "16",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "15"
   }, {
     "iri" : "http://w3id.org/http#methodName",
@@ -1661,7 +1661,7 @@
   }, {
     "range" : "1",
     "domain" : "0",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "24"
   }, {
     "iri" : "http://w3id.org/http#mthd",
@@ -1756,16 +1756,16 @@
     "attributes" : [ "functional", "object" ],
     "id" : "44"
   }, {
-    "iri" : "http://w3id.org/http#fieldValue",
+    "iri" : "http://w3id.org/http#hdrName",
     "baseIri" : "http://w3id.org/http",
     "range" : "48",
     "label" : {
-      "IRI-based" : "fieldValue",
-      "en" : "Field value"
+      "IRI-based" : "hdrName",
+      "en" : "Field name"
     },
     "domain" : "9",
     "comment" : {
-      "en" : "The value of an HTTP header field."
+      "en" : "The name of an HTTP header field."
     },
     "attributes" : [ "functional", "someValues", "datatype" ],
     "id" : "47"
@@ -1808,12 +1808,12 @@
   }, {
     "iri" : "http://w3id.org/http#scheme",
     "baseIri" : "http://w3id.org/http",
-    "range" : "26",
+    "range" : "27",
     "label" : {
       "IRI-based" : "scheme",
       "en" : "Scheme"
     },
-    "domain" : "27",
+    "domain" : "40",
     "comment" : {
       "en" : "The scheme part of an URI."
     },
@@ -1822,7 +1822,7 @@
   }, {
     "range" : "5",
     "domain" : "4",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "56"
   }, {
     "iri" : "http://w3id.org/http#statusCodeNumber",
@@ -1877,31 +1877,31 @@
   }, {
     "range" : "14",
     "domain" : "16",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "61"
   }, {
-    "iri" : "http://w3id.org/http#hdrName",
+    "iri" : "http://w3id.org/http#fieldValue",
     "baseIri" : "http://w3id.org/http",
     "range" : "45",
     "label" : {
-      "IRI-based" : "hdrName",
-      "en" : "Field name"
+      "IRI-based" : "fieldValue",
+      "en" : "Field value"
     },
     "domain" : "9",
     "comment" : {
-      "en" : "The name of an HTTP header field."
+      "en" : "The value of an HTTP header field."
     },
     "attributes" : [ "functional", "someValues", "datatype" ],
     "id" : "62"
   }, {
     "iri" : "http://w3id.org/http#query",
     "baseIri" : "http://w3id.org/http",
-    "range" : "29",
+    "range" : "26",
     "label" : {
       "IRI-based" : "query",
       "en" : "Query"
     },
-    "domain" : "27",
+    "domain" : "40",
     "comment" : {
       "en" : "The query part of an URI."
     },
@@ -1925,12 +1925,12 @@
   }, {
     "iri" : "http://w3id.org/http#authority",
     "baseIri" : "http://w3id.org/http",
-    "range" : "28",
+    "range" : "29",
     "label" : {
       "IRI-based" : "authority",
       "en" : "Authority"
     },
-    "domain" : "27",
+    "domain" : "40",
     "comment" : {
       "en" : "The authority part of an URI."
     },
@@ -1939,12 +1939,12 @@
   }, {
     "iri" : "http://w3id.org/http#path",
     "baseIri" : "http://w3id.org/http",
-    "range" : "23",
+    "range" : "28",
     "label" : {
       "IRI-based" : "path",
       "en" : "Path"
     },
-    "domain" : "27",
+    "domain" : "40",
     "comment" : {
       "en" : "The path part of an URI."
     },
@@ -1973,9 +1973,23 @@
     "attributes" : [ "functional", "datatype" ],
     "id" : "67"
   }, {
+    "iri" : "http://w3id.org/http#fragment",
+    "baseIri" : "http://w3id.org/http",
+    "range" : "23",
+    "label" : {
+      "IRI-based" : "fragment",
+      "en" : "Fragment"
+    },
+    "domain" : "40",
+    "comment" : {
+      "en" : "The fragment part of an URI."
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "68"
+  }, {
     "iri" : "http://w3id.org/http#requests",
     "baseIri" : "http://w3id.org/http",
-    "range" : "25",
+    "range" : "22",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -1993,20 +2007,6 @@
       "en" : "The HTTP requests made via a connection."
     },
     "attributes" : [ "object" ],
-    "id" : "68"
-  }, {
-    "iri" : "http://w3id.org/http#fragment",
-    "baseIri" : "http://w3id.org/http",
-    "range" : "22",
-    "label" : {
-      "IRI-based" : "fragment",
-      "en" : "Fragment"
-    },
-    "domain" : "27",
-    "comment" : {
-      "en" : "The fragment part of an URI."
-    },
-    "attributes" : [ "functional", "datatype" ],
     "id" : "69"
   }, {
     "iri" : "http://w3id.org/http#body",
@@ -2050,11 +2050,11 @@
   }, {
     "iri" : "http://w3id.org/http/headers#Location",
     "baseIri" : "http://w3id.org/http/headers",
-    "range" : "27",
+    "range" : "25",
     "label" : {
       "IRI-based" : "Location"
     },
-    "domain" : "27",
+    "domain" : "25",
     "attributes" : [ "external", "object" ],
     "id" : "73"
   } ]

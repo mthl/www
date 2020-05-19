@@ -146,6 +146,7 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # http://w3id.org/http#authority
 <http://w3id.org/http#authority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://w3id.org/http#authority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://w3id.org/http#authority> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/http#URI> .
 <http://w3id.org/http#authority> <http://www.w3.org/2000/01/rdf-schema#comment> "The authority part of an URI."@en .
 <http://w3id.org/http#authority> <http://www.w3.org/2000/01/rdf-schema#label> "Authority"@en .
 # 
@@ -167,6 +168,7 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # http://w3id.org/http#fragment
 <http://w3id.org/http#fragment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://w3id.org/http#fragment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://w3id.org/http#fragment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/http#URI> .
 <http://w3id.org/http#fragment> <http://www.w3.org/2000/01/rdf-schema#comment> "The fragment part of an URI."@en .
 <http://w3id.org/http#fragment> <http://www.w3.org/2000/01/rdf-schema#label> "Fragment"@en .
 # 
@@ -213,18 +215,21 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # http://w3id.org/http#path
 <http://w3id.org/http#path> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://w3id.org/http#path> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://w3id.org/http#path> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/http#URI> .
 <http://w3id.org/http#path> <http://www.w3.org/2000/01/rdf-schema#comment> "The path part of an URI."@en .
 <http://w3id.org/http#path> <http://www.w3.org/2000/01/rdf-schema#label> "Path"@en .
 # 
 # http://w3id.org/http#query
 <http://w3id.org/http#query> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://w3id.org/http#query> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://w3id.org/http#query> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/http#URI> .
 <http://w3id.org/http#query> <http://www.w3.org/2000/01/rdf-schema#comment> "The query part of an URI."@en .
 <http://w3id.org/http#query> <http://www.w3.org/2000/01/rdf-schema#label> "Query"@en .
 # 
 # http://w3id.org/http#scheme
 <http://w3id.org/http#scheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://w3id.org/http#scheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://w3id.org/http#scheme> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/http#URI> .
 <http://w3id.org/http#scheme> <http://www.w3.org/2000/01/rdf-schema#comment> "The scheme part of an URI."@en .
 <http://w3id.org/http#scheme> <http://www.w3.org/2000/01/rdf-schema#label> "Scheme"@en .
 # 

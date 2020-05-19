@@ -614,6 +614,9 @@
     "@language" : "en",
     "@value" : "The authority part of an URI."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://w3id.org/http#URI"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Authority"
@@ -675,6 +678,9 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "The fragment part of an URI."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://w3id.org/http#URI"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -825,6 +831,9 @@
     "@language" : "en",
     "@value" : "The path part of an URI."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://w3id.org/http#URI"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Path"
@@ -835,6 +844,9 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "The query part of an URI."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://w3id.org/http#URI"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -917,6 +929,9 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "The scheme part of an URI."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://w3id.org/http#URI"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",

@@ -144,6 +144,7 @@
 ###  http://w3id.org/http#authority
 :authority rdf:type owl:DatatypeProperty ,
                     owl:FunctionalProperty ;
+           rdfs:domain :URI ;
            rdfs:comment "The authority part of an URI."@en ;
            rdfs:label "Authority"@en .
 
@@ -168,6 +169,7 @@
 ###  http://w3id.org/http#fragment
 :fragment rdf:type owl:DatatypeProperty ,
                    owl:FunctionalProperty ;
+          rdfs:domain :URI ;
           rdfs:comment "The fragment part of an URI."@en ;
           rdfs:label "Fragment"@en .
 
@@ -220,6 +222,7 @@
 ###  http://w3id.org/http#path
 :path rdf:type owl:DatatypeProperty ,
                owl:FunctionalProperty ;
+      rdfs:domain :URI ;
       rdfs:comment "The path part of an URI."@en ;
       rdfs:label "Path"@en .
 
@@ -227,6 +230,7 @@
 ###  http://w3id.org/http#query
 :query rdf:type owl:DatatypeProperty ,
                 owl:FunctionalProperty ;
+       rdfs:domain :URI ;
        rdfs:comment "The query part of an URI."@en ;
        rdfs:label "Query"@en .
 
@@ -234,6 +238,7 @@
 ###  http://w3id.org/http#scheme
 :scheme rdf:type owl:DatatypeProperty ,
                  owl:FunctionalProperty ;
+        rdfs:domain :URI ;
         rdfs:comment "The scheme part of an URI."@en ;
         rdfs:label "Scheme"@en .
 
