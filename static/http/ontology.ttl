@@ -48,15 +48,15 @@
       rdfs:domain :Message ;
       rdfs:range <http://w3id.org/http/content#Content> ;
       rdfs:comment "The entity body of an HTTP message."@en ;
-      rdfs:label "Entity Body"@en .
+      rdfs:label "body"@en .
 
 
-###  http://w3id.org/http#headers
-:headers rdf:type owl:ObjectProperty ;
-         rdfs:domain :Message ;
-         rdfs:range :Header ;
-         rdfs:comment "The headers in an HTTP message."@en ;
-         rdfs:label "Headers"@en .
+###  http://w3id.org/http#hdr
+:hdr rdf:type owl:ObjectProperty ;
+     rdfs:domain :Message ;
+     rdfs:range :Header ;
+     rdfs:comment "The headers in an HTTP message."@en ;
+     rdfs:label "header"@en .
 
 
 ###  http://w3id.org/http#link
@@ -70,7 +70,7 @@
       rdfs:domain :Request ;
       rdfs:range :Method ;
       rdfs:comment "The HTTP method used for the HTTP request."@en ;
-      rdfs:label "Method"@en .
+      rdfs:label "method"@en .
 
 
 ###  http://w3id.org/http#queryParams
@@ -78,15 +78,7 @@
              rdfs:domain :URI ;
              rdfs:range :QueryParam ;
              rdfs:comment "The parameters found in the query string part of a URL."@en ;
-             rdfs:label "Query parameters"@en .
-
-
-###  http://w3id.org/http#requests
-:requests rdf:type owl:ObjectProperty ;
-          rdfs:domain :Connection ;
-          rdfs:comment "The HTTP requests made via a connection."@en ;
-          rdfs:isDefinedBy <http://tools.ietf.org/rfc/rfc7231> ;
-          rdfs:label "Requests"@en .
+             rdfs:label "query parameters"@en .
 
 
 ###  http://w3id.org/http#resp
@@ -94,7 +86,7 @@
       rdfs:domain :Request ;
       rdfs:range :Response ;
       rdfs:comment "The HTTP response sent in answer to an HTTP request."@en ;
-      rdfs:label "Response"@en .
+      rdfs:label "response"@en .
 
 
 ###  http://w3id.org/http#sc
@@ -104,7 +96,7 @@
     rdfs:range :StatusCode ;
     rdfs:comment "The status code of an HTTP response."@en ;
     rdfs:isDefinedBy <http://tools.ietf.org/rfc/rfc7231#section-6> ;
-    rdfs:label "Status code"@en .
+    rdfs:label "status code"@en .
 
 
 ###  http://w3id.org/http#uri
@@ -112,7 +104,8 @@
               owl:FunctionalProperty ;
      rdfs:domain :Request ;
      rdfs:range :URI ;
-     rdfs:label "Effective request URI" .
+     rdfs:comment "Effective request URI" ;
+     rdfs:label "uri" .
 
 
 ###  http://w3id.org/http/content#about
@@ -120,21 +113,26 @@
                                      rdfs:domain <http://w3id.org/http/content#ContentAsRDF> ;
                                      rdfs:range <http://www.w3.org/ns/sparql-service-description#Graph> ;
                                      rdfs:comment "A property associating an RDF content with its RDF graph"@en ;
-                                     rdfs:label "RDF Content Graph"@en .
+                                     rdfs:label "graph"@en .
 
 
-###  http://w3id.org/http/headers#Location
-<http://w3id.org/http/headers#Location> rdf:type owl:ObjectProperty ;
-                                        owl:propertyChainAxiom ( :headers
-                                                                 <http://w3id.org/http/headers#hasLocationHeader>
+###  http://w3id.org/http/headers#isLocationHeader
+<http://w3id.org/http/headers#isLocationHeader> rdf:type owl:ObjectProperty ,
+                                                         owl:ReflexiveProperty ;
+                                                rdfs:domain :Header ;
+                                                rdfs:range :Header ;
+                                                rdfs:label "location header?" .
+
+
+###  http://w3id.org/http/headers#location
+<http://w3id.org/http/headers#location> rdf:type owl:ObjectProperty ;
+                                        rdfs:domain :Response ;
+                                        rdfs:range :URI ;
+                                        owl:propertyChainAxiom ( :hdr
+                                                                 <http://w3id.org/http/headers#isLocationHeader>
                                                                  :link
-                                                               ) .
-
-
-###  http://w3id.org/http/headers#hasLocationHeader
-<http://w3id.org/http/headers#hasLocationHeader> rdf:type owl:ObjectProperty ;
-                                                 rdfs:domain :Header ;
-                                                 rdfs:range :Header .
+                                                               ) ;
+                                        rdfs:label "location" .
 
 
 #################################################################
@@ -146,24 +144,7 @@
                     owl:FunctionalProperty ;
            rdfs:domain :URI ;
            rdfs:comment "The authority part of an URI."@en ;
-           rdfs:label "Authority"@en .
-
-
-###  http://w3id.org/http#connectionAuthority
-:connectionAuthority rdf:type owl:DatatypeProperty ;
-                     rdfs:domain :Connection ;
-                     rdfs:range rdfs:Literal ;
-                     rdfs:comment "The authority of a connection used for the HTTP transfer."@en ;
-                     rdfs:label "Connection authority"@en .
-
-
-###  http://w3id.org/http#fieldValue
-:fieldValue rdf:type owl:DatatypeProperty ,
-                     owl:FunctionalProperty ;
-            rdfs:domain :Header ;
-            rdfs:range rdfs:Literal ;
-            rdfs:comment "The value of an HTTP header field."@en ;
-            rdfs:label "Field value"@en .
+           rdfs:label "authority"@en .
 
 
 ###  http://w3id.org/http#fragment
@@ -171,7 +152,7 @@
                    owl:FunctionalProperty ;
           rdfs:domain :URI ;
           rdfs:comment "The fragment part of an URI."@en ;
-          rdfs:label "Fragment"@en .
+          rdfs:label "fragment"@en .
 
 
 ###  http://w3id.org/http#hdrName
@@ -179,8 +160,17 @@
                   owl:FunctionalProperty ;
          rdfs:domain :Header ;
          rdfs:range rdfs:Literal ;
-         rdfs:comment "The name of an HTTP header field."@en ;
-         rdfs:label "Field name"@en .
+         rdfs:comment "The name of an HTTP message header."@en ;
+         rdfs:label "header name"@en .
+
+
+###  http://w3id.org/http#hdrValue
+:hdrValue rdf:type owl:DatatypeProperty ,
+                   owl:FunctionalProperty ;
+          rdfs:domain :Header ;
+          rdfs:range rdfs:Literal ;
+          rdfs:comment "The value of an HTTP message header."@en ;
+          rdfs:label "header value"@en .
 
 
 ###  http://w3id.org/http#httpVersion
@@ -189,7 +179,15 @@
              rdfs:range rdfs:Literal ;
              rdfs:comment "The HTTP version of an HTTP message."@en ;
              rdfs:isDefinedBy <http://tools.ietf.org/rfc/rfc7231> ;
-             rdfs:label "HTTP version"@en .
+             rdfs:label "http version"@en .
+
+
+###  http://w3id.org/http#idRes
+:idRes rdf:type owl:DatatypeProperty ,
+                owl:FunctionalProperty ;
+       rdfs:domain :URI ;
+       rdfs:comment "Everything except the query part"@en ;
+       rdfs:label "resource"@en .
 
 
 ###  http://w3id.org/http#methodName
@@ -198,7 +196,7 @@
             rdfs:domain :Method ;
             rdfs:range :notEmptyToken ;
             rdfs:comment "The HTTP method name used for the HTTP request."@en ;
-            rdfs:label "Method name"@en .
+            rdfs:label "method name"@en .
 
 
 ###  http://w3id.org/http#paramName
@@ -207,7 +205,7 @@
            rdfs:domain :QueryParam ;
            rdfs:range rdfs:Literal ;
            rdfs:comment "The name of a query parameter."@en ;
-           rdfs:label "Parameter name"@en .
+           rdfs:label "parameter name"@en .
 
 
 ###  http://w3id.org/http#paramValue
@@ -216,7 +214,7 @@
             rdfs:domain :QueryParam ;
             rdfs:range rdfs:Literal ;
             rdfs:comment "The literal value of a query parameter."@en ;
-            rdfs:label "Parameter value"@en .
+            rdfs:label "parameter value"@en .
 
 
 ###  http://w3id.org/http#path
@@ -224,7 +222,7 @@
                owl:FunctionalProperty ;
       rdfs:domain :URI ;
       rdfs:comment "The path part of an URI."@en ;
-      rdfs:label "Path"@en .
+      rdfs:label "path"@en .
 
 
 ###  http://w3id.org/http#query
@@ -232,7 +230,7 @@
                 owl:FunctionalProperty ;
        rdfs:domain :URI ;
        rdfs:comment "The query part of an URI."@en ;
-       rdfs:label "Query"@en .
+       rdfs:label "query"@en .
 
 
 ###  http://w3id.org/http#scheme
@@ -240,7 +238,7 @@
                  owl:FunctionalProperty ;
         rdfs:domain :URI ;
         rdfs:comment "The scheme part of an URI."@en ;
-        rdfs:label "Scheme"@en .
+        rdfs:label "scheme"@en .
 
 
 ###  http://w3id.org/http#statusCodeNumber
@@ -250,19 +248,12 @@
                   rdfs:range :threeDigit ;
                   rdfs:comment "The status code number."@en ;
                   rdfs:isDefinedBy <http://tools.ietf.org/rfc/rfc7231#section-6> ;
-                  rdfs:label "Status code number"@en .
+                  rdfs:label "status code number"@en .
 
 
 #################################################################
 #    Classes
 #################################################################
-
-###  http://w3id.org/http#Connection
-:Connection rdf:type owl:Class ;
-            rdfs:comment "A connection used for HTTP transfer."@en ;
-            rdfs:isDefinedBy <http://tools.ietf.org/rfc/rfc7231> ;
-            rdfs:label "Connection"@en .
-
 
 ###  http://w3id.org/http#FinalResponse
 :FinalResponse rdf:type owl:Class ;
@@ -274,19 +265,27 @@
                rdfs:comment "A final response."@en ;
                rdfs:label "Final"@en .
 
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :FinalResponse ;
+   owl:annotatedProperty owl:disjointWith ;
+   owl:annotatedTarget :InterimResponse ;
+   rdfs:comment "An HTTP response."@en ;
+   rdfs:label "Response"@en
+ ] .
+
 
 ###  http://w3id.org/http#Header
 :Header rdf:type owl:Class ;
         rdfs:subClassOf [ rdf:type owl:Restriction ;
-                          owl:onProperty :fieldValue ;
+                          owl:onProperty :hdrName ;
                           owl:someValuesFrom rdfs:Literal
                         ] ,
                         [ rdf:type owl:Restriction ;
-                          owl:onProperty :hdrName ;
+                          owl:onProperty :hdrValue ;
                           owl:someValuesFrom rdfs:Literal
                         ] ;
         rdfs:comment "A header in an HTTP message."@en ;
-        rdfs:label "Message Header"@en .
+        rdfs:label "Header"@en .
 
 
 ###  http://w3id.org/http#InterimResponse
@@ -307,15 +306,12 @@
                                                   owl:allValuesFrom <http://w3id.org/http/content#Content>
                                                 ]
                                                 [ rdf:type owl:Restriction ;
-                                                  owl:onProperty :headers ;
+                                                  owl:onProperty :hdr ;
                                                   owl:allValuesFrom :Header
                                                 ]
                                               ) ;
                            rdf:type owl:Class
-                         ] ;
-         rdfs:comment "An HTTP message."@en ;
-         rdfs:isDefinedBy <http://tools.ietf.org/rfc/rfc7231> ;
-         rdfs:label "Message"@en .
+                         ] .
 
 
 ###  http://w3id.org/http#Method
@@ -353,6 +349,15 @@
          rdfs:isDefinedBy <http://tools.ietf.org/rfc/rfc7231> ;
          rdfs:label "Request"@en .
 
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :Request ;
+   owl:annotatedProperty owl:disjointWith ;
+   owl:annotatedTarget :Response ;
+   rdfs:comment "An HTTP message."@en ;
+   rdfs:isDefinedBy <http://tools.ietf.org/rfc/rfc7231> ;
+   rdfs:label "Message"@en
+ ] .
+
 
 ###  http://w3id.org/http#Response
 :Response rdf:type owl:Class ;
@@ -363,9 +368,7 @@
                                                  ]
                                                ) ;
                             rdf:type owl:Class
-                          ] ;
-          rdfs:comment "An HTTP response."@en ;
-          rdfs:label "Response"@en .
+                          ] .
 
 
 ###  http://w3id.org/http#StatusCode
@@ -417,7 +420,7 @@
                                                                 owl:someValuesFrom :URI
                                                               ] ,
                                                               [ rdf:type owl:Restriction ;
-                                                                owl:onProperty <http://w3id.org/http/headers#hasLocationHeader> ;
+                                                                owl:onProperty <http://w3id.org/http/headers#isLocationHeader> ;
                                                                 owl:hasSelf "true"^^xsd:boolean
                                                               ] .
 
@@ -1017,4 +1020,4 @@
                                                 rdfs:label "Variant Also Negotiates (Experimental)"@en .
 
 
-###  Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/
+###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

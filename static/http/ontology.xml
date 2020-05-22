@@ -86,19 +86,19 @@
         <rdfs:domain rdf:resource="http://w3id.org/http#Message"/>
         <rdfs:range rdf:resource="http://w3id.org/http/content#Content"/>
         <rdfs:comment xml:lang="en">The entity body of an HTTP message.</rdfs:comment>
-        <rdfs:label xml:lang="en">Entity Body</rdfs:label>
+        <rdfs:label xml:lang="en">body</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://w3id.org/http#headers -->
+    <!-- http://w3id.org/http#hdr -->
 
 
-    <owl:ObjectProperty rdf:about="http://w3id.org/http#headers">
+    <owl:ObjectProperty rdf:about="http://w3id.org/http#hdr">
         <rdfs:domain rdf:resource="http://w3id.org/http#Message"/>
         <rdfs:range rdf:resource="http://w3id.org/http#Header"/>
         <rdfs:comment xml:lang="en">The headers in an HTTP message.</rdfs:comment>
-        <rdfs:label xml:lang="en">Headers</rdfs:label>
+        <rdfs:label xml:lang="en">header</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -120,7 +120,7 @@
         <rdfs:domain rdf:resource="http://w3id.org/http#Request"/>
         <rdfs:range rdf:resource="http://w3id.org/http#Method"/>
         <rdfs:comment xml:lang="en">The HTTP method used for the HTTP request.</rdfs:comment>
-        <rdfs:label xml:lang="en">Method</rdfs:label>
+        <rdfs:label xml:lang="en">method</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -132,19 +132,7 @@
         <rdfs:domain rdf:resource="http://w3id.org/http#URI"/>
         <rdfs:range rdf:resource="http://w3id.org/http#QueryParam"/>
         <rdfs:comment xml:lang="en">The parameters found in the query string part of a URL.</rdfs:comment>
-        <rdfs:label xml:lang="en">Query parameters</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://w3id.org/http#requests -->
-
-
-    <owl:ObjectProperty rdf:about="http://w3id.org/http#requests">
-        <rdfs:domain rdf:resource="http://w3id.org/http#Connection"/>
-        <rdfs:comment xml:lang="en">The HTTP requests made via a connection.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
-        <rdfs:label xml:lang="en">Requests</rdfs:label>
+        <rdfs:label xml:lang="en">query parameters</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -156,7 +144,7 @@
         <rdfs:domain rdf:resource="http://w3id.org/http#Request"/>
         <rdfs:range rdf:resource="http://w3id.org/http#Response"/>
         <rdfs:comment xml:lang="en">The HTTP response sent in answer to an HTTP request.</rdfs:comment>
-        <rdfs:label xml:lang="en">Response</rdfs:label>
+        <rdfs:label xml:lang="en">response</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -170,7 +158,7 @@
         <rdfs:range rdf:resource="http://w3id.org/http#StatusCode"/>
         <rdfs:comment xml:lang="en">The status code of an HTTP response.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231#section-6"/>
-        <rdfs:label xml:lang="en">Status code</rdfs:label>
+        <rdfs:label xml:lang="en">status code</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -182,7 +170,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://w3id.org/http#Request"/>
         <rdfs:range rdf:resource="http://w3id.org/http#URI"/>
-        <rdfs:label>Effective request URI</rdfs:label>
+        <rdfs:comment>Effective request URI</rdfs:comment>
+        <rdfs:label>uri</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -194,30 +183,35 @@
         <rdfs:domain rdf:resource="http://w3id.org/http/content#ContentAsRDF"/>
         <rdfs:range rdf:resource="http://www.w3.org/ns/sparql-service-description#Graph"/>
         <rdfs:comment xml:lang="en">A property associating an RDF content with its RDF graph</rdfs:comment>
-        <rdfs:label xml:lang="en">RDF Content Graph</rdfs:label>
+        <rdfs:label xml:lang="en">graph</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://w3id.org/http/headers#Location -->
+    <!-- http://w3id.org/http/headers#isLocationHeader -->
 
 
-    <owl:ObjectProperty rdf:about="http://w3id.org/http/headers#Location">
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://w3id.org/http#headers"/>
-            <rdf:Description rdf:about="http://w3id.org/http/headers#hasLocationHeader"/>
-            <rdf:Description rdf:about="http://w3id.org/http#link"/>
-        </owl:propertyChainAxiom>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://w3id.org/http/headers#hasLocationHeader -->
-
-
-    <owl:ObjectProperty rdf:about="http://w3id.org/http/headers#hasLocationHeader">
+    <owl:ObjectProperty rdf:about="http://w3id.org/http/headers#isLocationHeader">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
         <rdfs:domain rdf:resource="http://w3id.org/http#Header"/>
         <rdfs:range rdf:resource="http://w3id.org/http#Header"/>
+        <rdfs:label>location header?</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/http/headers#location -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/http/headers#location">
+        <rdfs:domain rdf:resource="http://w3id.org/http#Response"/>
+        <rdfs:range rdf:resource="http://w3id.org/http#URI"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://w3id.org/http#hdr"/>
+            <rdf:Description rdf:about="http://w3id.org/http/headers#isLocationHeader"/>
+            <rdf:Description rdf:about="http://w3id.org/http#link"/>
+        </owl:propertyChainAxiom>
+        <rdfs:label>location</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -241,32 +235,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://w3id.org/http#URI"/>
         <rdfs:comment xml:lang="en">The authority part of an URI.</rdfs:comment>
-        <rdfs:label xml:lang="en">Authority</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://w3id.org/http#connectionAuthority -->
-
-
-    <owl:DatatypeProperty rdf:about="http://w3id.org/http#connectionAuthority">
-        <rdfs:domain rdf:resource="http://w3id.org/http#Connection"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment xml:lang="en">The authority of a connection used for the HTTP transfer.</rdfs:comment>
-        <rdfs:label xml:lang="en">Connection authority</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://w3id.org/http#fieldValue -->
-
-
-    <owl:DatatypeProperty rdf:about="http://w3id.org/http#fieldValue">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://w3id.org/http#Header"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment xml:lang="en">The value of an HTTP header field.</rdfs:comment>
-        <rdfs:label xml:lang="en">Field value</rdfs:label>
+        <rdfs:label xml:lang="en">authority</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -278,7 +247,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://w3id.org/http#URI"/>
         <rdfs:comment xml:lang="en">The fragment part of an URI.</rdfs:comment>
-        <rdfs:label xml:lang="en">Fragment</rdfs:label>
+        <rdfs:label xml:lang="en">fragment</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -290,8 +259,21 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://w3id.org/http#Header"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment xml:lang="en">The name of an HTTP header field.</rdfs:comment>
-        <rdfs:label xml:lang="en">Field name</rdfs:label>
+        <rdfs:comment xml:lang="en">The name of an HTTP message header.</rdfs:comment>
+        <rdfs:label xml:lang="en">header name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/http#hdrValue -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/http#hdrValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/http#Header"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">The value of an HTTP message header.</rdfs:comment>
+        <rdfs:label xml:lang="en">header value</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -304,7 +286,19 @@
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="en">The HTTP version of an HTTP message.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
-        <rdfs:label xml:lang="en">HTTP version</rdfs:label>
+        <rdfs:label xml:lang="en">http version</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/http#idRes -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/http#idRes">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/http#URI"/>
+        <rdfs:comment xml:lang="en">Everything except the query part</rdfs:comment>
+        <rdfs:label xml:lang="en">resource</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -317,7 +311,7 @@
         <rdfs:domain rdf:resource="http://w3id.org/http#Method"/>
         <rdfs:range rdf:resource="http://w3id.org/http#notEmptyToken"/>
         <rdfs:comment xml:lang="en">The HTTP method name used for the HTTP request.</rdfs:comment>
-        <rdfs:label xml:lang="en">Method name</rdfs:label>
+        <rdfs:label xml:lang="en">method name</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -330,7 +324,7 @@
         <rdfs:domain rdf:resource="http://w3id.org/http#QueryParam"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="en">The name of a query parameter.</rdfs:comment>
-        <rdfs:label xml:lang="en">Parameter name</rdfs:label>
+        <rdfs:label xml:lang="en">parameter name</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -343,7 +337,7 @@
         <rdfs:domain rdf:resource="http://w3id.org/http#QueryParam"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="en">The literal value of a query parameter.</rdfs:comment>
-        <rdfs:label xml:lang="en">Parameter value</rdfs:label>
+        <rdfs:label xml:lang="en">parameter value</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -355,7 +349,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://w3id.org/http#URI"/>
         <rdfs:comment xml:lang="en">The path part of an URI.</rdfs:comment>
-        <rdfs:label xml:lang="en">Path</rdfs:label>
+        <rdfs:label xml:lang="en">path</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -367,7 +361,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://w3id.org/http#URI"/>
         <rdfs:comment xml:lang="en">The query part of an URI.</rdfs:comment>
-        <rdfs:label xml:lang="en">Query</rdfs:label>
+        <rdfs:label xml:lang="en">query</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -379,7 +373,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://w3id.org/http#URI"/>
         <rdfs:comment xml:lang="en">The scheme part of an URI.</rdfs:comment>
-        <rdfs:label xml:lang="en">Scheme</rdfs:label>
+        <rdfs:label xml:lang="en">scheme</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -393,7 +387,7 @@
         <rdfs:range rdf:resource="http://w3id.org/http#threeDigit"/>
         <rdfs:comment xml:lang="en">The status code number.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231#section-6"/>
-        <rdfs:label xml:lang="en">Status code number</rdfs:label>
+        <rdfs:label xml:lang="en">status code number</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -407,17 +401,6 @@
      -->
 
 
-    
-
-
-    <!-- http://w3id.org/http#Connection -->
-
-
-    <owl:Class rdf:about="http://w3id.org/http#Connection">
-        <rdfs:comment xml:lang="en">A connection used for HTTP transfer.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
-        <rdfs:label xml:lang="en">Connection</rdfs:label>
-    </owl:Class>
     
 
 
@@ -435,6 +418,13 @@
         <rdfs:comment xml:lang="en">A final response.</rdfs:comment>
         <rdfs:label xml:lang="en">Final</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://w3id.org/http#FinalResponse"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#disjointWith"/>
+        <owl:annotatedTarget rdf:resource="http://w3id.org/http#InterimResponse"/>
+        <rdfs:comment xml:lang="en">An HTTP response.</rdfs:comment>
+        <rdfs:label xml:lang="en">Response</rdfs:label>
+    </owl:Axiom>
     
 
 
@@ -444,18 +434,18 @@
     <owl:Class rdf:about="http://w3id.org/http#Header">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://w3id.org/http#fieldValue"/>
+                <owl:onProperty rdf:resource="http://w3id.org/http#hdrName"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://w3id.org/http#hdrName"/>
+                <owl:onProperty rdf:resource="http://w3id.org/http#hdrValue"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A header in an HTTP message.</rdfs:comment>
-        <rdfs:label xml:lang="en">Message Header</rdfs:label>
+        <rdfs:label xml:lang="en">Header</rdfs:label>
     </owl:Class>
     
 
@@ -489,15 +479,12 @@
                         <owl:allValuesFrom rdf:resource="http://w3id.org/http/content#Content"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://w3id.org/http#headers"/>
+                        <owl:onProperty rdf:resource="http://w3id.org/http#hdr"/>
                         <owl:allValuesFrom rdf:resource="http://w3id.org/http#Header"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">An HTTP message.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
-        <rdfs:label xml:lang="en">Message</rdfs:label>
     </owl:Class>
     
 
@@ -552,6 +539,14 @@
         <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
         <rdfs:label xml:lang="en">Request</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://w3id.org/http#Request"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#disjointWith"/>
+        <owl:annotatedTarget rdf:resource="http://w3id.org/http#Response"/>
+        <rdfs:comment xml:lang="en">An HTTP message.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://tools.ietf.org/rfc/rfc7231"/>
+        <rdfs:label xml:lang="en">Message</rdfs:label>
+    </owl:Axiom>
     
 
 
@@ -570,8 +565,6 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">An HTTP response.</rdfs:comment>
-        <rdfs:label xml:lang="en">Response</rdfs:label>
     </owl:Class>
     
 
@@ -653,7 +646,7 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://w3id.org/http/headers#hasLocationHeader"/>
+                <owl:onProperty rdf:resource="http://w3id.org/http/headers#isLocationHeader"/>
                 <owl:hasSelf rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasSelf>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1569,6 +1562,6 @@
 
 
 
-<!-- Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/ -->
+<!-- Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/ -->
 
 

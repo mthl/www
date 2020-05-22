@@ -17,24 +17,24 @@
 <http://w3id.org/http#notEmptyToken> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid1 .
 _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
 _:genid1 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#token> .
-_:genid1 <http://www.w3.org/2002/07/owl#withRestrictions> _:genid4 .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid3 .
+_:genid1 <http://www.w3.org/2002/07/owl#withRestrictions> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid3 .
 _:genid3 <http://www.w3.org/2001/XMLSchema#minLength> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
 # http://w3id.org/http#threeDigit
 <http://w3id.org/http#threeDigit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
 <http://w3id.org/http#threeDigit> <http://www.w3.org/2000/01/rdf-schema#comment> "A positive integer consisting in three digit" .
 <http://w3id.org/http#threeDigit> <http://www.w3.org/2000/01/rdf-schema#label> "3-digit integer"@en .
-<http://w3id.org/http#threeDigit> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid5 .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
-_:genid5 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid5 <http://www.w3.org/2002/07/owl#withRestrictions> _:genid8 .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid7 .
-_:genid7 <http://www.w3.org/2001/XMLSchema#maxInclusive> "999"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://w3id.org/http#threeDigit> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:genid4 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid4 <http://www.w3.org/2002/07/owl#withRestrictions> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid6 .
+_:genid6 <http://www.w3.org/2001/XMLSchema#maxInclusive> "999"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
 # 
 # 
@@ -51,14 +51,14 @@ _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <http://w3id.org/http#body> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/http#Message> .
 <http://w3id.org/http#body> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/http/content#Content> .
 <http://w3id.org/http#body> <http://www.w3.org/2000/01/rdf-schema#comment> "The entity body of an HTTP message."@en .
-<http://w3id.org/http#body> <http://www.w3.org/2000/01/rdf-schema#label> "Entity Body"@en .
+<http://w3id.org/http#body> <http://www.w3.org/2000/01/rdf-schema#label> "body"@en .
 # 
-# http://w3id.org/http#headers
-<http://w3id.org/http#headers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://w3id.org/http#headers> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/http#Message> .
-<http://w3id.org/http#headers> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/http#Header> .
-<http://w3id.org/http#headers> <http://www.w3.org/2000/01/rdf-schema#comment> "The headers in an HTTP message."@en .
-<http://w3id.org/http#headers> <http://www.w3.org/2000/01/rdf-schema#label> "Headers"@en .
+# http://w3id.org/http#hdr
+<http://w3id.org/http#hdr> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/http#hdr> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/http#Message> .
+<http://w3id.org/http#hdr> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/http#Header> .
+<http://w3id.org/http#hdr> <http://www.w3.org/2000/01/rdf-schema#comment> "The headers in an HTTP message."@en .
+<http://w3id.org/http#hdr> <http://www.w3.org/2000/01/rdf-schema#label> "header"@en .
 # 
 # http://w3id.org/http#link
 <http://w3id.org/http#link> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -70,28 +70,21 @@ _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <http://w3id.org/http#mthd> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/http#Request> .
 <http://w3id.org/http#mthd> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/http#Method> .
 <http://w3id.org/http#mthd> <http://www.w3.org/2000/01/rdf-schema#comment> "The HTTP method used for the HTTP request."@en .
-<http://w3id.org/http#mthd> <http://www.w3.org/2000/01/rdf-schema#label> "Method"@en .
+<http://w3id.org/http#mthd> <http://www.w3.org/2000/01/rdf-schema#label> "method"@en .
 # 
 # http://w3id.org/http#queryParams
 <http://w3id.org/http#queryParams> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://w3id.org/http#queryParams> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/http#URI> .
 <http://w3id.org/http#queryParams> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/http#QueryParam> .
 <http://w3id.org/http#queryParams> <http://www.w3.org/2000/01/rdf-schema#comment> "The parameters found in the query string part of a URL."@en .
-<http://w3id.org/http#queryParams> <http://www.w3.org/2000/01/rdf-schema#label> "Query parameters"@en .
-# 
-# http://w3id.org/http#requests
-<http://w3id.org/http#requests> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://w3id.org/http#requests> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/http#Connection> .
-<http://w3id.org/http#requests> <http://www.w3.org/2000/01/rdf-schema#comment> "The HTTP requests made via a connection."@en .
-<http://w3id.org/http#requests> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://tools.ietf.org/rfc/rfc7231> .
-<http://w3id.org/http#requests> <http://www.w3.org/2000/01/rdf-schema#label> "Requests"@en .
+<http://w3id.org/http#queryParams> <http://www.w3.org/2000/01/rdf-schema#label> "query parameters"@en .
 # 
 # http://w3id.org/http#resp
 <http://w3id.org/http#resp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://w3id.org/http#resp> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/http#Request> .
 <http://w3id.org/http#resp> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/http#Response> .
 <http://w3id.org/http#resp> <http://www.w3.org/2000/01/rdf-schema#comment> "The HTTP response sent in answer to an HTTP request."@en .
-<http://w3id.org/http#resp> <http://www.w3.org/2000/01/rdf-schema#label> "Response"@en .
+<http://w3id.org/http#resp> <http://www.w3.org/2000/01/rdf-schema#label> "response"@en .
 # 
 # http://w3id.org/http#sc
 <http://w3id.org/http#sc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -100,39 +93,45 @@ _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <http://w3id.org/http#sc> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/http#StatusCode> .
 <http://w3id.org/http#sc> <http://www.w3.org/2000/01/rdf-schema#comment> "The status code of an HTTP response."@en .
 <http://w3id.org/http#sc> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://tools.ietf.org/rfc/rfc7231#section-6> .
-<http://w3id.org/http#sc> <http://www.w3.org/2000/01/rdf-schema#label> "Status code"@en .
+<http://w3id.org/http#sc> <http://www.w3.org/2000/01/rdf-schema#label> "status code"@en .
 # 
 # http://w3id.org/http#uri
 <http://w3id.org/http#uri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://w3id.org/http#uri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <http://w3id.org/http#uri> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/http#Request> .
 <http://w3id.org/http#uri> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/http#URI> .
-<http://w3id.org/http#uri> <http://www.w3.org/2000/01/rdf-schema#label> "Effective request URI" .
+<http://w3id.org/http#uri> <http://www.w3.org/2000/01/rdf-schema#comment> "Effective request URI" .
+<http://w3id.org/http#uri> <http://www.w3.org/2000/01/rdf-schema#label> "uri" .
 # 
 # http://w3id.org/http/content#about
 <http://w3id.org/http/content#about> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://w3id.org/http/content#about> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/http/content#ContentAsRDF> .
 <http://w3id.org/http/content#about> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sparql-service-description#Graph> .
 <http://w3id.org/http/content#about> <http://www.w3.org/2000/01/rdf-schema#comment> "A property associating an RDF content with its RDF graph"@en .
-<http://w3id.org/http/content#about> <http://www.w3.org/2000/01/rdf-schema#label> "RDF Content Graph"@en .
+<http://w3id.org/http/content#about> <http://www.w3.org/2000/01/rdf-schema#label> "graph"@en .
 # 
-# http://w3id.org/http/headers#Location
-<http://w3id.org/http/headers#Location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://w3id.org/http/headers#Location> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:genid11 .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/http#headers> .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid10 .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/http/headers#hasLocationHeader> .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
+# http://w3id.org/http/headers#isLocationHeader
+<http://w3id.org/http/headers#isLocationHeader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/http/headers#isLocationHeader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ReflexiveProperty> .
+<http://w3id.org/http/headers#isLocationHeader> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/http#Header> .
+<http://w3id.org/http/headers#isLocationHeader> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/http#Header> .
+<http://w3id.org/http/headers#isLocationHeader> <http://www.w3.org/2000/01/rdf-schema#label> "location header?" .
+# 
+# http://w3id.org/http/headers#location
+<http://w3id.org/http/headers#location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/http/headers#location> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/http#Response> .
+<http://w3id.org/http/headers#location> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/http#URI> .
+<http://w3id.org/http/headers#location> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:genid9 .
 _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/http#link> .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-# 
-# http://w3id.org/http/headers#hasLocationHeader
-<http://w3id.org/http/headers#hasLocationHeader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://w3id.org/http/headers#hasLocationHeader> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/http#Header> .
-<http://w3id.org/http/headers#hasLocationHeader> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/http#Header> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/http#hdr> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/http/headers#isLocationHeader> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/http#link> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://w3id.org/http/headers#location> <http://www.w3.org/2000/01/rdf-schema#label> "location" .
 # 
 # 
 # 
@@ -148,37 +147,30 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <http://w3id.org/http#authority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <http://w3id.org/http#authority> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/http#URI> .
 <http://w3id.org/http#authority> <http://www.w3.org/2000/01/rdf-schema#comment> "The authority part of an URI."@en .
-<http://w3id.org/http#authority> <http://www.w3.org/2000/01/rdf-schema#label> "Authority"@en .
-# 
-# http://w3id.org/http#connectionAuthority
-<http://w3id.org/http#connectionAuthority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://w3id.org/http#connectionAuthority> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/http#Connection> .
-<http://w3id.org/http#connectionAuthority> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
-<http://w3id.org/http#connectionAuthority> <http://www.w3.org/2000/01/rdf-schema#comment> "The authority of a connection used for the HTTP transfer."@en .
-<http://w3id.org/http#connectionAuthority> <http://www.w3.org/2000/01/rdf-schema#label> "Connection authority"@en .
-# 
-# http://w3id.org/http#fieldValue
-<http://w3id.org/http#fieldValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://w3id.org/http#fieldValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
-<http://w3id.org/http#fieldValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/http#Header> .
-<http://w3id.org/http#fieldValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
-<http://w3id.org/http#fieldValue> <http://www.w3.org/2000/01/rdf-schema#comment> "The value of an HTTP header field."@en .
-<http://w3id.org/http#fieldValue> <http://www.w3.org/2000/01/rdf-schema#label> "Field value"@en .
+<http://w3id.org/http#authority> <http://www.w3.org/2000/01/rdf-schema#label> "authority"@en .
 # 
 # http://w3id.org/http#fragment
 <http://w3id.org/http#fragment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://w3id.org/http#fragment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <http://w3id.org/http#fragment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/http#URI> .
 <http://w3id.org/http#fragment> <http://www.w3.org/2000/01/rdf-schema#comment> "The fragment part of an URI."@en .
-<http://w3id.org/http#fragment> <http://www.w3.org/2000/01/rdf-schema#label> "Fragment"@en .
+<http://w3id.org/http#fragment> <http://www.w3.org/2000/01/rdf-schema#label> "fragment"@en .
 # 
 # http://w3id.org/http#hdrName
 <http://w3id.org/http#hdrName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://w3id.org/http#hdrName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <http://w3id.org/http#hdrName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/http#Header> .
 <http://w3id.org/http#hdrName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
-<http://w3id.org/http#hdrName> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of an HTTP header field."@en .
-<http://w3id.org/http#hdrName> <http://www.w3.org/2000/01/rdf-schema#label> "Field name"@en .
+<http://w3id.org/http#hdrName> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of an HTTP message header."@en .
+<http://w3id.org/http#hdrName> <http://www.w3.org/2000/01/rdf-schema#label> "header name"@en .
+# 
+# http://w3id.org/http#hdrValue
+<http://w3id.org/http#hdrValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/http#hdrValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://w3id.org/http#hdrValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/http#Header> .
+<http://w3id.org/http#hdrValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://w3id.org/http#hdrValue> <http://www.w3.org/2000/01/rdf-schema#comment> "The value of an HTTP message header."@en .
+<http://w3id.org/http#hdrValue> <http://www.w3.org/2000/01/rdf-schema#label> "header value"@en .
 # 
 # http://w3id.org/http#httpVersion
 <http://w3id.org/http#httpVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -186,7 +178,14 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <http://w3id.org/http#httpVersion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
 <http://w3id.org/http#httpVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "The HTTP version of an HTTP message."@en .
 <http://w3id.org/http#httpVersion> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://tools.ietf.org/rfc/rfc7231> .
-<http://w3id.org/http#httpVersion> <http://www.w3.org/2000/01/rdf-schema#label> "HTTP version"@en .
+<http://w3id.org/http#httpVersion> <http://www.w3.org/2000/01/rdf-schema#label> "http version"@en .
+# 
+# http://w3id.org/http#idRes
+<http://w3id.org/http#idRes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/http#idRes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://w3id.org/http#idRes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/http#URI> .
+<http://w3id.org/http#idRes> <http://www.w3.org/2000/01/rdf-schema#comment> "Everything except the query part"@en .
+<http://w3id.org/http#idRes> <http://www.w3.org/2000/01/rdf-schema#label> "resource"@en .
 # 
 # http://w3id.org/http#methodName
 <http://w3id.org/http#methodName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -194,7 +193,7 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <http://w3id.org/http#methodName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/http#Method> .
 <http://w3id.org/http#methodName> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/http#notEmptyToken> .
 <http://w3id.org/http#methodName> <http://www.w3.org/2000/01/rdf-schema#comment> "The HTTP method name used for the HTTP request."@en .
-<http://w3id.org/http#methodName> <http://www.w3.org/2000/01/rdf-schema#label> "Method name"@en .
+<http://w3id.org/http#methodName> <http://www.w3.org/2000/01/rdf-schema#label> "method name"@en .
 # 
 # http://w3id.org/http#paramName
 <http://w3id.org/http#paramName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -202,7 +201,7 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <http://w3id.org/http#paramName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/http#QueryParam> .
 <http://w3id.org/http#paramName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
 <http://w3id.org/http#paramName> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of a query parameter."@en .
-<http://w3id.org/http#paramName> <http://www.w3.org/2000/01/rdf-schema#label> "Parameter name"@en .
+<http://w3id.org/http#paramName> <http://www.w3.org/2000/01/rdf-schema#label> "parameter name"@en .
 # 
 # http://w3id.org/http#paramValue
 <http://w3id.org/http#paramValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -210,28 +209,28 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <http://w3id.org/http#paramValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/http#QueryParam> .
 <http://w3id.org/http#paramValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
 <http://w3id.org/http#paramValue> <http://www.w3.org/2000/01/rdf-schema#comment> "The literal value of a query parameter."@en .
-<http://w3id.org/http#paramValue> <http://www.w3.org/2000/01/rdf-schema#label> "Parameter value"@en .
+<http://w3id.org/http#paramValue> <http://www.w3.org/2000/01/rdf-schema#label> "parameter value"@en .
 # 
 # http://w3id.org/http#path
 <http://w3id.org/http#path> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://w3id.org/http#path> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <http://w3id.org/http#path> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/http#URI> .
 <http://w3id.org/http#path> <http://www.w3.org/2000/01/rdf-schema#comment> "The path part of an URI."@en .
-<http://w3id.org/http#path> <http://www.w3.org/2000/01/rdf-schema#label> "Path"@en .
+<http://w3id.org/http#path> <http://www.w3.org/2000/01/rdf-schema#label> "path"@en .
 # 
 # http://w3id.org/http#query
 <http://w3id.org/http#query> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://w3id.org/http#query> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <http://w3id.org/http#query> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/http#URI> .
 <http://w3id.org/http#query> <http://www.w3.org/2000/01/rdf-schema#comment> "The query part of an URI."@en .
-<http://w3id.org/http#query> <http://www.w3.org/2000/01/rdf-schema#label> "Query"@en .
+<http://w3id.org/http#query> <http://www.w3.org/2000/01/rdf-schema#label> "query"@en .
 # 
 # http://w3id.org/http#scheme
 <http://w3id.org/http#scheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://w3id.org/http#scheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <http://w3id.org/http#scheme> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/http#URI> .
 <http://w3id.org/http#scheme> <http://www.w3.org/2000/01/rdf-schema#comment> "The scheme part of an URI."@en .
-<http://w3id.org/http#scheme> <http://www.w3.org/2000/01/rdf-schema#label> "Scheme"@en .
+<http://w3id.org/http#scheme> <http://www.w3.org/2000/01/rdf-schema#label> "scheme"@en .
 # 
 # http://w3id.org/http#statusCodeNumber
 <http://w3id.org/http#statusCodeNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -240,7 +239,7 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <http://w3id.org/http#statusCodeNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/http#threeDigit> .
 <http://w3id.org/http#statusCodeNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "The status code number."@en .
 <http://w3id.org/http#statusCodeNumber> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://tools.ietf.org/rfc/rfc7231#section-6> .
-<http://w3id.org/http#statusCodeNumber> <http://www.w3.org/2000/01/rdf-schema#label> "Status code number"@en .
+<http://w3id.org/http#statusCodeNumber> <http://www.w3.org/2000/01/rdf-schema#label> "status code number"@en .
 # 
 # 
 # 
@@ -251,72 +250,69 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # #################################################################
 # 
 # 
-# http://w3id.org/http#Connection
-<http://w3id.org/http#Connection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/http#Connection> <http://www.w3.org/2000/01/rdf-schema#comment> "A connection used for HTTP transfer."@en .
-<http://w3id.org/http#Connection> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://tools.ietf.org/rfc/rfc7231> .
-<http://w3id.org/http#Connection> <http://www.w3.org/2000/01/rdf-schema#label> "Connection"@en .
-# 
 # http://w3id.org/http#FinalResponse
 <http://w3id.org/http#FinalResponse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/http#FinalResponse> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/http#Response> .
-<http://w3id.org/http#FinalResponse> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid12 <http://www.w3.org/2002/07/owl#complementOf> <http://w3id.org/http#InterimResponse> .
+<http://w3id.org/http#FinalResponse> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid10 <http://www.w3.org/2002/07/owl#complementOf> <http://w3id.org/http#InterimResponse> .
 <http://w3id.org/http#FinalResponse> <http://www.w3.org/2002/07/owl#disjointWith> <http://w3id.org/http#InterimResponse> .
 <http://w3id.org/http#FinalResponse> <http://www.w3.org/2000/01/rdf-schema#comment> "A final response."@en .
 <http://w3id.org/http#FinalResponse> <http://www.w3.org/2000/01/rdf-schema#label> "Final"@en .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid11 <http://www.w3.org/2002/07/owl#annotatedSource> <http://w3id.org/http#FinalResponse> .
+_:genid11 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://www.w3.org/2002/07/owl#disjointWith> .
+_:genid11 <http://www.w3.org/2002/07/owl#annotatedTarget> <http://w3id.org/http#InterimResponse> .
+_:genid11 <http://www.w3.org/2000/01/rdf-schema#comment> "An HTTP response."@en .
+_:genid11 <http://www.w3.org/2000/01/rdf-schema#label> "Response"@en .
 # 
 # http://w3id.org/http#Header
 <http://w3id.org/http#Header> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/http#Header> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/http#hdrName> .
+_:genid12 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
 <http://w3id.org/http#Header> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
 _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/http#fieldValue> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/http#hdrValue> .
 _:genid13 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
-<http://w3id.org/http#Header> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/http#hdrName> .
-_:genid14 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
 <http://w3id.org/http#Header> <http://www.w3.org/2000/01/rdf-schema#comment> "A header in an HTTP message."@en .
-<http://w3id.org/http#Header> <http://www.w3.org/2000/01/rdf-schema#label> "Message Header"@en .
+<http://w3id.org/http#Header> <http://www.w3.org/2000/01/rdf-schema#label> "Header"@en .
 # 
 # http://w3id.org/http#InterimResponse
 <http://w3id.org/http#InterimResponse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/http#InterimResponse> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/http#Response> .
-<http://w3id.org/http#InterimResponse> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/http#sc> .
-_:genid15 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/http/sc#Informational> .
+<http://w3id.org/http#InterimResponse> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/http#sc> .
+_:genid14 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/http/sc#Informational> .
 <http://w3id.org/http#InterimResponse> <http://www.w3.org/2000/01/rdf-schema#comment> "An interim response."@en .
 <http://w3id.org/http#InterimResponse> <http://www.w3.org/2000/01/rdf-schema#label> "Interim"@en .
 # 
 # http://w3id.org/http#Message
 <http://w3id.org/http#Message> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/http#Message> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
-_:genid16 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid19 .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid20 .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/http#body> .
-_:genid20 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/http/content#Content> .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid17 .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid18 .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/http#headers> .
-_:genid18 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/http#Header> .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/http#Message> <http://www.w3.org/2000/01/rdf-schema#comment> "An HTTP message."@en .
-<http://w3id.org/http#Message> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://tools.ietf.org/rfc/rfc7231> .
-<http://w3id.org/http#Message> <http://www.w3.org/2000/01/rdf-schema#label> "Message"@en .
+<http://w3id.org/http#Message> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/http#body> .
+_:genid19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/http/content#Content> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/http#hdr> .
+_:genid17 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://w3id.org/http#Header> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # http://w3id.org/http#Method
 <http://w3id.org/http#Method> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/http#Method> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid21 .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/http#methodName> .
-_:genid21 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/http#notEmptyToken> .
+<http://w3id.org/http#Method> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/http#methodName> .
+_:genid20 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/http#notEmptyToken> .
 <http://w3id.org/http#Method> <http://www.w3.org/2000/01/rdf-schema#comment> "The HTTP method used for the request."@en .
 <http://w3id.org/http#Method> <http://www.w3.org/2000/01/rdf-schema#label> "Method"@en .
 # 
@@ -327,28 +323,35 @@ _:genid21 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/http#n
 # 
 # http://w3id.org/http#Request
 <http://w3id.org/http#Request> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/http#Request> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid22 .
-_:genid22 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid27 .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/http#Message> .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid25 .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid26 .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/http#mthd> .
-_:genid26 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/http#Method> .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid23 .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid24 .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/http#uri> .
-_:genid24 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/http#URI> .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/http#Request> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
+_:genid21 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/http#Message> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/http#mthd> .
+_:genid25 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/http#Method> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/http#uri> .
+_:genid23 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/http#URI> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/http#Request> <http://www.w3.org/2002/07/owl#disjointWith> <http://w3id.org/http#Response> .
 <http://w3id.org/http#Request> <http://www.w3.org/2000/01/rdf-schema#comment> "An HTTP request."@en .
 <http://w3id.org/http#Request> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://tools.ietf.org/rfc/rfc7231> .
 <http://w3id.org/http#Request> <http://www.w3.org/2000/01/rdf-schema#label> "Request"@en .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Axiom> .
+_:genid27 <http://www.w3.org/2002/07/owl#annotatedSource> <http://w3id.org/http#Request> .
+_:genid27 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://www.w3.org/2002/07/owl#disjointWith> .
+_:genid27 <http://www.w3.org/2002/07/owl#annotatedTarget> <http://w3id.org/http#Response> .
+_:genid27 <http://www.w3.org/2000/01/rdf-schema#comment> "An HTTP message."@en .
+_:genid27 <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://tools.ietf.org/rfc/rfc7231> .
+_:genid27 <http://www.w3.org/2000/01/rdf-schema#label> "Message"@en .
 # 
 # http://w3id.org/http#Response
 <http://w3id.org/http#Response> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -364,8 +367,6 @@ _:genid30 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/http#sc> .
 _:genid30 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/http#StatusCode> .
 _:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/http#Response> <http://www.w3.org/2000/01/rdf-schema#comment> "An HTTP response."@en .
-<http://w3id.org/http#Response> <http://www.w3.org/2000/01/rdf-schema#label> "Response"@en .
 # 
 # http://w3id.org/http#StatusCode
 <http://w3id.org/http#StatusCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -417,7 +418,7 @@ _:genid38 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/http#link>
 _:genid38 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/http#URI> .
 <http://w3id.org/http/headers#LocationHeader> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid39 .
 _:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/http/headers#hasLocationHeader> .
+_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/http/headers#isLocationHeader> .
 _:genid39 <http://www.w3.org/2002/07/owl#hasSelf> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
 # http://w3id.org/http/sc#ClientError
@@ -994,4 +995,4 @@ _:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://w3id.org/http/sc#VariantAlsoNegotiates> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ietf.org/rfc/rfc2295.txt> .
 <http://w3id.org/http/sc#VariantAlsoNegotiates> <http://www.w3.org/2000/01/rdf-schema#label> "Variant Also Negotiates (Experimental)"@en .
 # 
-# Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/
