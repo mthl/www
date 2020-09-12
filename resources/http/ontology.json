@@ -10,33 +10,13 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid10",
+  "@id" : "_:genid12",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#complementOf" : [ {
     "@id" : "http://w3id.org/http#InterimResponse"
   } ]
 }, {
-  "@id" : "_:genid11",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "An HTTP response."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Response"
-  } ],
-  "http://www.w3.org/2002/07/owl#annotatedProperty" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#disjointWith"
-  } ],
-  "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://w3id.org/http#FinalResponse"
-  } ],
-  "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
-    "@id" : "http://w3id.org/http#InterimResponse"
-  } ]
-}, {
-  "@id" : "_:genid12",
+  "@id" : "_:genid13",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://w3id.org/http#hdrName"
@@ -45,7 +25,7 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
-  "@id" : "_:genid13",
+  "@id" : "_:genid14",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://w3id.org/http#hdrValue"
@@ -54,7 +34,7 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
-  "@id" : "_:genid14",
+  "@id" : "_:genid15",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://w3id.org/http#sc"
@@ -63,56 +43,46 @@
     "@id" : "http://w3id.org/http/sc#Informational"
   } ]
 }, {
-  "@id" : "_:genid15",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "_:genid19"
-    }, {
-      "@id" : "_:genid17"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid17",
+  "@id" : "_:genid16",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://w3id.org/http#Header"
-  } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/http#hdr"
+    "@id" : "http://w3id.org/http#version"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
   "@id" : "_:genid19",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://w3id.org/http/content#Content"
-  } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/http#body"
-  } ]
-}, {
-  "@id" : "_:genid20",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/http#methodName"
+    "@id" : "http://w3id.org/http#mthdName"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://w3id.org/http#notEmptyToken"
   } ]
 }, {
-  "@id" : "_:genid21",
+  "@id" : "_:genid20",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "http://w3id.org/http#Message"
+      "@id" : "_:genid26"
     }, {
-      "@id" : "_:genid25"
+      "@id" : "_:genid24"
     }, {
-      "@id" : "_:genid23"
+      "@id" : "_:genid22"
     } ]
   } ]
 }, {
-  "@id" : "_:genid23",
+  "@id" : "_:genid22",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/http/headers#host"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/http/headers#Host"
+  } ]
+}, {
+  "@id" : "_:genid24",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://w3id.org/http#uri"
@@ -121,7 +91,7 @@
     "@id" : "http://w3id.org/http#URI"
   } ]
 }, {
-  "@id" : "_:genid25",
+  "@id" : "_:genid26",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://w3id.org/http#mthd"
@@ -131,36 +101,12 @@
   } ]
 }, {
   "@id" : "_:genid27",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "An HTTP message."
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/http#sc"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://tools.ietf.org/rfc/rfc7231"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Message"
-  } ],
-  "http://www.w3.org/2002/07/owl#annotatedProperty" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#disjointWith"
-  } ],
-  "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "http://w3id.org/http#Request"
-  } ],
-  "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
-    "@id" : "http://w3id.org/http#Response"
-  } ]
-}, {
-  "@id" : "_:genid28",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://w3id.org/http#Message"
-    }, {
-      "@id" : "_:genid30"
-    } ]
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/http#Status"
   } ]
 }, {
   "@id" : "_:genid3",
@@ -172,22 +118,13 @@
   "@id" : "_:genid30",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/http#sc"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://w3id.org/http#StatusCode"
-  } ]
-}, {
-  "@id" : "_:genid32",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/http#statusCodeNumber"
+    "@id" : "http://w3id.org/http#code"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://w3id.org/http#threeDigit"
   } ]
 }, {
-  "@id" : "_:genid33",
+  "@id" : "_:genid31",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#cardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -197,17 +134,26 @@
     "@id" : "http://w3id.org/http/content#about"
   } ]
 }, {
-  "@id" : "_:genid34",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://w3id.org/http#Header"
-    }, {
-      "@id" : "_:genid36"
-    } ]
+  "@id" : "_:genid32",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@value" : "Host"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/http#hdrName"
   } ]
 }, {
-  "@id" : "_:genid36",
+  "@id" : "_:genid33",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasSelf" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/http/headers#isHost"
+  } ]
+}, {
+  "@id" : "_:genid34",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@value" : "Location"
@@ -216,7 +162,7 @@
     "@id" : "http://w3id.org/http#hdrName"
   } ]
 }, {
-  "@id" : "_:genid38",
+  "@id" : "_:genid35",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://w3id.org/http#link"
@@ -225,14 +171,33 @@
     "@id" : "http://w3id.org/http#URI"
   } ]
 }, {
-  "@id" : "_:genid39",
+  "@id" : "_:genid36",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasSelf" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "true"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/http/headers#isLocationHeader"
+    "@id" : "http://w3id.org/http/headers#isLocation"
+  } ]
+}, {
+  "@id" : "_:genid37",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/http#Status"
+    }, {
+      "@id" : "_:genid39"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid39",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/http#code"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid40"
   } ]
 }, {
   "@id" : "_:genid4",
@@ -247,98 +212,101 @@
   } ]
 }, {
   "@id" : "_:genid40",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
+  "http://www.w3.org/2002/07/owl#onDatatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/2002/07/owl#withRestrictions" : [ {
     "@list" : [ {
-      "@id" : "http://w3id.org/http#StatusCode"
+      "@id" : "_:genid44"
     }, {
       "@id" : "_:genid42"
     } ]
   } ]
 }, {
   "@id" : "_:genid42",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/http#statusCodeNumber"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid43"
+  "http://www.w3.org/2001/XMLSchema#maxInclusive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "499"
   } ]
 }, {
-  "@id" : "_:genid43",
+  "@id" : "_:genid44",
+  "http://www.w3.org/2001/XMLSchema#minInclusive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "400"
+  } ]
+}, {
+  "@id" : "_:genid46",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/http#Status"
+    }, {
+      "@id" : "_:genid48"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid48",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/http#code"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid49"
+  } ]
+}, {
+  "@id" : "_:genid49",
   "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
   "http://www.w3.org/2002/07/owl#onDatatype" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ],
   "http://www.w3.org/2002/07/owl#withRestrictions" : [ {
     "@list" : [ {
-      "@id" : "_:genid47"
-    }, {
-      "@id" : "_:genid45"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid45",
-  "http://www.w3.org/2001/XMLSchema#maxInclusive" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "499"
-  } ]
-}, {
-  "@id" : "_:genid47",
-  "http://www.w3.org/2001/XMLSchema#minInclusive" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "400"
-  } ]
-}, {
-  "@id" : "_:genid49",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://w3id.org/http#StatusCode"
+      "@id" : "_:genid53"
     }, {
       "@id" : "_:genid51"
     } ]
   } ]
 }, {
   "@id" : "_:genid51",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/http#statusCodeNumber"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid52"
+  "http://www.w3.org/2001/XMLSchema#maxInclusive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "199"
   } ]
 }, {
-  "@id" : "_:genid52",
+  "@id" : "_:genid53",
+  "http://www.w3.org/2001/XMLSchema#minInclusive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "100"
+  } ]
+}, {
+  "@id" : "_:genid55",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/http#Status"
+    }, {
+      "@id" : "_:genid57"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid57",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/http#code"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid58"
+  } ]
+}, {
+  "@id" : "_:genid58",
   "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
   "http://www.w3.org/2002/07/owl#onDatatype" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ],
   "http://www.w3.org/2002/07/owl#withRestrictions" : [ {
     "@list" : [ {
-      "@id" : "_:genid56"
-    }, {
-      "@id" : "_:genid54"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid54",
-  "http://www.w3.org/2001/XMLSchema#maxInclusive" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "199"
-  } ]
-}, {
-  "@id" : "_:genid56",
-  "http://www.w3.org/2001/XMLSchema#minInclusive" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "100"
-  } ]
-}, {
-  "@id" : "_:genid58",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://w3id.org/http#StatusCode"
+      "@id" : "_:genid62"
     }, {
       "@id" : "_:genid60"
     } ]
@@ -351,125 +319,108 @@
   } ]
 }, {
   "@id" : "_:genid60",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/http#statusCodeNumber"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid61"
+  "http://www.w3.org/2001/XMLSchema#maxInclusive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "399"
   } ]
 }, {
-  "@id" : "_:genid61",
+  "@id" : "_:genid62",
+  "http://www.w3.org/2001/XMLSchema#minInclusive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "300"
+  } ]
+}, {
+  "@id" : "_:genid64",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/http#Status"
+    }, {
+      "@id" : "_:genid66"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid66",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/http#code"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid67"
+  } ]
+}, {
+  "@id" : "_:genid67",
   "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
   "http://www.w3.org/2002/07/owl#onDatatype" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ],
   "http://www.w3.org/2002/07/owl#withRestrictions" : [ {
     "@list" : [ {
-      "@id" : "_:genid65"
-    }, {
-      "@id" : "_:genid63"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid63",
-  "http://www.w3.org/2001/XMLSchema#maxInclusive" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "399"
-  } ]
-}, {
-  "@id" : "_:genid65",
-  "http://www.w3.org/2001/XMLSchema#minInclusive" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "300"
-  } ]
-}, {
-  "@id" : "_:genid67",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://w3id.org/http#StatusCode"
+      "@id" : "_:genid71"
     }, {
       "@id" : "_:genid69"
     } ]
   } ]
 }, {
   "@id" : "_:genid69",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/http#statusCodeNumber"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid70"
+  "http://www.w3.org/2001/XMLSchema#maxInclusive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "599"
   } ]
 }, {
-  "@id" : "_:genid70",
+  "@id" : "_:genid71",
+  "http://www.w3.org/2001/XMLSchema#minInclusive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "500"
+  } ]
+}, {
+  "@id" : "_:genid73",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/http#Status"
+    }, {
+      "@id" : "_:genid75"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid75",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/http#code"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid76"
+  } ]
+}, {
+  "@id" : "_:genid76",
   "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
   "http://www.w3.org/2002/07/owl#onDatatype" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ],
   "http://www.w3.org/2002/07/owl#withRestrictions" : [ {
     "@list" : [ {
-      "@id" : "_:genid74"
-    }, {
-      "@id" : "_:genid72"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid72",
-  "http://www.w3.org/2001/XMLSchema#maxInclusive" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "599"
-  } ]
-}, {
-  "@id" : "_:genid74",
-  "http://www.w3.org/2001/XMLSchema#minInclusive" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "500"
-  } ]
-}, {
-  "@id" : "_:genid76",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://w3id.org/http#StatusCode"
+      "@id" : "_:genid80"
     }, {
       "@id" : "_:genid78"
     } ]
   } ]
 }, {
   "@id" : "_:genid78",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://w3id.org/http#statusCodeNumber"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid79"
-  } ]
-}, {
-  "@id" : "_:genid79",
-  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
-  "http://www.w3.org/2002/07/owl#onDatatype" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-  } ],
-  "http://www.w3.org/2002/07/owl#withRestrictions" : [ {
-    "@list" : [ {
-      "@id" : "_:genid83"
-    }, {
-      "@id" : "_:genid81"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid81",
   "http://www.w3.org/2001/XMLSchema#maxInclusive" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "299"
   } ]
 }, {
-  "@id" : "_:genid83",
+  "@id" : "_:genid80",
   "http://www.w3.org/2001/XMLSchema#minInclusive" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "200"
+  } ]
+}, {
+  "@id" : "_:genid82",
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The Host header is required for requests"
   } ]
 }, {
   "@id" : "http://w3id.org/http#",
@@ -483,6 +434,30 @@
     "@value" : "HTTP Ontology"
   } ]
 }, {
+  "@id" : "http://w3id.org/http#CONNECT",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Method" ],
+  "http://w3id.org/http#mthdName" : [ {
+    "@value" : "CONNECT"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://tools.ietf.org/rfc/rfc7231#section-4.3.6"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "CONNECT"
+  } ]
+}, {
+  "@id" : "http://w3id.org/http#DELETE",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Method" ],
+  "http://w3id.org/http#mthdName" : [ {
+    "@value" : "DELETE"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://tools.ietf.org/rfc/rfc7231#section-4.3.5"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DELETE"
+  } ]
+}, {
   "@id" : "http://w3id.org/http#FinalResponse",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -491,15 +466,36 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Final"
+    "@value" : "Final Response"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://w3id.org/http#Response"
   }, {
-    "@id" : "_:genid10"
+    "@id" : "_:genid12"
+  } ]
+}, {
+  "@id" : "http://w3id.org/http#GET",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Method" ],
+  "http://w3id.org/http#mthdName" : [ {
+    "@value" : "GET"
   } ],
-  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "http://w3id.org/http#InterimResponse"
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://tools.ietf.org/rfc/rfc7231#section-4.3.1"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "GET"
+  } ]
+}, {
+  "@id" : "http://w3id.org/http#HEAD",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Method" ],
+  "http://w3id.org/http#mthdName" : [ {
+    "@value" : "HEAD"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://tools.ietf.org/rfc/rfc7231#section-4.3.2"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "HEAD"
   } ]
 }, {
   "@id" : "http://w3id.org/http#Header",
@@ -513,9 +509,9 @@
     "@value" : "Header"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid12"
-  }, {
     "@id" : "_:genid13"
+  }, {
+    "@id" : "_:genid14"
   } ]
 }, {
   "@id" : "http://w3id.org/http#InterimResponse",
@@ -526,18 +522,36 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Interim"
+    "@value" : "Interim Response"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://w3id.org/http#Response"
   }, {
-    "@id" : "_:genid14"
+    "@id" : "_:genid15"
   } ]
 }, {
   "@id" : "http://w3id.org/http#Message",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An HTTP message."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://tools.ietf.org/rfc/rfc7231"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Message"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid15"
+    "@id" : "_:genid16"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointUnionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/http#Request"
+    }, {
+      "@id" : "http://w3id.org/http#Response"
+    } ]
   } ]
 }, {
   "@id" : "http://w3id.org/http#Method",
@@ -551,7 +565,55 @@
     "@value" : "Method"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid20"
+    "@id" : "_:genid19"
+  } ]
+}, {
+  "@id" : "http://w3id.org/http#OPTIONS",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Method" ],
+  "http://w3id.org/http#mthdName" : [ {
+    "@value" : "OPTIONS"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://tools.ietf.org/rfc/rfc7231#section-4.3.7"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "OPTIONS"
+  } ]
+}, {
+  "@id" : "http://w3id.org/http#PATCH",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Method" ],
+  "http://w3id.org/http#mthdName" : [ {
+    "@value" : "PATCH"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://tools.ietf.org/rfc/rfc5789"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "PATCH"
+  } ]
+}, {
+  "@id" : "http://w3id.org/http#POST",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Method" ],
+  "http://w3id.org/http#mthdName" : [ {
+    "@value" : "POST"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://tools.ietf.org/rfc/rfc7231#section-4.3.3"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "POST"
+  } ]
+}, {
+  "@id" : "http://w3id.org/http#PUT",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Method" ],
+  "http://w3id.org/http#mthdName" : [ {
+    "@value" : "PUT"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://tools.ietf.org/rfc/rfc7231#section-4.3.4"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "PUT"
   } ]
 }, {
   "@id" : "http://w3id.org/http#QueryParam",
@@ -579,33 +641,63 @@
     "@value" : "Request"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid21"
+    "@id" : "http://w3id.org/http#Message"
   } ],
-  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "http://w3id.org/http#Response"
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid20"
   } ]
 }, {
   "@id" : "http://w3id.org/http#Response",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An HTTP response."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Response"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid28"
+    "@id" : "http://w3id.org/http#Message"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointUnionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/http#FinalResponse"
+    }, {
+      "@id" : "http://w3id.org/http#InterimResponse"
+    } ]
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid27"
   } ]
 }, {
-  "@id" : "http://w3id.org/http#StatusCode",
+  "@id" : "http://w3id.org/http#Status",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "The status code of an HTTP response."
+    "@value" : "The status of an HTTP response."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://tools.ietf.org/rfc/rfc7231#section-6"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Status code"
+    "@value" : "Status"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid32"
+    "@id" : "_:genid30"
+  } ]
+}, {
+  "@id" : "http://w3id.org/http#TRACE",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Method" ],
+  "http://w3id.org/http#mthdName" : [ {
+    "@value" : "TRACE"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://tools.ietf.org/rfc/rfc7231#section-4.3.8"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "TRACE"
   } ]
 }, {
   "@id" : "http://w3id.org/http#URI",
@@ -615,7 +707,7 @@
     "@value" : "A semantic description of the syntactic parts composing a URI."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "URI description"
+    "@value" : "URI"
   } ]
 }, {
   "@id" : "http://w3id.org/http#authority",
@@ -647,6 +739,26 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://w3id.org/http/content#Content"
+  } ]
+}, {
+  "@id" : "http://w3id.org/http#code",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The status code."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://w3id.org/http#Status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://tools.ietf.org/rfc/rfc7231#section-6"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "status code"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://w3id.org/http#threeDigit"
   } ]
 }, {
   "@id" : "http://w3id.org/http#fragment",
@@ -714,26 +826,6 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
-  "@id" : "http://w3id.org/http#httpVersion",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "The HTTP version of an HTTP message."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/http#Message"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://tools.ietf.org/rfc/rfc7231"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "http version"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
-  } ]
-}, {
   "@id" : "http://w3id.org/http#idRes",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -751,23 +843,6 @@
   "@id" : "http://w3id.org/http#link",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ]
 }, {
-  "@id" : "http://w3id.org/http#methodName",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "The HTTP method name used for the HTTP request."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/http#Method"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "method name"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://w3id.org/http#notEmptyToken"
-  } ]
-}, {
   "@id" : "http://w3id.org/http#mthd",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -783,6 +858,23 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://w3id.org/http#Method"
+  } ]
+}, {
+  "@id" : "http://w3id.org/http#mthdName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The HTTP method name used for the HTTP request."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://w3id.org/http#Method"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "method name"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://w3id.org/http#notEmptyToken"
   } ]
 }, {
   "@id" : "http://w3id.org/http#notEmptyToken",
@@ -898,7 +990,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "The status code of an HTTP response."
+    "@value" : "The status of an HTTP response."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://w3id.org/http#Response"
@@ -908,10 +1000,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "status code"
+    "@value" : "status"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://w3id.org/http#StatusCode"
+    "@id" : "http://w3id.org/http#Status"
   } ]
 }, {
   "@id" : "http://w3id.org/http#scheme",
@@ -926,26 +1018,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "scheme"
-  } ]
-}, {
-  "@id" : "http://w3id.org/http#statusCodeNumber",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "The status code number."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/http#StatusCode"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://tools.ietf.org/rfc/rfc7231#section-6"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "status code number"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://w3id.org/http#threeDigit"
   } ]
 }, {
   "@id" : "http://w3id.org/http#threeDigit",
@@ -976,6 +1048,26 @@
     "@id" : "http://w3id.org/http#URI"
   } ]
 }, {
+  "@id" : "http://w3id.org/http#version",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The HTTP protocol version of an HTTP message."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://w3id.org/http#Message"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://tools.ietf.org/rfc/rfc7231"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "version"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ]
+}, {
   "@id" : "http://w3id.org/http/content#Content",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -995,13 +1087,13 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "RDF Content"
+    "@value" : "Content as RDF"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://w3id.org/http/content#Content"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid33"
+    "@id" : "_:genid31"
   } ]
 }, {
   "@id" : "http://w3id.org/http/content#about",
@@ -1021,24 +1113,79 @@
     "@id" : "http://www.w3.org/ns/sparql-service-description#Graph"
   } ]
 }, {
-  "@id" : "http://w3id.org/http/headers#LocationHeader",
+  "@id" : "http://w3id.org/http/headers#Host",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Host Header"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid38"
+    "@id" : "http://w3id.org/http#Header"
   }, {
-    "@id" : "_:genid39"
+    "@id" : "_:genid33"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid32"
+  } ]
+}, {
+  "@id" : "http://w3id.org/http/headers#Location",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Location Header"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/http#Header"
+  }, {
+    "@id" : "_:genid35"
+  }, {
+    "@id" : "_:genid36"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
     "@id" : "_:genid34"
   } ]
 }, {
-  "@id" : "http://w3id.org/http/headers#isLocationHeader",
+  "@id" : "http://w3id.org/http/headers#host",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "\nThis is effectively a functional property but OWL2 DL does not allow\nsuch property to be defined on non-simple properties.\n"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://w3id.org/http#Request"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "host"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://w3id.org/http/headers#Host"
+  } ],
+  "http://www.w3.org/2002/07/owl#propertyChainAxiom" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/http#hdr"
+    }, {
+      "@id" : "http://w3id.org/http/headers#isHost"
+    } ]
+  } ]
+}, {
+  "@id" : "http://w3id.org/http/headers#isHost",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#ReflexiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://w3id.org/http#Header"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "location header?"
+    "@value" : "is Host header?"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://w3id.org/http#Header"
+  } ]
+}, {
+  "@id" : "http://w3id.org/http/headers#isLocation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#ReflexiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://w3id.org/http#Header"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is location header?"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://w3id.org/http#Header"
@@ -1059,123 +1206,15 @@
     "@list" : [ {
       "@id" : "http://w3id.org/http#hdr"
     }, {
-      "@id" : "http://w3id.org/http/headers#isLocationHeader"
+      "@id" : "http://w3id.org/http/headers#isLocation"
     }, {
       "@id" : "http://w3id.org/http#link"
     } ]
   } ]
 }, {
-  "@id" : "http://w3id.org/http/mthd#CONNECT",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Method" ],
-  "http://w3id.org/http#methodName" : [ {
-    "@value" : "CONNECT"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://tools.ietf.org/rfc/rfc7231#section-4.3.6"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "CONNECT"
-  } ]
-}, {
-  "@id" : "http://w3id.org/http/mthd#DELETE",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Method" ],
-  "http://w3id.org/http#methodName" : [ {
-    "@value" : "DELETE"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://tools.ietf.org/rfc/rfc7231#section-4.3.5"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "DELETE"
-  } ]
-}, {
-  "@id" : "http://w3id.org/http/mthd#GET",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Method" ],
-  "http://w3id.org/http#methodName" : [ {
-    "@value" : "GET"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://tools.ietf.org/rfc/rfc7231#section-4.3.1"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "GET"
-  } ]
-}, {
-  "@id" : "http://w3id.org/http/mthd#HEAD",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Method" ],
-  "http://w3id.org/http#methodName" : [ {
-    "@value" : "HEAD"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://tools.ietf.org/rfc/rfc7231#section-4.3.2"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "HEAD"
-  } ]
-}, {
-  "@id" : "http://w3id.org/http/mthd#OPTIONS",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Method" ],
-  "http://w3id.org/http#methodName" : [ {
-    "@value" : "OPTIONS"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://tools.ietf.org/rfc/rfc7231#section-4.3.7"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "OPTIONS"
-  } ]
-}, {
-  "@id" : "http://w3id.org/http/mthd#PATCH",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Method" ],
-  "http://w3id.org/http#methodName" : [ {
-    "@value" : "PATCH"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://tools.ietf.org/rfc/rfc5789"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "PATCH"
-  } ]
-}, {
-  "@id" : "http://w3id.org/http/mthd#POST",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Method" ],
-  "http://w3id.org/http#methodName" : [ {
-    "@value" : "POST"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://tools.ietf.org/rfc/rfc7231#section-4.3.3"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "POST"
-  } ]
-}, {
-  "@id" : "http://w3id.org/http/mthd#PUT",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Method" ],
-  "http://w3id.org/http#methodName" : [ {
-    "@value" : "PUT"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://tools.ietf.org/rfc/rfc7231#section-4.3.4"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "PUT"
-  } ]
-}, {
-  "@id" : "http://w3id.org/http/mthd#TRACE",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Method" ],
-  "http://w3id.org/http#methodName" : [ {
-    "@value" : "TRACE"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://tools.ietf.org/rfc/rfc7231#section-4.3.8"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "TRACE"
-  } ]
-}, {
   "@id" : "http://w3id.org/http/sc#Accepted",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "202"
   } ],
@@ -1188,8 +1227,8 @@
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#BadGateway",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "502"
   } ],
@@ -1202,8 +1241,8 @@
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#BadRequest",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "400"
   } ],
@@ -1226,12 +1265,12 @@
     "@value" : "Client Error"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid40"
+    "@id" : "_:genid37"
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#Conflict",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "409"
   } ],
@@ -1244,8 +1283,8 @@
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#Continue",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "100"
   } ],
@@ -1258,8 +1297,8 @@
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#Created",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "201"
   } ],
@@ -1272,8 +1311,8 @@
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#ExpectationFailed",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "417"
   } ],
@@ -1286,8 +1325,8 @@
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#FailedDependency",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "424"
   } ],
@@ -1300,8 +1339,8 @@
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#Forbidden",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "403"
   } ],
@@ -1314,8 +1353,8 @@
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#Found",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "302"
   } ],
@@ -1328,8 +1367,8 @@
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#GatewayTimeout",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "504"
   } ],
@@ -1342,8 +1381,8 @@
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#Gone",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "410"
   } ],
@@ -1356,8 +1395,8 @@
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#HTTPVersionNotSupported",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "505"
   } ],
@@ -1370,8 +1409,8 @@
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#IMUsed",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "226"
   } ],
@@ -1394,12 +1433,12 @@
     "@value" : "Informational"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid49"
+    "@id" : "_:genid46"
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#InsufficientStorage",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "507"
   } ],
@@ -1412,8 +1451,8 @@
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#InternalServerError",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "500"
   } ],
@@ -1426,8 +1465,8 @@
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#LengthRequired",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "411"
   } ],
@@ -1440,8 +1479,8 @@
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#Locked",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "423"
   } ],
@@ -1454,8 +1493,8 @@
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#MethodNotAllowed",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "405"
   } ],
@@ -1468,8 +1507,8 @@
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#MovedPermanently",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "301"
   } ],
@@ -1482,8 +1521,8 @@
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#MultiStatus",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "207"
   } ],
@@ -1496,8 +1535,8 @@
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#MultipleChoices",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "300"
   } ],
@@ -1510,8 +1549,8 @@
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#NoContent",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "204"
   } ],
@@ -1524,8 +1563,8 @@
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#NonAuthoritativeInformation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "203"
   } ],
@@ -1538,8 +1577,8 @@
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#NotAcceptable",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "406"
   } ],
@@ -1552,8 +1591,8 @@
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#NotExtended",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "510"
   } ],
@@ -1566,8 +1605,8 @@
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#NotFound",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "404"
   } ],
@@ -1580,8 +1619,8 @@
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#NotImplemented",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "501"
   } ],
@@ -1594,8 +1633,8 @@
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#NotModified",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "304"
   } ],
@@ -1608,8 +1647,8 @@
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#OK",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "200"
   } ],
@@ -1622,8 +1661,8 @@
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#PartialContent",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "206"
   } ],
@@ -1636,8 +1675,8 @@
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#PaymentRequired",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "402"
   } ],
@@ -1650,8 +1689,8 @@
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#PreconditionFailed",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "412"
   } ],
@@ -1664,8 +1703,8 @@
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#Processing",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "102"
   } ],
@@ -1678,8 +1717,8 @@
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#ProxyAuthenticationRequired",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "407"
   } ],
@@ -1702,12 +1741,12 @@
     "@value" : "Redirection"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid58"
+    "@id" : "_:genid55"
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#RequestEntityTooLarge",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "413"
   } ],
@@ -1720,8 +1759,8 @@
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#RequestTimeout",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "408"
   } ],
@@ -1734,8 +1773,8 @@
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#RequestURITooLong",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "414"
   } ],
@@ -1748,8 +1787,8 @@
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#RequestedRangeNotSatisfiable",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "416"
   } ],
@@ -1762,8 +1801,8 @@
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#Reserved",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "306"
   } ],
@@ -1776,8 +1815,8 @@
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#ResetContent",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "205"
   } ],
@@ -1790,8 +1829,8 @@
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#SeeOther",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "303"
   } ],
@@ -1814,12 +1853,12 @@
     "@value" : "Server Error"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid67"
+    "@id" : "_:genid64"
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#ServiceUnavailable",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "503"
   } ],
@@ -1842,12 +1881,12 @@
     "@value" : "Successful"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid76"
+    "@id" : "_:genid73"
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#SwitchingProtocols",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "101"
   } ],
@@ -1860,8 +1899,8 @@
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#TemporaryRedirect",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "307"
   } ],
@@ -1874,8 +1913,8 @@
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#Unauthorized",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "401"
   } ],
@@ -1888,8 +1927,8 @@
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#UnprocessableEntity",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "422"
   } ],
@@ -1902,8 +1941,8 @@
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#UnsupportedMediaType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "415"
   } ],
@@ -1916,8 +1955,8 @@
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#UpgradeRequired",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "426"
   } ],
@@ -1930,8 +1969,8 @@
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#UseProxy",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "305"
   } ],
@@ -1944,8 +1983,8 @@
   } ]
 }, {
   "@id" : "http://w3id.org/http/sc#VariantAlsoNegotiates",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#StatusCode" ],
-  "http://w3id.org/http#statusCodeNumber" : [ {
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/http#Status" ],
+  "http://w3id.org/http#code" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "506"
   } ],

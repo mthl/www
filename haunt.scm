@@ -17,7 +17,7 @@
   '((about . "http://reuz.fr/#me")
     (email . ("mthl@reuz.fr"
               "mathieu.lirzin@nereide.fr"
-              "mathieu.lirzin@etu.univ-tours.fr"
+              ;; "mathieu.lirzin@etu.univ-tours.fr"
               "mthl@gnu.org"))
     (contributes . (((about . "https://ofbiz.apache.org/")
                      (name . "Apache OFBiz"))))
@@ -135,15 +135,10 @@
         (bdtln (xref "https://lifat.univ-tours.fr/teams/bdtin/" "BdTln"))
         (univ (xref "https://www.univ-tours.fr/" "University of Tours"))
         (markhoff (xref "http://www.info.univ-tours.fr/~markhoff/" "Béatrice Markhoff")))
-    `(p "I am a software engineer at " ,nereide " and a PhD student
-at " (em "Laboratoire d'Informatique Formelle et Appliquée de
-Tours") " (",lifat "), ",univ " in the " (em "Base de Données et Traitement
-des Langues Naturelles") " (" ,bdtln ") team.  My PhD thesis which subject is
-“Semantic Interoperability in multi-tier systems” has started in april 2019
-under the supervision of " ,markhoff " with the goal of finding sound and
-effective ways to compose Hypermedia APIs in the context of Information
-Systems. My topics of interest are Programming Languages, Network Based
-Software Architecture, Software packaging and the World Wide Web.")))
+    `(p "I am a software engineer at " ,nereide " doing research and
+developpement on the Apache OFBiz ERP framework. My topics of interest
+are Programming Languages, Network Based Software Architecture,
+Software packaging and the World Wide Web.")))
 
 (define free-software-desc
   (let ((gnu (xref "https://www.gnu.org/" "GNU"))
@@ -165,9 +160,9 @@ experience as a student in 2017."))
       (dl
        (dt "Néréide postal address")
        (dd ,(xref "https://www.openstreetmap.org/node/4999813121" "8 rue des déportés 37000 Tours"))
-       (dt "University postal address")
-       (dd ,(xref "https://www.openstreetmap.org/way/118648970"
-                  "UFR Sciences et Techniques, Site universitaire de Blois, 3 place Jean Jaurès 41000 Blois."))
+       ;; (dt "University postal address")
+       ;; (dd ,(xref "https://www.openstreetmap.org/way/118648970"
+       ;;            "UFR Sciences et Techniques, Site universitaire de Blois, 3 place Jean Jaurès 41000 Blois."))
        (dt "Email")
        (dd ,@emails)
        (dt "PGP")
@@ -226,7 +221,7 @@ experience as a student in 2017."))
                          (page #:path "index.html"
                                #:title mthl
                                #:content home-page)
-                         (static-directory "static" "")
+                         (static-directory "resources" "")
                          (blog #:theme blog-theme #:prefix "blog")
                          (atom-feed)
                          (atom-feeds-by-tag))))))

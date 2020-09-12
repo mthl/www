@@ -10,7 +10,10 @@ This ontology has the following classes and properties.</span>
 <a href="#http://w3id.org/http/content#Content" title="http://w3id.org/http/content#Content">Content</a>
 </li>
 <li>
-<a href="#FinalResponse" title="http://w3id.org/http#FinalResponse">Final</a>
+<a href="#http://w3id.org/http/content#ContentAsRDF" title="http://w3id.org/http/content#ContentAsRDF">Content as RDF</a>
+</li>
+<li>
+<a href="#FinalResponse" title="http://w3id.org/http#FinalResponse">Final Response</a>
 </li>
 <li>
 <a href="#http://www.w3.org/ns/sparql-service-description#Graph" title="http://www.w3.org/ns/sparql-service-description#Graph">Graph</a>
@@ -19,20 +22,19 @@ This ontology has the following classes and properties.</span>
 <a href="#Header" title="http://w3id.org/http#Header">Header</a>
 </li>
 <li>
+<a href="#http://w3id.org/http/headers#Host" title="http://w3id.org/http/headers#Host">Host Header</a>
+</li>
+<li>
 <a href="#http://w3id.org/http/sc#Informational" title="http://w3id.org/http/sc#Informational">Informational</a>
 </li>
 <li>
-<a href="#InterimResponse" title="http://w3id.org/http#InterimResponse">Interim</a>
+<a href="#InterimResponse" title="http://w3id.org/http#InterimResponse">Interim Response</a>
 </li>
 <li>
-<a href="#http://w3id.org/http/headers#LocationHeader" title="http://w3id.org/http/headers#LocationHeader">
-<span>location header</span>
-</a>
+<a href="#http://w3id.org/http/headers#Location" title="http://w3id.org/http/headers#Location">Location Header</a>
 </li>
 <li>
-<a href="#Message" title="http://w3id.org/http#Message">
-<span>message</span>
-</a>
+<a href="#Message" title="http://w3id.org/http#Message">Message</a>
 </li>
 <li>
 <a href="#Method" title="http://w3id.org/http#Method">Method</a>
@@ -41,30 +43,25 @@ This ontology has the following classes and properties.</span>
 <a href="#QueryParam" title="http://w3id.org/http#QueryParam">Query Parameter</a>
 </li>
 <li>
-<a href="#http://w3id.org/http/content#ContentAsRDF" title="http://w3id.org/http/content#ContentAsRDF">RDF Content</a>
-</li>
-<li>
 <a href="#http://w3id.org/http/sc#Redirection" title="http://w3id.org/http/sc#Redirection">Redirection</a>
 </li>
 <li>
 <a href="#Request" title="http://w3id.org/http#Request">Request</a>
 </li>
 <li>
-<a href="#Response" title="http://w3id.org/http#Response">
-<span>response</span>
-</a>
+<a href="#Response" title="http://w3id.org/http#Response">Response</a>
 </li>
 <li>
 <a href="#http://w3id.org/http/sc#ServerError" title="http://w3id.org/http/sc#ServerError">Server Error</a>
 </li>
 <li>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 </li>
 <li>
 <a href="#http://w3id.org/http/sc#Successful" title="http://w3id.org/http/sc#Successful">Successful</a>
 </li>
 <li>
-<a href="#URI" title="http://w3id.org/http#URI">URI description</a>
+<a href="#URI" title="http://w3id.org/http#URI">URI</a>
 </li>
 </ul>
 <h4>Object Properties</h4><ul class="hlist">
@@ -78,15 +75,21 @@ This ontology has the following classes and properties.</span>
 <a href="#hdr" title="http://w3id.org/http#hdr">header</a>
 </li>
 <li>
+<a href="#http://w3id.org/http/headers#host" title="http://w3id.org/http/headers#host">host</a>
+</li>
+<li>
+<a href="#http://w3id.org/http/headers#isHost" title="http://w3id.org/http/headers#isHost">is Host header?</a>
+</li>
+<li>
+<a href="#http://w3id.org/http/headers#isLocation" title="http://w3id.org/http/headers#isLocation">is location header?</a>
+</li>
+<li>
 <a href="#link" title="http://w3id.org/http#link">
 <span>link</span>
 </a>
 </li>
 <li>
 <a href="#http://w3id.org/http/headers#location" title="http://w3id.org/http/headers#location">location</a>
-</li>
-<li>
-<a href="#http://w3id.org/http/headers#isLocationHeader" title="http://w3id.org/http/headers#isLocationHeader">location header?</a>
 </li>
 <li>
 <a href="#mthd" title="http://w3id.org/http#mthd">method</a>
@@ -98,7 +101,7 @@ This ontology has the following classes and properties.</span>
 <a href="#resp" title="http://w3id.org/http#resp">response</a>
 </li>
 <li>
-<a href="#sc" title="http://w3id.org/http#sc">status code</a>
+<a href="#sc" title="http://w3id.org/http#sc">status</a>
 </li>
 <li>
 <a href="#uri" title="http://w3id.org/http#uri">uri</a>
@@ -118,10 +121,7 @@ This ontology has the following classes and properties.</span>
 <a href="#hdrValue" title="http://w3id.org/http#hdrValue">header value</a>
 </li>
 <li>
-<a href="#httpVersion" title="http://w3id.org/http#httpVersion">http version</a>
-</li>
-<li>
-<a href="#methodName" title="http://w3id.org/http#methodName">method name</a>
+<a href="#mthdName" title="http://w3id.org/http#mthdName">method name</a>
 </li>
 <li>
 <a href="#paramName" title="http://w3id.org/http#paramName">parameter name</a>
@@ -142,7 +142,10 @@ This ontology has the following classes and properties.</span>
 <a href="#scheme" title="http://w3id.org/http#scheme">scheme</a>
 </li>
 <li>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
+</li>
+<li>
+<a href="#version" title="http://w3id.org/http#version">version</a>
 </li>
 </ul>
 <h4>Named Individuals</h4><ul class="hlist">
@@ -162,7 +165,7 @@ This ontology has the following classes and properties.</span>
 <a href="#http://w3id.org/http/sc#Conflict" title="http://w3id.org/http/sc#Conflict">Conflict</a>
 </li>
 <li>
-<a href="#http://w3id.org/http/mthd#CONNECT" title="http://w3id.org/http/mthd#CONNECT">CONNECT</a>
+<a href="#CONNECT" title="http://w3id.org/http#CONNECT">CONNECT</a>
 </li>
 <li>
 <a href="#http://w3id.org/http/sc#Continue" title="http://w3id.org/http/sc#Continue">Continue</a>
@@ -171,7 +174,7 @@ This ontology has the following classes and properties.</span>
 <a href="#http://w3id.org/http/sc#Created" title="http://w3id.org/http/sc#Created">Created</a>
 </li>
 <li>
-<a href="#http://w3id.org/http/mthd#DELETE" title="http://w3id.org/http/mthd#DELETE">DELETE</a>
+<a href="#DELETE" title="http://w3id.org/http#DELETE">DELETE</a>
 </li>
 <li>
 <a href="#http://w3id.org/http/sc#ExpectationFailed" title="http://w3id.org/http/sc#ExpectationFailed">Expectation Failed</a>
@@ -189,13 +192,13 @@ This ontology has the following classes and properties.</span>
 <a href="#http://w3id.org/http/sc#GatewayTimeout" title="http://w3id.org/http/sc#GatewayTimeout">Gateway Timeout</a>
 </li>
 <li>
-<a href="#http://w3id.org/http/mthd#GET" title="http://w3id.org/http/mthd#GET">GET</a>
+<a href="#GET" title="http://w3id.org/http#GET">GET</a>
 </li>
 <li>
 <a href="#http://w3id.org/http/sc#Gone" title="http://w3id.org/http/sc#Gone">Gone</a>
 </li>
 <li>
-<a href="#http://w3id.org/http/mthd#HEAD" title="http://w3id.org/http/mthd#HEAD">HEAD</a>
+<a href="#HEAD" title="http://w3id.org/http#HEAD">HEAD</a>
 </li>
 <li>
 <a href="#http://w3id.org/http/sc#HTTPVersionNotSupported" title="http://w3id.org/http/sc#HTTPVersionNotSupported">HTTP Version Not Supported</a>
@@ -252,19 +255,19 @@ This ontology has the following classes and properties.</span>
 <a href="#http://w3id.org/http/sc#OK" title="http://w3id.org/http/sc#OK">OK</a>
 </li>
 <li>
-<a href="#http://w3id.org/http/mthd#OPTIONS" title="http://w3id.org/http/mthd#OPTIONS">OPTIONS</a>
+<a href="#OPTIONS" title="http://w3id.org/http#OPTIONS">OPTIONS</a>
 </li>
 <li>
 <a href="#http://w3id.org/http/sc#PartialContent" title="http://w3id.org/http/sc#PartialContent">Partial Content</a>
 </li>
 <li>
-<a href="#http://w3id.org/http/mthd#PATCH" title="http://w3id.org/http/mthd#PATCH">PATCH</a>
+<a href="#PATCH" title="http://w3id.org/http#PATCH">PATCH</a>
 </li>
 <li>
 <a href="#http://w3id.org/http/sc#PaymentRequired" title="http://w3id.org/http/sc#PaymentRequired">Payment Required</a>
 </li>
 <li>
-<a href="#http://w3id.org/http/mthd#POST" title="http://w3id.org/http/mthd#POST">POST</a>
+<a href="#POST" title="http://w3id.org/http#POST">POST</a>
 </li>
 <li>
 <a href="#http://w3id.org/http/sc#PreconditionFailed" title="http://w3id.org/http/sc#PreconditionFailed">Precondition Failed</a>
@@ -276,7 +279,7 @@ This ontology has the following classes and properties.</span>
 <a href="#http://w3id.org/http/sc#ProxyAuthenticationRequired" title="http://w3id.org/http/sc#ProxyAuthenticationRequired">Proxy Authentication Required</a>
 </li>
 <li>
-<a href="#http://w3id.org/http/mthd#PUT" title="http://w3id.org/http/mthd#PUT">PUT</a>
+<a href="#PUT" title="http://w3id.org/http#PUT">PUT</a>
 </li>
 <li>
 <a href="#http://w3id.org/http/sc#RequestEntityTooLarge" title="http://w3id.org/http/sc#RequestEntityTooLarge">Request Entity Too Large</a>
@@ -306,7 +309,7 @@ This ontology has the following classes and properties.</span>
 <a href="#http://w3id.org/http/sc#TemporaryRedirect" title="http://w3id.org/http/sc#TemporaryRedirect">Temporary Redirect</a>
 </li>
 <li>
-<a href="#http://w3id.org/http/mthd#TRACE" title="http://w3id.org/http/mthd#TRACE">TRACE</a>
+<a href="#TRACE" title="http://w3id.org/http#TRACE">TRACE</a>
 </li>
 <li>
 <a href="#http://w3id.org/http/sc#Unauthorized" title="http://w3id.org/http/sc#Unauthorized">Unauthorized</a>

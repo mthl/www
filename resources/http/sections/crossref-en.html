@@ -10,7 +10,10 @@ This section provides details for each class and property defined by HTTP Ontolo
 <a href="#http://w3id.org/http/content#Content" title="http://w3id.org/http/content#Content">Content</a>
 </li>
 <li>
-<a href="#FinalResponse" title="http://w3id.org/http#FinalResponse">Final</a>
+<a href="#http://w3id.org/http/content#ContentAsRDF" title="http://w3id.org/http/content#ContentAsRDF">Content as RDF</a>
+</li>
+<li>
+<a href="#FinalResponse" title="http://w3id.org/http#FinalResponse">Final Response</a>
 </li>
 <li>
 <a href="#http://www.w3.org/ns/sparql-service-description#Graph" title="http://www.w3.org/ns/sparql-service-description#Graph">Graph</a>
@@ -19,20 +22,19 @@ This section provides details for each class and property defined by HTTP Ontolo
 <a href="#Header" title="http://w3id.org/http#Header">Header</a>
 </li>
 <li>
+<a href="#http://w3id.org/http/headers#Host" title="http://w3id.org/http/headers#Host">Host Header</a>
+</li>
+<li>
 <a href="#http://w3id.org/http/sc#Informational" title="http://w3id.org/http/sc#Informational">Informational</a>
 </li>
 <li>
-<a href="#InterimResponse" title="http://w3id.org/http#InterimResponse">Interim</a>
+<a href="#InterimResponse" title="http://w3id.org/http#InterimResponse">Interim Response</a>
 </li>
 <li>
-<a href="#http://w3id.org/http/headers#LocationHeader" title="http://w3id.org/http/headers#LocationHeader">
-<span>location header</span>
-</a>
+<a href="#http://w3id.org/http/headers#Location" title="http://w3id.org/http/headers#Location">Location Header</a>
 </li>
 <li>
-<a href="#Message" title="http://w3id.org/http#Message">
-<span>message</span>
-</a>
+<a href="#Message" title="http://w3id.org/http#Message">Message</a>
 </li>
 <li>
 <a href="#Method" title="http://w3id.org/http#Method">Method</a>
@@ -41,30 +43,25 @@ This section provides details for each class and property defined by HTTP Ontolo
 <a href="#QueryParam" title="http://w3id.org/http#QueryParam">Query Parameter</a>
 </li>
 <li>
-<a href="#http://w3id.org/http/content#ContentAsRDF" title="http://w3id.org/http/content#ContentAsRDF">RDF Content</a>
-</li>
-<li>
 <a href="#http://w3id.org/http/sc#Redirection" title="http://w3id.org/http/sc#Redirection">Redirection</a>
 </li>
 <li>
 <a href="#Request" title="http://w3id.org/http#Request">Request</a>
 </li>
 <li>
-<a href="#Response" title="http://w3id.org/http#Response">
-<span>response</span>
-</a>
+<a href="#Response" title="http://w3id.org/http#Response">Response</a>
 </li>
 <li>
 <a href="#http://w3id.org/http/sc#ServerError" title="http://w3id.org/http/sc#ServerError">Server Error</a>
 </li>
 <li>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 </li>
 <li>
 <a href="#http://w3id.org/http/sc#Successful" title="http://w3id.org/http/sc#Successful">Successful</a>
 </li>
 <li>
-<a href="#URI" title="http://w3id.org/http#URI">URI description</a>
+<a href="#URI" title="http://w3id.org/http#URI">URI</a>
 </li>
 </ul>
 <div class="entity" id="http://w3id.org/http/sc#ClientError">
@@ -80,8 +77,8 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>is equivalent to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
-<sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
+<sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="logic">some</span> )</dd>
 </dl>
 </div>
@@ -98,7 +95,7 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>has sub-classes</dt>
 <dd>
-<a href="#http://w3id.org/http/content#ContentAsRDF" title="http://w3id.org/http/content#ContentAsRDF">RDF Content</a>
+<a href="#http://w3id.org/http/content#ContentAsRDF" title="http://w3id.org/http/content#ContentAsRDF">Content as RDF</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>is in range of</dt>
@@ -108,8 +105,35 @@ This section provides details for each class and property defined by HTTP Ontolo
 </dd>
 </dl>
 </div>
+<div class="entity" id="http://w3id.org/http/content#ContentAsRDF">
+<h3>Content as RDF<sup class="type-c" title="class">c</sup>
+<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+</span>
+</h3>
+<p>
+<strong>IRI:</strong> http://w3id.org/http/content#ContentAsRDF</p>
+<div class="comment">
+<span class="markdown">RDF Content embedded in the body of an HTTP message</span>
+</div>
+<dl class="description">
+<dt>is equivalent to</dt>
+<dd>
+<a href="#http://w3id.org/http/content#about" title="http://w3id.org/http/content#about">graph</a>
+<sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1</dd>
+<dt>has super-classes</dt>
+<dd>
+<a href="#http://w3id.org/http/content#Content" title="http://w3id.org/http/content#Content">Content</a>
+<sup class="type-c" title="class">c</sup>
+</dd>
+<dt>is in domain of</dt>
+<dd>
+<a href="#http://w3id.org/http/content#about" title="http://w3id.org/http/content#about">graph</a>
+<sup class="type-op" title="object property">op</sup>
+</dd>
+</dl>
+</div>
 <div class="entity" id="FinalResponse">
-<h3>Final<sup class="type-c" title="class">c</sup>
+<h3>Final Response<sup class="type-c" title="class">c</sup>
 <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
 </span>
 </h3>
@@ -121,12 +145,7 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>has super-classes</dt>
 <dd>
-<a href="#Response" title="http://w3id.org/http#Response">response</a>
-<sup class="type-c" title="class">c</sup>
-</dd>
-<dt>is disjoint with</dt>
-<dd>
-<a href="#InterimResponse" title="http://w3id.org/http#InterimResponse">Interim</a>
+<a href="#Response" title="http://w3id.org/http#Response">Response</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 </dl>
@@ -162,17 +181,49 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>has super-classes</dt>
 <dd/>
+<dt>has sub-classes</dt>
+<dd>
+<a href="#http://w3id.org/http/headers#Host" title="http://w3id.org/http/headers#Host">Host Header</a>
+<sup class="type-c" title="class">c</sup>, <a href="#http://w3id.org/http/headers#Location" title="http://w3id.org/http/headers#Location">Location Header</a>
+<sup class="type-c" title="class">c</sup>
+</dd>
 <dt>is in domain of</dt>
 <dd>
 <a href="#hdrName" title="http://w3id.org/http#hdrName">header name</a>
 <sup class="type-dp" title="data property">dp</sup>, <a href="#hdrValue" title="http://w3id.org/http#hdrValue">header value</a>
-<sup class="type-dp" title="data property">dp</sup>, <a href="#http://w3id.org/http/headers#isLocationHeader" title="http://w3id.org/http/headers#isLocationHeader">location header?</a>
+<sup class="type-dp" title="data property">dp</sup>, <a href="#http://w3id.org/http/headers#isHost" title="http://w3id.org/http/headers#isHost">is Host header?</a>
+<sup class="type-op" title="object property">op</sup>, <a href="#http://w3id.org/http/headers#isLocation" title="http://w3id.org/http/headers#isLocation">is location header?</a>
 <sup class="type-op" title="object property">op</sup>
 </dd>
 <dt>is in range of</dt>
 <dd>
 <a href="#hdr" title="http://w3id.org/http#hdr">header</a>
-<sup class="type-op" title="object property">op</sup>, <a href="#http://w3id.org/http/headers#isLocationHeader" title="http://w3id.org/http/headers#isLocationHeader">location header?</a>
+<sup class="type-op" title="object property">op</sup>, <a href="#http://w3id.org/http/headers#isHost" title="http://w3id.org/http/headers#isHost">is Host header?</a>
+<sup class="type-op" title="object property">op</sup>, <a href="#http://w3id.org/http/headers#isLocation" title="http://w3id.org/http/headers#isLocation">is location header?</a>
+<sup class="type-op" title="object property">op</sup>
+</dd>
+</dl>
+</div>
+<div class="entity" id="http://w3id.org/http/headers#Host">
+<h3>Host Header<sup class="type-c" title="class">c</sup>
+<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+</span>
+</h3>
+<p>
+<strong>IRI:</strong> http://w3id.org/http/headers#Host</p>
+<dl class="description">
+<dt>is equivalent to</dt>
+<dd>
+<a href="#hdrName" title="http://w3id.org/http#hdrName">header name</a>
+<sup class="type-dp" title="data property">dp</sup> <span class="logic">value</span> Host</dd>
+<dt>has super-classes</dt>
+<dd>
+<a href="#Header" title="http://w3id.org/http#Header">Header</a>
+<sup class="type-c" title="class">c</sup>
+</dd>
+<dt>is in range of</dt>
+<dd>
+<a href="#http://w3id.org/http/headers#host" title="http://w3id.org/http/headers#host">host</a>
 <sup class="type-op" title="object property">op</sup>
 </dd>
 </dl>
@@ -190,13 +241,13 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>is equivalent to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
-<sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
+<sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="logic">some</span> )</dd>
 </dl>
 </div>
 <div class="entity" id="InterimResponse">
-<h3>Interim<sup class="type-c" title="class">c</sup>
+<h3>Interim Response<sup class="type-c" title="class">c</sup>
 <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
 </span>
 </h3>
@@ -208,48 +259,60 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>has super-classes</dt>
 <dd>
-<a href="#Response" title="http://w3id.org/http#Response">response</a>
-<sup class="type-c" title="class">c</sup>
-</dd>
-<dt>is disjoint with</dt>
-<dd>
-<a href="#FinalResponse" title="http://w3id.org/http#FinalResponse">Final</a>
+<a href="#Response" title="http://w3id.org/http#Response">Response</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 </dl>
 </div>
-<div class="entity" id="http://w3id.org/http/headers#LocationHeader">
-<h3>location header<sup class="type-c" title="class">c</sup>
+<div class="entity" id="http://w3id.org/http/headers#Location">
+<h3>Location Header<sup class="type-c" title="class">c</sup>
 <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
 </span>
 </h3>
 <p>
-<strong>IRI:</strong> http://w3id.org/http/headers#LocationHeader</p>
+<strong>IRI:</strong> http://w3id.org/http/headers#Location</p>
 <dl class="description">
 <dt>is equivalent to</dt>
 <dd>
-<a href="#Header" title="http://w3id.org/http#Header">Header</a>
-<sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#hdrName" title="http://w3id.org/http#hdrName">header name</a>
-<sup class="type-dp" title="data property">dp</sup> <span class="logic">value</span> Location)</dd>
+<a href="#hdrName" title="http://w3id.org/http#hdrName">header name</a>
+<sup class="type-dp" title="data property">dp</sup> <span class="logic">value</span> Location</dd>
 <dt>has super-classes</dt>
-<dd/>
+<dd>
+<a href="#Header" title="http://w3id.org/http#Header">Header</a>
+<sup class="type-c" title="class">c</sup>
+</dd>
 </dl>
 </div>
 <div class="entity" id="Message">
-<h3>message<sup class="type-c" title="class">c</sup>
+<h3>Message<sup class="type-c" title="class">c</sup>
 <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
 </span>
 </h3>
 <p>
 <strong>IRI:</strong> http://w3id.org/http#Message</p>
+<div class="comment">
+<span class="markdown">An HTTP message.</span>
+</div>
+<dl class="definedBy">
+<dt>Is defined by</dt>
+<dd>
+<a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
+</dd>
+</dl>
 <dl class="description">
 <dt>has super-classes</dt>
 <dd/>
+<dt>has sub-classes</dt>
+<dd>
+<a href="#Request" title="http://w3id.org/http#Request">Request</a>
+<sup class="type-c" title="class">c</sup>, <a href="#Response" title="http://w3id.org/http#Response">Response</a>
+<sup class="type-c" title="class">c</sup>
+</dd>
 <dt>is in domain of</dt>
 <dd>
 <a href="#body" title="http://w3id.org/http#body">body</a>
 <sup class="type-op" title="object property">op</sup>, <a href="#hdr" title="http://w3id.org/http#hdr">header</a>
-<sup class="type-op" title="object property">op</sup>, <a href="#httpVersion" title="http://w3id.org/http#httpVersion">http version</a>
+<sup class="type-op" title="object property">op</sup>, <a href="#version" title="http://w3id.org/http#version">version</a>
 <sup class="type-dp" title="data property">dp</sup>
 </dd>
 </dl>
@@ -267,12 +330,12 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>is equivalent to</dt>
 <dd>
-<a href="#methodName" title="http://w3id.org/http#methodName">method name</a>
+<a href="#mthdName" title="http://w3id.org/http#mthdName">method name</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="logic">some</span> <span class="dotted" title="http://w3id.org/http#notEmptyToken">Non-empty token</span>
 </dd>
 <dt>is in domain of</dt>
 <dd>
-<a href="#methodName" title="http://w3id.org/http#methodName">method name</a>
+<a href="#mthdName" title="http://w3id.org/http#mthdName">method name</a>
 <sup class="type-dp" title="data property">dp</sup>
 </dd>
 <dt>is in range of</dt>
@@ -282,15 +345,15 @@ This section provides details for each class and property defined by HTTP Ontolo
 </dd>
 <dt>has members</dt>
 <dd>
-<a href="#http://w3id.org/http/mthd#CONNECT" title="http://w3id.org/http/mthd#CONNECT">CONNECT</a>
-<sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/mthd#DELETE" title="http://w3id.org/http/mthd#DELETE">DELETE</a>
-<sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/mthd#GET" title="http://w3id.org/http/mthd#GET">GET</a>
-<sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/mthd#HEAD" title="http://w3id.org/http/mthd#HEAD">HEAD</a>
-<sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/mthd#OPTIONS" title="http://w3id.org/http/mthd#OPTIONS">OPTIONS</a>
-<sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/mthd#PATCH" title="http://w3id.org/http/mthd#PATCH">PATCH</a>
-<sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/mthd#POST" title="http://w3id.org/http/mthd#POST">POST</a>
-<sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/mthd#PUT" title="http://w3id.org/http/mthd#PUT">PUT</a>
-<sup class="type-ni" title="named individual">ni</sup>, <a href="#http://w3id.org/http/mthd#TRACE" title="http://w3id.org/http/mthd#TRACE">TRACE</a>
+<a href="#CONNECT" title="http://w3id.org/http#CONNECT">CONNECT</a>
+<sup class="type-ni" title="named individual">ni</sup>, <a href="#DELETE" title="http://w3id.org/http#DELETE">DELETE</a>
+<sup class="type-ni" title="named individual">ni</sup>, <a href="#GET" title="http://w3id.org/http#GET">GET</a>
+<sup class="type-ni" title="named individual">ni</sup>, <a href="#HEAD" title="http://w3id.org/http#HEAD">HEAD</a>
+<sup class="type-ni" title="named individual">ni</sup>, <a href="#OPTIONS" title="http://w3id.org/http#OPTIONS">OPTIONS</a>
+<sup class="type-ni" title="named individual">ni</sup>, <a href="#PATCH" title="http://w3id.org/http#PATCH">PATCH</a>
+<sup class="type-ni" title="named individual">ni</sup>, <a href="#POST" title="http://w3id.org/http#POST">POST</a>
+<sup class="type-ni" title="named individual">ni</sup>, <a href="#PUT" title="http://w3id.org/http#PUT">PUT</a>
+<sup class="type-ni" title="named individual">ni</sup>, <a href="#TRACE" title="http://w3id.org/http#TRACE">TRACE</a>
 <sup class="type-ni" title="named individual">ni</sup>
 </dd>
 </dl>
@@ -319,33 +382,6 @@ This section provides details for each class and property defined by HTTP Ontolo
 </dd>
 </dl>
 </div>
-<div class="entity" id="http://w3id.org/http/content#ContentAsRDF">
-<h3>RDF Content<sup class="type-c" title="class">c</sup>
-<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-</span>
-</h3>
-<p>
-<strong>IRI:</strong> http://w3id.org/http/content#ContentAsRDF</p>
-<div class="comment">
-<span class="markdown">RDF Content embedded in the body of an HTTP message</span>
-</div>
-<dl class="description">
-<dt>is equivalent to</dt>
-<dd>
-<a href="#http://w3id.org/http/content#about" title="http://w3id.org/http/content#about">graph</a>
-<sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1</dd>
-<dt>has super-classes</dt>
-<dd>
-<a href="#http://w3id.org/http/content#Content" title="http://w3id.org/http/content#Content">Content</a>
-<sup class="type-c" title="class">c</sup>
-</dd>
-<dt>is in domain of</dt>
-<dd>
-<a href="#http://w3id.org/http/content#about" title="http://w3id.org/http/content#about">graph</a>
-<sup class="type-op" title="object property">op</sup>
-</dd>
-</dl>
-</div>
 <div class="entity" id="http://w3id.org/http/sc#Redirection">
 <h3>Redirection<sup class="type-c" title="class">c</sup>
 <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -359,8 +395,8 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>is equivalent to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
-<sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
+<sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="logic">some</span> )</dd>
 </dl>
 </div>
@@ -381,53 +417,67 @@ This section provides details for each class and property defined by HTTP Ontolo
 </dd>
 </dl>
 <dl class="description">
+<dt>is equivalent to</dt>
+<dd>(<a href="#mthd" title="http://w3id.org/http#mthd">method</a>
+<sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#Method" title="http://w3id.org/http#Method">Method</a>
+<sup class="type-c" title="class">c</sup>) <span class="logic">and</span> (<a href="#uri" title="http://w3id.org/http#uri">uri</a>
+<sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#URI" title="http://w3id.org/http#URI">URI</a>
+<sup class="type-c" title="class">c</sup>) <span class="logic">and</span> (<a href="#http://w3id.org/http/headers#host" title="http://w3id.org/http/headers#host">host</a>
+<sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#http://w3id.org/http/headers#Host" title="http://w3id.org/http/headers#Host">Host Header</a>
+<sup class="type-c" title="class">c</sup>)</dd>
 <dt>has super-classes</dt>
-<dd/>
+<dd>
+<a href="#Message" title="http://w3id.org/http#Message">Message</a>
+<sup class="type-c" title="class">c</sup>
+</dd>
 <dt>is in domain of</dt>
 <dd>
-<a href="#mthd" title="http://w3id.org/http#mthd">method</a>
+<a href="#http://w3id.org/http/headers#host" title="http://w3id.org/http/headers#host">host</a>
+<sup class="type-op" title="object property">op</sup>, <a href="#mthd" title="http://w3id.org/http#mthd">method</a>
 <sup class="type-op" title="object property">op</sup>, <a href="#resp" title="http://w3id.org/http#resp">response</a>
 <sup class="type-op" title="object property">op</sup>, <a href="#uri" title="http://w3id.org/http#uri">uri</a>
 <sup class="type-op" title="object property">op</sup>
 </dd>
-<dt>is disjoint with</dt>
-<dd>
-<a href="#Response" title="http://w3id.org/http#Response">response</a>
-<sup class="type-c" title="class">c</sup>
-</dd>
 </dl>
 </div>
 <div class="entity" id="Response">
-<h3>response<sup class="type-c" title="class">c</sup>
+<h3>Response<sup class="type-c" title="class">c</sup>
 <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
 </span>
 </h3>
 <p>
 <strong>IRI:</strong> http://w3id.org/http#Response</p>
+<div class="comment">
+<span class="markdown">An HTTP response.</span>
+</div>
 <dl class="description">
+<dt>is equivalent to</dt>
+<dd>
+<a href="#sc" title="http://w3id.org/http#sc">status</a>
+<sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#Status" title="http://w3id.org/http#Status">Status</a>
+<sup class="type-c" title="class">c</sup>
+</dd>
 <dt>has super-classes</dt>
-<dd/>
+<dd>
+<a href="#Message" title="http://w3id.org/http#Message">Message</a>
+<sup class="type-c" title="class">c</sup>
+</dd>
 <dt>has sub-classes</dt>
 <dd>
-<a href="#FinalResponse" title="http://w3id.org/http#FinalResponse">Final</a>
-<sup class="type-c" title="class">c</sup>, <a href="#InterimResponse" title="http://w3id.org/http#InterimResponse">Interim</a>
+<a href="#FinalResponse" title="http://w3id.org/http#FinalResponse">Final Response</a>
+<sup class="type-c" title="class">c</sup>, <a href="#InterimResponse" title="http://w3id.org/http#InterimResponse">Interim Response</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>is in domain of</dt>
 <dd>
 <a href="#http://w3id.org/http/headers#location" title="http://w3id.org/http/headers#location">location</a>
-<sup class="type-op" title="object property">op</sup>, <a href="#sc" title="http://w3id.org/http#sc">status code</a>
+<sup class="type-op" title="object property">op</sup>, <a href="#sc" title="http://w3id.org/http#sc">status</a>
 <sup class="type-op" title="object property">op</sup>
 </dd>
 <dt>is in range of</dt>
 <dd>
 <a href="#resp" title="http://w3id.org/http#resp">response</a>
 <sup class="type-op" title="object property">op</sup>
-</dd>
-<dt>is disjoint with</dt>
-<dd>
-<a href="#Request" title="http://w3id.org/http#Request">Request</a>
-<sup class="type-c" title="class">c</sup>
 </dd>
 </dl>
 </div>
@@ -444,20 +494,20 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>is equivalent to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
-<sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
+<sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="logic">some</span> )</dd>
 </dl>
 </div>
-<div class="entity" id="StatusCode">
-<h3>Status code<sup class="type-c" title="class">c</sup>
+<div class="entity" id="Status">
+<h3>Status<sup class="type-c" title="class">c</sup>
 <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
 </span>
 </h3>
 <p>
-<strong>IRI:</strong> http://w3id.org/http#StatusCode</p>
+<strong>IRI:</strong> http://w3id.org/http#Status</p>
 <div class="comment">
-<span class="markdown">The status code of an HTTP response.</span>
+<span class="markdown">The status of an HTTP response.</span>
 </div>
 <dl class="definedBy">
 <dt>Is defined by</dt>
@@ -468,17 +518,17 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>is equivalent to</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="logic">some</span> <span class="dotted" title="http://w3id.org/http#threeDigit">3-digit integer</span>
 </dd>
 <dt>is in domain of</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup>
 </dd>
 <dt>is in range of</dt>
 <dd>
-<a href="#sc" title="http://w3id.org/http#sc">status code</a>
+<a href="#sc" title="http://w3id.org/http#sc">status</a>
 <sup class="type-op" title="object property">op</sup>
 </dd>
 <dt>has members</dt>
@@ -551,13 +601,13 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>is equivalent to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
-<sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
+<sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="logic">some</span> )</dd>
 </dl>
 </div>
 <div class="entity" id="URI">
-<h3>URI description<sup class="type-c" title="class">c</sup>
+<h3>URI<sup class="type-c" title="class">c</sup>
 <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
 </span>
 </h3>
@@ -600,15 +650,21 @@ This section provides details for each class and property defined by HTTP Ontolo
 <a href="#hdr" title="http://w3id.org/http#hdr">header</a>
 </li>
 <li>
+<a href="#http://w3id.org/http/headers#host" title="http://w3id.org/http/headers#host">host</a>
+</li>
+<li>
+<a href="#http://w3id.org/http/headers#isHost" title="http://w3id.org/http/headers#isHost">is Host header?</a>
+</li>
+<li>
+<a href="#http://w3id.org/http/headers#isLocation" title="http://w3id.org/http/headers#isLocation">is location header?</a>
+</li>
+<li>
 <a href="#link" title="http://w3id.org/http#link">
 <span>link</span>
 </a>
 </li>
 <li>
 <a href="#http://w3id.org/http/headers#location" title="http://w3id.org/http/headers#location">location</a>
-</li>
-<li>
-<a href="#http://w3id.org/http/headers#isLocationHeader" title="http://w3id.org/http/headers#isLocationHeader">location header?</a>
 </li>
 <li>
 <a href="#mthd" title="http://w3id.org/http#mthd">method</a>
@@ -620,7 +676,7 @@ This section provides details for each class and property defined by HTTP Ontolo
 <a href="#resp" title="http://w3id.org/http#resp">response</a>
 </li>
 <li>
-<a href="#sc" title="http://w3id.org/http#sc">status code</a>
+<a href="#sc" title="http://w3id.org/http#sc">status</a>
 </li>
 <li>
 <a href="#uri" title="http://w3id.org/http#uri">uri</a>
@@ -642,7 +698,7 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl>
 <dt>has domain</dt>
 <dd>
-<a href="#Message" title="http://w3id.org/http#Message">message</a>
+<a href="#Message" title="http://w3id.org/http#Message">Message</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has range</dt>
@@ -667,7 +723,7 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl>
 <dt>has domain</dt>
 <dd>
-<a href="#http://w3id.org/http/content#ContentAsRDF" title="http://w3id.org/http/content#ContentAsRDF">RDF Content</a>
+<a href="#http://w3id.org/http/content#ContentAsRDF" title="http://w3id.org/http/content#ContentAsRDF">Content as RDF</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has range</dt>
@@ -692,7 +748,89 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl>
 <dt>has domain</dt>
 <dd>
-<a href="#Message" title="http://w3id.org/http#Message">message</a>
+<a href="#Message" title="http://w3id.org/http#Message">Message</a>
+<sup class="type-c" title="class">c</sup>
+</dd>
+<dt>has range</dt>
+<dd>
+<a href="#Header" title="http://w3id.org/http#Header">Header</a>
+<sup class="type-c" title="class">c</sup>
+</dd>
+</dl>
+</div>
+</div>
+<div class="entity" id="http://w3id.org/http/headers#host">
+<h3>host<sup class="type-op" title="object property">op</sup>
+<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+</span>
+</h3>
+<p>
+<strong>IRI:</strong> http://w3id.org/http/headers#host</p>
+<div class="comment">
+<span class="markdown">
+This is effectively a functional property but OWL2 DL does not allow
+such property to be defined on non-simple properties.
+</span>
+</div>
+<div class="description">
+<dl>
+<dt>has domain</dt>
+<dd>
+<a href="#Request" title="http://w3id.org/http#Request">Request</a>
+<sup class="type-c" title="class">c</sup>
+</dd>
+<dt>has range</dt>
+<dd>
+<a href="#http://w3id.org/http/headers#Host" title="http://w3id.org/http/headers#Host">Host Header</a>
+<sup class="type-c" title="class">c</sup>
+</dd>
+<dt>has sub-property chains</dt>
+<dd>
+<a href="#hdr" title="http://w3id.org/http#hdr">header</a>
+<sup class="type-op" title="object property">op</sup> <span class="logic">o</span> <a href="#http://w3id.org/http/headers#isHost" title="http://w3id.org/http/headers#isHost">is Host header?</a>
+<sup class="type-op" title="object property">op</sup>
+</dd>
+</dl>
+</div>
+</div>
+<div class="entity" id="http://w3id.org/http/headers#isHost">
+<h3>is Host header?<sup class="type-op" title="object property">op</sup>
+<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+</span>
+</h3>
+<p>
+<strong>IRI:</strong> http://w3id.org/http/headers#isHost</p>
+<div class="description">
+<p>
+<strong>has characteristics:</strong> reflexive</p>
+<dl>
+<dt>has domain</dt>
+<dd>
+<a href="#Header" title="http://w3id.org/http#Header">Header</a>
+<sup class="type-c" title="class">c</sup>
+</dd>
+<dt>has range</dt>
+<dd>
+<a href="#Header" title="http://w3id.org/http#Header">Header</a>
+<sup class="type-c" title="class">c</sup>
+</dd>
+</dl>
+</div>
+</div>
+<div class="entity" id="http://w3id.org/http/headers#isLocation">
+<h3>is location header?<sup class="type-op" title="object property">op</sup>
+<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+</span>
+</h3>
+<p>
+<strong>IRI:</strong> http://w3id.org/http/headers#isLocation</p>
+<div class="description">
+<p>
+<strong>has characteristics:</strong> reflexive</p>
+<dl>
+<dt>has domain</dt>
+<dd>
+<a href="#Header" title="http://w3id.org/http#Header">Header</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has range</dt>
@@ -722,44 +860,20 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl>
 <dt>has domain</dt>
 <dd>
-<a href="#Response" title="http://w3id.org/http#Response">response</a>
+<a href="#Response" title="http://w3id.org/http#Response">Response</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has range</dt>
 <dd>
-<a href="#URI" title="http://w3id.org/http#URI">URI description</a>
+<a href="#URI" title="http://w3id.org/http#URI">URI</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has sub-property chains</dt>
 <dd>
 <a href="#hdr" title="http://w3id.org/http#hdr">header</a>
-<sup class="type-op" title="object property">op</sup> <span class="logic">o</span> <a href="#http://w3id.org/http/headers#isLocationHeader" title="http://w3id.org/http/headers#isLocationHeader">location header?</a>
+<sup class="type-op" title="object property">op</sup> <span class="logic">o</span> <a href="#http://w3id.org/http/headers#isLocation" title="http://w3id.org/http/headers#isLocation">is location header?</a>
 <sup class="type-op" title="object property">op</sup> <span class="logic">o</span> <a href="#link" title="http://w3id.org/http#link">link</a>
 <sup class="type-op" title="object property">op</sup>
-</dd>
-</dl>
-</div>
-</div>
-<div class="entity" id="http://w3id.org/http/headers#isLocationHeader">
-<h3>location header?<sup class="type-op" title="object property">op</sup>
-<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-</span>
-</h3>
-<p>
-<strong>IRI:</strong> http://w3id.org/http/headers#isLocationHeader</p>
-<div class="description">
-<p>
-<strong>has characteristics:</strong> reflexive</p>
-<dl>
-<dt>has domain</dt>
-<dd>
-<a href="#Header" title="http://w3id.org/http#Header">Header</a>
-<sup class="type-c" title="class">c</sup>
-</dd>
-<dt>has range</dt>
-<dd>
-<a href="#Header" title="http://w3id.org/http#Header">Header</a>
-<sup class="type-c" title="class">c</sup>
 </dd>
 </dl>
 </div>
@@ -805,7 +919,7 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl>
 <dt>has domain</dt>
 <dd>
-<a href="#URI" title="http://w3id.org/http#URI">URI description</a>
+<a href="#URI" title="http://w3id.org/http#URI">URI</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has range</dt>
@@ -835,21 +949,21 @@ This section provides details for each class and property defined by HTTP Ontolo
 </dd>
 <dt>has range</dt>
 <dd>
-<a href="#Response" title="http://w3id.org/http#Response">response</a>
+<a href="#Response" title="http://w3id.org/http#Response">Response</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 </dl>
 </div>
 </div>
 <div class="entity" id="sc">
-<h3>status code<sup class="type-op" title="object property">op</sup>
+<h3>status<sup class="type-op" title="object property">op</sup>
 <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
 </span>
 </h3>
 <p>
 <strong>IRI:</strong> http://w3id.org/http#sc</p>
 <div class="comment">
-<span class="markdown">The status code of an HTTP response.</span>
+<span class="markdown">The status of an HTTP response.</span>
 </div>
 <dl class="definedBy">
 <dt>Is defined by</dt>
@@ -863,12 +977,12 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl>
 <dt>has domain</dt>
 <dd>
-<a href="#Response" title="http://w3id.org/http#Response">response</a>
+<a href="#Response" title="http://w3id.org/http#Response">Response</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has range</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 </dl>
@@ -895,7 +1009,7 @@ This section provides details for each class and property defined by HTTP Ontolo
 </dd>
 <dt>has range</dt>
 <dd>
-<a href="#URI" title="http://w3id.org/http#URI">URI description</a>
+<a href="#URI" title="http://w3id.org/http#URI">URI</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 </dl>
@@ -918,10 +1032,7 @@ This section provides details for each class and property defined by HTTP Ontolo
 <a href="#hdrValue" title="http://w3id.org/http#hdrValue">header value</a>
 </li>
 <li>
-<a href="#httpVersion" title="http://w3id.org/http#httpVersion">http version</a>
-</li>
-<li>
-<a href="#methodName" title="http://w3id.org/http#methodName">method name</a>
+<a href="#mthdName" title="http://w3id.org/http#mthdName">method name</a>
 </li>
 <li>
 <a href="#paramName" title="http://w3id.org/http#paramName">parameter name</a>
@@ -942,7 +1053,10 @@ This section provides details for each class and property defined by HTTP Ontolo
 <a href="#scheme" title="http://w3id.org/http#scheme">scheme</a>
 </li>
 <li>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
+</li>
+<li>
+<a href="#version" title="http://w3id.org/http#version">version</a>
 </li>
 </ul>
 <div class="entity" id="authority">
@@ -961,7 +1075,7 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl>
 <dt>has domain</dt>
 <dd>
-<a href="#URI" title="http://w3id.org/http#URI">URI description</a>
+<a href="#URI" title="http://w3id.org/http#URI">URI</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 </dl>
@@ -983,7 +1097,7 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl>
 <dt>has domain</dt>
 <dd>
-<a href="#URI" title="http://w3id.org/http#URI">URI description</a>
+<a href="#URI" title="http://w3id.org/http#URI">URI</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 </dl>
@@ -1041,43 +1155,13 @@ This section provides details for each class and property defined by HTTP Ontolo
 </dl>
 </div>
 </div>
-<div class="entity" id="httpVersion">
-<h3>http version<sup class="type-dp" title="data property">dp</sup>
-<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-</span>
-</h3>
-<p>
-<strong>IRI:</strong> http://w3id.org/http#httpVersion</p>
-<div class="comment">
-<span class="markdown">The HTTP version of an HTTP message.</span>
-</div>
-<dl class="definedBy">
-<dt>Is defined by</dt>
-<dd>
-<a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
-</dd>
-</dl>
-<div class="description">
-<dl>
-<dt>has domain</dt>
-<dd>
-<a href="#Message" title="http://w3id.org/http#Message">message</a>
-<sup class="type-c" title="class">c</sup>
-</dd>
-<dt>has range</dt>
-<dd>
-<span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
-</dd>
-</dl>
-</div>
-</div>
-<div class="entity" id="methodName">
+<div class="entity" id="mthdName">
 <h3>method name<sup class="type-dp" title="data property">dp</sup>
 <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
 </span>
 </h3>
 <p>
-<strong>IRI:</strong> http://w3id.org/http#methodName</p>
+<strong>IRI:</strong> http://w3id.org/http#mthdName</p>
 <div class="comment">
 <span class="markdown">The HTTP method name used for the HTTP request.</span>
 </div>
@@ -1165,7 +1249,7 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl>
 <dt>has domain</dt>
 <dd>
-<a href="#URI" title="http://w3id.org/http#URI">URI description</a>
+<a href="#URI" title="http://w3id.org/http#URI">URI</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 </dl>
@@ -1187,7 +1271,7 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl>
 <dt>has domain</dt>
 <dd>
-<a href="#URI" title="http://w3id.org/http#URI">URI description</a>
+<a href="#URI" title="http://w3id.org/http#URI">URI</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 </dl>
@@ -1209,7 +1293,7 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl>
 <dt>has domain</dt>
 <dd>
-<a href="#URI" title="http://w3id.org/http#URI">URI description</a>
+<a href="#URI" title="http://w3id.org/http#URI">URI</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 </dl>
@@ -1231,21 +1315,21 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl>
 <dt>has domain</dt>
 <dd>
-<a href="#URI" title="http://w3id.org/http#URI">URI description</a>
+<a href="#URI" title="http://w3id.org/http#URI">URI</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 </dl>
 </div>
 </div>
-<div class="entity" id="statusCodeNumber">
-<h3>status code number<sup class="type-dp" title="data property">dp</sup>
+<div class="entity" id="code">
+<h3>status code<sup class="type-dp" title="data property">dp</sup>
 <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
 </span>
 </h3>
 <p>
-<strong>IRI:</strong> http://w3id.org/http#statusCodeNumber</p>
+<strong>IRI:</strong> http://w3id.org/http#code</p>
 <div class="comment">
-<span class="markdown">The status code number.</span>
+<span class="markdown">The status code.</span>
 </div>
 <dl class="definedBy">
 <dt>Is defined by</dt>
@@ -1259,12 +1343,42 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl>
 <dt>has domain</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has range</dt>
 <dd>
 <span class="dotted" title="http://w3id.org/http#threeDigit">3-digit integer</span>
+</dd>
+</dl>
+</div>
+</div>
+<div class="entity" id="version">
+<h3>version<sup class="type-dp" title="data property">dp</sup>
+<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+</span>
+</h3>
+<p>
+<strong>IRI:</strong> http://w3id.org/http#version</p>
+<div class="comment">
+<span class="markdown">The HTTP protocol version of an HTTP message.</span>
+</div>
+<dl class="definedBy">
+<dt>Is defined by</dt>
+<dd>
+<a href="http://tools.ietf.org/rfc/rfc7231">http://tools.ietf.org/rfc/rfc7231</a>
+</dd>
+</dl>
+<div class="description">
+<dl>
+<dt>has domain</dt>
+<dd>
+<a href="#Message" title="http://w3id.org/http#Message">Message</a>
+<sup class="type-c" title="class">c</sup>
+</dd>
+<dt>has range</dt>
+<dd>
+<span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
 </dd>
 </dl>
 </div>
@@ -1289,7 +1403,7 @@ This section provides details for each class and property defined by HTTP Ontolo
 <a href="#http://w3id.org/http/sc#Conflict" title="http://w3id.org/http/sc#Conflict">Conflict</a>
 </li>
 <li>
-<a href="#http://w3id.org/http/mthd#CONNECT" title="http://w3id.org/http/mthd#CONNECT">CONNECT</a>
+<a href="#CONNECT" title="http://w3id.org/http#CONNECT">CONNECT</a>
 </li>
 <li>
 <a href="#http://w3id.org/http/sc#Continue" title="http://w3id.org/http/sc#Continue">Continue</a>
@@ -1298,7 +1412,7 @@ This section provides details for each class and property defined by HTTP Ontolo
 <a href="#http://w3id.org/http/sc#Created" title="http://w3id.org/http/sc#Created">Created</a>
 </li>
 <li>
-<a href="#http://w3id.org/http/mthd#DELETE" title="http://w3id.org/http/mthd#DELETE">DELETE</a>
+<a href="#DELETE" title="http://w3id.org/http#DELETE">DELETE</a>
 </li>
 <li>
 <a href="#http://w3id.org/http/sc#ExpectationFailed" title="http://w3id.org/http/sc#ExpectationFailed">Expectation Failed</a>
@@ -1316,13 +1430,13 @@ This section provides details for each class and property defined by HTTP Ontolo
 <a href="#http://w3id.org/http/sc#GatewayTimeout" title="http://w3id.org/http/sc#GatewayTimeout">Gateway Timeout</a>
 </li>
 <li>
-<a href="#http://w3id.org/http/mthd#GET" title="http://w3id.org/http/mthd#GET">GET</a>
+<a href="#GET" title="http://w3id.org/http#GET">GET</a>
 </li>
 <li>
 <a href="#http://w3id.org/http/sc#Gone" title="http://w3id.org/http/sc#Gone">Gone</a>
 </li>
 <li>
-<a href="#http://w3id.org/http/mthd#HEAD" title="http://w3id.org/http/mthd#HEAD">HEAD</a>
+<a href="#HEAD" title="http://w3id.org/http#HEAD">HEAD</a>
 </li>
 <li>
 <a href="#http://w3id.org/http/sc#HTTPVersionNotSupported" title="http://w3id.org/http/sc#HTTPVersionNotSupported">HTTP Version Not Supported</a>
@@ -1379,19 +1493,19 @@ This section provides details for each class and property defined by HTTP Ontolo
 <a href="#http://w3id.org/http/sc#OK" title="http://w3id.org/http/sc#OK">OK</a>
 </li>
 <li>
-<a href="#http://w3id.org/http/mthd#OPTIONS" title="http://w3id.org/http/mthd#OPTIONS">OPTIONS</a>
+<a href="#OPTIONS" title="http://w3id.org/http#OPTIONS">OPTIONS</a>
 </li>
 <li>
 <a href="#http://w3id.org/http/sc#PartialContent" title="http://w3id.org/http/sc#PartialContent">Partial Content</a>
 </li>
 <li>
-<a href="#http://w3id.org/http/mthd#PATCH" title="http://w3id.org/http/mthd#PATCH">PATCH</a>
+<a href="#PATCH" title="http://w3id.org/http#PATCH">PATCH</a>
 </li>
 <li>
 <a href="#http://w3id.org/http/sc#PaymentRequired" title="http://w3id.org/http/sc#PaymentRequired">Payment Required</a>
 </li>
 <li>
-<a href="#http://w3id.org/http/mthd#POST" title="http://w3id.org/http/mthd#POST">POST</a>
+<a href="#POST" title="http://w3id.org/http#POST">POST</a>
 </li>
 <li>
 <a href="#http://w3id.org/http/sc#PreconditionFailed" title="http://w3id.org/http/sc#PreconditionFailed">Precondition Failed</a>
@@ -1403,7 +1517,7 @@ This section provides details for each class and property defined by HTTP Ontolo
 <a href="#http://w3id.org/http/sc#ProxyAuthenticationRequired" title="http://w3id.org/http/sc#ProxyAuthenticationRequired">Proxy Authentication Required</a>
 </li>
 <li>
-<a href="#http://w3id.org/http/mthd#PUT" title="http://w3id.org/http/mthd#PUT">PUT</a>
+<a href="#PUT" title="http://w3id.org/http#PUT">PUT</a>
 </li>
 <li>
 <a href="#http://w3id.org/http/sc#RequestEntityTooLarge" title="http://w3id.org/http/sc#RequestEntityTooLarge">Request Entity Too Large</a>
@@ -1433,7 +1547,7 @@ This section provides details for each class and property defined by HTTP Ontolo
 <a href="#http://w3id.org/http/sc#TemporaryRedirect" title="http://w3id.org/http/sc#TemporaryRedirect">Temporary Redirect</a>
 </li>
 <li>
-<a href="#http://w3id.org/http/mthd#TRACE" title="http://w3id.org/http/mthd#TRACE">TRACE</a>
+<a href="#TRACE" title="http://w3id.org/http#TRACE">TRACE</a>
 </li>
 <li>
 <a href="#http://w3id.org/http/sc#Unauthorized" title="http://w3id.org/http/sc#Unauthorized">Unauthorized</a>
@@ -1470,12 +1584,12 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"306"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
@@ -1497,12 +1611,12 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"202"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
@@ -1524,12 +1638,12 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"502"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
@@ -1551,12 +1665,12 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"400"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
@@ -1578,24 +1692,24 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"409"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
 </dl>
 </div>
-<div class="entity" id="http://w3id.org/http/mthd#CONNECT">
+<div class="entity" id="CONNECT">
 <h3>CONNECT<sup class="type-ni" title="named individual">ni</sup>
 <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
 </span>
 </h3>
 <p>
-<strong>IRI:</strong> http://w3id.org/http/mthd#CONNECT</p>
+<strong>IRI:</strong> http://w3id.org/http#CONNECT</p>
 <dl class="definedBy">
 <dt>Is defined by</dt>
 <dd>
@@ -1610,7 +1724,7 @@ This section provides details for each class and property defined by HTTP Ontolo
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#methodName" title="http://w3id.org/http#methodName">method name</a>
+<a href="#mthdName" title="http://w3id.org/http#mthdName">method name</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"CONNECT"</span>
 </dd>
 </dl>
@@ -1631,12 +1745,12 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"100"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
@@ -1658,24 +1772,24 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"201"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
 </dl>
 </div>
-<div class="entity" id="http://w3id.org/http/mthd#DELETE">
+<div class="entity" id="DELETE">
 <h3>DELETE<sup class="type-ni" title="named individual">ni</sup>
 <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
 </span>
 </h3>
 <p>
-<strong>IRI:</strong> http://w3id.org/http/mthd#DELETE</p>
+<strong>IRI:</strong> http://w3id.org/http#DELETE</p>
 <dl class="definedBy">
 <dt>Is defined by</dt>
 <dd>
@@ -1690,7 +1804,7 @@ This section provides details for each class and property defined by HTTP Ontolo
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#methodName" title="http://w3id.org/http#methodName">method name</a>
+<a href="#mthdName" title="http://w3id.org/http#mthdName">method name</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"DELETE"</span>
 </dd>
 </dl>
@@ -1711,12 +1825,12 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"417"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
@@ -1738,12 +1852,12 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"424"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
@@ -1765,12 +1879,12 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"403"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
@@ -1792,12 +1906,12 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"302"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
@@ -1819,24 +1933,24 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"504"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
 </dl>
 </div>
-<div class="entity" id="http://w3id.org/http/mthd#GET">
+<div class="entity" id="GET">
 <h3>GET<sup class="type-ni" title="named individual">ni</sup>
 <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
 </span>
 </h3>
 <p>
-<strong>IRI:</strong> http://w3id.org/http/mthd#GET</p>
+<strong>IRI:</strong> http://w3id.org/http#GET</p>
 <dl class="definedBy">
 <dt>Is defined by</dt>
 <dd>
@@ -1851,7 +1965,7 @@ This section provides details for each class and property defined by HTTP Ontolo
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#methodName" title="http://w3id.org/http#methodName">method name</a>
+<a href="#mthdName" title="http://w3id.org/http#mthdName">method name</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"GET"</span>
 </dd>
 </dl>
@@ -1872,24 +1986,24 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"410"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
 </dl>
 </div>
-<div class="entity" id="http://w3id.org/http/mthd#HEAD">
+<div class="entity" id="HEAD">
 <h3>HEAD<sup class="type-ni" title="named individual">ni</sup>
 <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
 </span>
 </h3>
 <p>
-<strong>IRI:</strong> http://w3id.org/http/mthd#HEAD</p>
+<strong>IRI:</strong> http://w3id.org/http#HEAD</p>
 <dl class="definedBy">
 <dt>Is defined by</dt>
 <dd>
@@ -1904,7 +2018,7 @@ This section provides details for each class and property defined by HTTP Ontolo
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#methodName" title="http://w3id.org/http#methodName">method name</a>
+<a href="#mthdName" title="http://w3id.org/http#mthdName">method name</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"HEAD"</span>
 </dd>
 </dl>
@@ -1925,12 +2039,12 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"505"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
@@ -1952,12 +2066,12 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"226"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
@@ -1979,12 +2093,12 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"507"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
@@ -2006,12 +2120,12 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"500"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
@@ -2033,12 +2147,12 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"411"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
@@ -2060,12 +2174,12 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"423"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
@@ -2087,12 +2201,12 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"405"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
@@ -2114,12 +2228,12 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"301"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
@@ -2141,12 +2255,12 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"207"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
@@ -2168,12 +2282,12 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"300"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
@@ -2195,12 +2309,12 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"204"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
@@ -2222,12 +2336,12 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"203"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
@@ -2249,12 +2363,12 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"406"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
@@ -2276,12 +2390,12 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"510"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
@@ -2303,12 +2417,12 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"404"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
@@ -2330,12 +2444,12 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"501"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
@@ -2357,12 +2471,12 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"304"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
@@ -2384,24 +2498,24 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"200"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
 </dl>
 </div>
-<div class="entity" id="http://w3id.org/http/mthd#OPTIONS">
+<div class="entity" id="OPTIONS">
 <h3>OPTIONS<sup class="type-ni" title="named individual">ni</sup>
 <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
 </span>
 </h3>
 <p>
-<strong>IRI:</strong> http://w3id.org/http/mthd#OPTIONS</p>
+<strong>IRI:</strong> http://w3id.org/http#OPTIONS</p>
 <dl class="definedBy">
 <dt>Is defined by</dt>
 <dd>
@@ -2416,7 +2530,7 @@ This section provides details for each class and property defined by HTTP Ontolo
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#methodName" title="http://w3id.org/http#methodName">method name</a>
+<a href="#mthdName" title="http://w3id.org/http#mthdName">method name</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"OPTIONS"</span>
 </dd>
 </dl>
@@ -2437,24 +2551,24 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"206"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
 </dl>
 </div>
-<div class="entity" id="http://w3id.org/http/mthd#PATCH">
+<div class="entity" id="PATCH">
 <h3>PATCH<sup class="type-ni" title="named individual">ni</sup>
 <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
 </span>
 </h3>
 <p>
-<strong>IRI:</strong> http://w3id.org/http/mthd#PATCH</p>
+<strong>IRI:</strong> http://w3id.org/http#PATCH</p>
 <dl class="definedBy">
 <dt>Is defined by</dt>
 <dd>
@@ -2469,7 +2583,7 @@ This section provides details for each class and property defined by HTTP Ontolo
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#methodName" title="http://w3id.org/http#methodName">method name</a>
+<a href="#mthdName" title="http://w3id.org/http#mthdName">method name</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"PATCH"</span>
 </dd>
 </dl>
@@ -2490,24 +2604,24 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"402"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
 </dl>
 </div>
-<div class="entity" id="http://w3id.org/http/mthd#POST">
+<div class="entity" id="POST">
 <h3>POST<sup class="type-ni" title="named individual">ni</sup>
 <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
 </span>
 </h3>
 <p>
-<strong>IRI:</strong> http://w3id.org/http/mthd#POST</p>
+<strong>IRI:</strong> http://w3id.org/http#POST</p>
 <dl class="definedBy">
 <dt>Is defined by</dt>
 <dd>
@@ -2522,7 +2636,7 @@ This section provides details for each class and property defined by HTTP Ontolo
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#methodName" title="http://w3id.org/http#methodName">method name</a>
+<a href="#mthdName" title="http://w3id.org/http#mthdName">method name</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"POST"</span>
 </dd>
 </dl>
@@ -2543,12 +2657,12 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"412"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
@@ -2570,12 +2684,12 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"102"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
@@ -2597,24 +2711,24 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"407"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
 </dl>
 </div>
-<div class="entity" id="http://w3id.org/http/mthd#PUT">
+<div class="entity" id="PUT">
 <h3>PUT<sup class="type-ni" title="named individual">ni</sup>
 <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
 </span>
 </h3>
 <p>
-<strong>IRI:</strong> http://w3id.org/http/mthd#PUT</p>
+<strong>IRI:</strong> http://w3id.org/http#PUT</p>
 <dl class="definedBy">
 <dt>Is defined by</dt>
 <dd>
@@ -2629,7 +2743,7 @@ This section provides details for each class and property defined by HTTP Ontolo
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#methodName" title="http://w3id.org/http#methodName">method name</a>
+<a href="#mthdName" title="http://w3id.org/http#mthdName">method name</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"PUT"</span>
 </dd>
 </dl>
@@ -2650,12 +2764,12 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"413"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
@@ -2677,12 +2791,12 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"408"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
@@ -2704,12 +2818,12 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"414"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
@@ -2731,12 +2845,12 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"416"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
@@ -2758,12 +2872,12 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"205"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
@@ -2785,12 +2899,12 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"303"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
@@ -2812,12 +2926,12 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"503"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
@@ -2839,12 +2953,12 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"101"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
@@ -2866,24 +2980,24 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"307"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
 </dl>
 </div>
-<div class="entity" id="http://w3id.org/http/mthd#TRACE">
+<div class="entity" id="TRACE">
 <h3>TRACE<sup class="type-ni" title="named individual">ni</sup>
 <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
 </span>
 </h3>
 <p>
-<strong>IRI:</strong> http://w3id.org/http/mthd#TRACE</p>
+<strong>IRI:</strong> http://w3id.org/http#TRACE</p>
 <dl class="definedBy">
 <dt>Is defined by</dt>
 <dd>
@@ -2898,7 +3012,7 @@ This section provides details for each class and property defined by HTTP Ontolo
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#methodName" title="http://w3id.org/http#methodName">method name</a>
+<a href="#mthdName" title="http://w3id.org/http#mthdName">method name</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"TRACE"</span>
 </dd>
 </dl>
@@ -2919,12 +3033,12 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"401"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
@@ -2946,12 +3060,12 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"422"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
@@ -2973,12 +3087,12 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"415"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
@@ -3000,12 +3114,12 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"426"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
@@ -3027,12 +3141,12 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"305"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
@@ -3054,12 +3168,12 @@ This section provides details for each class and property defined by HTTP Ontolo
 <dl class="description">
 <dt>belongs to</dt>
 <dd>
-<a href="#StatusCode" title="http://w3id.org/http#StatusCode">Status code</a>
+<a href="#Status" title="http://w3id.org/http#Status">Status</a>
 <sup class="type-c" title="class">c</sup>
 </dd>
 <dt>has facts</dt>
 <dd>
-<a href="#statusCodeNumber" title="http://w3id.org/http#statusCodeNumber">status code number</a>
+<a href="#code" title="http://w3id.org/http#code">status code</a>
 <sup class="type-dp" title="data property">dp</sup> <span class="literal">"506"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
 </span>
 </dd>
