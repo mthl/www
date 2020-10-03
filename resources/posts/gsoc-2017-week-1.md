@@ -1,5 +1,4 @@
 ---
-slug: gsoc-2017-week-1
 title: Javascript for info-style navigation - Week 1
 creator: Mathieu Lirzin
 date: 2017-06-03T17:46:25+02:00
@@ -28,7 +27,8 @@ Alternatively to the *HTML* output, the traditional output of `makeinfo` in the 
 
 While the *info* output empowers its users, it is not the most accessible way to read documentation because it relies on either using `emacs` or the terminal, and requires users to use the keyboard.  The goal of this *Google Summer of Code* project is to empower the users of the *HTML* documentation format with the same features which are available to the users of `emacs` or `info` by implementing them in *Javascript* which is the engine available is modern Web browsers.
 
-For starting my project, I have been working on the basic keyboard navigation which seems like the most approchable feature to add.  This has allowed me to familiarize myself with the existing prototype that my mentor [Per Bothner](http://per.bothner.com/) had previously written for the Kawa manual.
+For starting my project, I have been working on the basic keyboard navigation which seems like the most approchable 
+feature to add.  This has allowed me to familiarize myself with the existing prototype that my mentor [Per Bothner](http://per.bothner.com/) had previously written for the Kawa manual.
 
 ## Existing prototype
 

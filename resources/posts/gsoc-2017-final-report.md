@@ -1,5 +1,4 @@
 ---
-slug: gsoc-2017-final-report
 title: Javascript for info-style navigation - Final report
 creator: Mathieu Lirzin
 date: 2017-08-25T17:32:10+02:00
@@ -41,7 +40,7 @@ Instead of searching through a predefined set of keywords like in the index sear
 
 ## Technical details
 
-I will present shortly the main technical challenges of this project. You can read [the previous reports](http://mathieu.lirzin.emi.u-bordeaux.fr/categories/gsoc/) to get more details on those challenges and learn about the issues I faced.
+I will present shortly the main technical challenges of this project. You can read [the previous reports](/blog?categories=gsoc) to get more details on those challenges and learn about the issues I faced.
 
 #### Using iframes
 

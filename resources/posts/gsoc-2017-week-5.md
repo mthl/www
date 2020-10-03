@@ -1,7 +1,12 @@
+---
 title: Javascript for info-style navigation - Week 5
-date: 2017-07-03 13:53:23
-categories: gsoc
-tags: texinfo, javascript, chromium
+creator: Mathieu Lirzin
+date: 2017-07-03T13:53:23+02:00
+subject:
+    - gsoc
+    - texinfo
+    - javascript
+    - chromium
 ---
 
 This is an update on the work I am doing this summer for my [Google Summer of Code](https://summerofcode.withgoogle.com/projects/#6199074135998464).  Please see [the first article](http://mathieu.lirzin.emi.u-bordeaux.fr/2017/06/03/gsoc2017-1/) of this serie of reports for a general introduction on what this project is about.

@@ -1,5 +1,4 @@
 ---
-slug: gsoc-2017-week-9
 title: Javascript for info-style navigation - Week 9
 creator: Mathieu Lirzin
 date: 2017-07-28T14:41:57+02:00

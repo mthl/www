@@ -1,10 +1,15 @@
+---
 title: Javascript for info-style navigation - Week 12
-date: 2017-08-23 14:37:49
-categories: gsoc
-tags: texinfo, javascript, css
+creator: Mathieu Lirzin
+date: 2017-08-23T14:37:49+02:00
+subject:
+    - gsoc
+    - texinfo
+    - javascript
+    - css
 ---
 
-This is an update on the work I am doing this summer for my [Google Summer of Code](https://summerofcode.withgoogle.com/projects/#6199074135998464).  Please see [the first article](http://mathieu.lirzin.emi.u-bordeaux.fr/2017/06/03/gsoc2017-1/) of this serie of reports for a general introduction on what this project is about.
+This is an update on the work I am doing this summer for my [Google Summer of Code](https://summerofcode.withgoogle.com/projects/#6199074135998464).  Please see [the first article](./gsoc-2017-1.md) of this serie of reports for a general introduction on what this project is about.
 
 ## Global search 
 

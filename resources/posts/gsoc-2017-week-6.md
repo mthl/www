@@ -1,5 +1,4 @@
 ---
-slug: gsoc-2017-week-6
 title: Javascript for info-style navigation - Week 6
 creator: Mathieu Lirzin
 date: 2017-07-10T11:36:21+02:00
