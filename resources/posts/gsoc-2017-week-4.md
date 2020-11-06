@@ -10,7 +10,7 @@ subject:
     - history
 ---
 
-This is an update on the work I am doing this summer for my [Google Summer of Code](https://summerofcode.withgoogle.com/projects/#6199074135998464).  Please see [the first article](http://mathieu.lirzin.emi.u-bordeaux.fr/2017/06/03/gsoc2017-1/) of this serie of reports for a general introduction on what this project is about.
+This is an update on the work I am doing this summer for my [Google Summer of Code](https://summerofcode.withgoogle.com/projects/#6199074135998464).  Please see [the first article](./gsoc-2017-week-1.md) of this serie of reports for a general introduction on what this project is about.
 
 ## Implementing menu navigation
 
@@ -22,7 +22,7 @@ To implement a similar functionnality in a web page, I have used a fixed `<div>`
 
 ## Implementing the navigation to *top* and *final* nodes
 
-Since the implementation didn't took as much time as expected, I have decided to add the navigation using the `<` and `>` keys.  The navigation to the *top* and *final* nodes can be done using the `<` and `>` keys.  To implement that feature I have adapted the `create_link_dict` which was described in [last report](http://mathieu.lirzin.emi.u-bordeaux.fr/2017/06/16/gsoc2017-2-3/).  Since we are taversing the tree of nodes using a *Depth First Search* (DFS) algorithm we have to store a link in the returned dictionnary for the first and the final node of the tree walk.  To store those links which are not indexed by actual page identifiers but by an arbitary name, we use a pointer property which contains the identifer on the corresponding page.
+Since the implementation didn't took as much time as expected, I have decided to add the navigation using the `<` and `>` keys.  The navigation to the *top* and *final* nodes can be done using the `<` and `>` keys.  To implement that feature I have adapted the `create_link_dict` which was described in [last report](./gsoc-2017-week-2+3.md).  Since we are taversing the tree of nodes using a *Depth First Search* (DFS) algorithm we have to store a link in the returned dictionnary for the first and the final node of the tree walk.  To store those links which are not indexed by actual page identifiers but by an arbitary name, we use a pointer property which contains the identifer on the corresponding page.
 
 ## Handling history of the page navigation
 

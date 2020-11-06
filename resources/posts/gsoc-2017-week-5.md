@@ -9,11 +9,11 @@ subject:
     - chromium
 ---
 
-This is an update on the work I am doing this summer for my [Google Summer of Code](https://summerofcode.withgoogle.com/projects/#6199074135998464).  Please see [the first article](http://mathieu.lirzin.emi.u-bordeaux.fr/2017/06/03/gsoc2017-1/) of this serie of reports for a general introduction on what this project is about.
+This is an update on the work I am doing this summer for my [Google Summer of Code](https://summerofcode.withgoogle.com/projects/#6199074135998464).  Please see [the first article](./gsoc-2017-week-1.md) of this serie of reports for a general introduction on what this project is about.
 
 ## Implementing index search
 
-In the same spirit of menu navigation which was described [last week](http://mathieu.lirzin.emi.u-bordeaux.fr/2017/06/25/gsoc2017-4/), I have implemented the feature consisting of providing a text input with completion that allows the user to quickly access a particular node corresponding to a concept or API reference.  This feature is accessible with the `i` key.
+In the same spirit of menu navigation which was described [last week](./gsoc-2017-week-4.md), I have implemented the feature consisting of providing a text input with completion that allows the user to quickly access a particular node corresponding to a concept or API reference.  This feature is accessible with the `i` key.
 
 To achieve that, we parse files ending with `-Index.xhtml` to find index links and build a dictionnary from them with a simple Javascript object.
 

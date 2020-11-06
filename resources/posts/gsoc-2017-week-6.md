@@ -10,7 +10,7 @@ subject:
     - distribution
 ---
 
-This is an update on the work I am doing this summer for my [Google Summer of Code](https://summerofcode.withgoogle.com/projects/#6199074135998464).  Please see [the first article](http://mathieu.lirzin.emi.u-bordeaux.fr/2017/06/03/gsoc2017-1/) of this serie of reports for a general introduction on what this project is about.
+This is an update on the work I am doing this summer for my [Google Summer of Code](https://summerofcode.withgoogle.com/projects/#6199074135998464).  Please see [the first article](./gsoc-2017-week-1.md) of this serie of reports for a general introduction on what this project is about.
 
 ## Distribution
 

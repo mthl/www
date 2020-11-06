@@ -1,1 +1,4 @@
-site/
+/site/
+/target/
+/.lein-*
+/.nrepl-*
