@@ -12,6 +12,7 @@
    [hiccup/hiccup "1.0.5"]]
   :global-vars {*warn-on-reflection* true
                 *assert* false}
+  :uberjar-name "reuz-standalone.jar"
   :main fr.reuz.main
   :profiles
   {:uberjar {:aot :all
