@@ -1,5 +1,5 @@
 (ns fr.reuz.database
-  (:require [fr.reuz.static :refer [defresource]]))
+  (:require [fr.reuz.static :refer [defdata]]))
 
 (def schema
   {:foaf/member {:db/cardinality :db.cardinality/many
@@ -21,7 +21,7 @@
    :foaf/publications {:db/cardinality :db.cardinality/many
                        :db/valueType :db.type/ref}})
 
-(defresource facts "fr/reuz/db.edn"
+(defdata facts
   (require '[fr.reuz.blog :as blog])
   [{:db/id 14
     :rdf/about 'fr.reuz/me

@@ -5,8 +5,7 @@
    [datascript.core :as d]
    [hiccup.page :as hp]
    [clojure.java.io :as io]
-   [clojure.instant :as inst]
-   [fr.reuz.static :refer [defresource]])
+   [clojure.instant :as inst])
   (:import java.time.OffsetDateTime))
 
 (defmulti parse-value (fn [p o] p))
@@ -90,5 +89,3 @@
          :where
          [?me :vcard/nickname ?nick]]
        db nick))
-
-

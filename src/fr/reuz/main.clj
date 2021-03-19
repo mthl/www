@@ -9,8 +9,7 @@
    [datascript.db :as db]
    [hiccup.page :as hp]
    [reitit.ring :as ring]
-   [ring.adapter.jetty :as jetty])
-  (:import java.io.PushbackReader))
+   [ring.adapter.jetty :as jetty]))
 
 (defn find-articles
   [db]
@@ -66,8 +65,7 @@
 
 (defn make-handler
   []
-  (let [facts* (-> facts io/reader PushbackReader. edn/read)
-        db (-> (db/empty-db schema) (d/db-with facts*))]
+  (let [db (-> (db/empty-db schema) (d/db-with facts))]
     (ring/ring-handler
      (router db)
      (ring/routes
