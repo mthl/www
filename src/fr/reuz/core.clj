@@ -50,36 +50,23 @@ occupation ". My topics of interest are Programming Languages, Network
 Based Software Architecture, Software packaging and the World Wide
 Web."])
 
-(defn gnu-contributions
-  [db me]
-  (d/q '[:find ?name ?homepage
-         :in $ ?me
+(defn find-github-forge
+  [db id]
+  (d/q '[:find [?url ?label]
+         :in $ ?id
          :where
-         [?project :doap/name ?name]
-         [?project :doap/homepage ?homepage]
-         [?project :doap/vendor "GNU"]
-         [?project :doap/developer ?me]]
-       db me))
-
-(defn find-forges
-  [db who]
-  (d/q '[:find ?label ?url
-         :in $ ?who
-         :where
-         [?who :foaf/account ?account]
+         [?account :rdf/about ?id]
          [?account :rdf/id ?url]
          [?account :rdfs/label ?label]]
-       db who))
+       db id))
 
 (defn free-software-desc
   [db me]
-  (let [gnu (xref "https://www.gnu.org/" "GNU")
-        gnu-packages (into '() desc-ref (gnu-contributions db me))
-        forges (into '() desc-ref (find-forges db me))]
+  (let [gh (find-github-forge db 'fr.reuz/github-account)]
     [:p
-     "I have been involved in the development of some " gnu "
-   packages: " gnu-packages ". The software I am writing is available
-   on various repositories: " forges "."]))
+     "I have been involved in the development of several free software projects."
+     " The source code of those projects can be found on my "
+     (apply xref gh) " account."]))
 
 (defn blog-desc
   []
@@ -105,13 +92,6 @@ experience as a student in 2017."])
      [:dt "Oscaro postal address"] [:dd (address-link workplace)]
      [:dt "Email"] emails*
      [:dt "PGP"] [:dd pgp]]))
-
-(defn db-id
-  [db nick]
-  (d/q '[:find ?me .
-         :in $ ?nick
-         :where [?me :vcard/nickname ?nick]]
-       db nick))
 
 (defn full-name
   [db who]
@@ -149,7 +129,7 @@ experience as a student in 2017."])
 
 (defn index
   [db]
-  (let [me (db-id db "mthl")
+  (let [me [:rdf/about 'fr.reuz/me]
         name (full-name db me)
         emails (find-emails db me)
         work-data (job-info db me)]

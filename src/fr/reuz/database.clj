@@ -23,7 +23,7 @@
 
 (defdata facts
   (require '[fr.reuz.blog :as blog])
-  [{:db/id 14
+  [{:rdf/id "https://reuz.fr/#me"
     :rdf/about 'fr.reuz/me
     :rdf/type #{'foaf/Person 'vcard/Individual}
     :vcard/nickname "mthl"
@@ -40,7 +40,6 @@
                     :vcard/postal-code "37540"
                     :vcard/region "Centre-Val de Loire"
                     :vcard/country-name "France"}
-
     :vcard/email #{{:rdf/id "mailto:mthl@reuz.fr"
                     :rdfs/label "mthl@reuz.fr"
                     :rdf/type 'vcard/Email}
@@ -51,7 +50,8 @@
                     :rdfs/label "mthl@gnu.org"
                     :rdf/type 'vcard/Email}}
     :foaf/account [{:rdfs/label "Github"
-                    :rdf/id "https://github.com/mthl"}
+                    :rdf/id "https://github.com/mthl"
+                    :rdf/about 'fr.reuz/github-account}
                    {:rdfs/label "Gitlab"
                     :rdf/id "https://gitlab.com/mthl"}
                    {:rdfs/label "Néréide Labs"
