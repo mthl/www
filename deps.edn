@@ -1,0 +1,16 @@
+{:paths ["src" "resources"]
+ :deps {metosin/reitit-ring {:mvn/version "0.5.5"}
+        org.clojure/clojure {:mvn/version "1.10.3"}
+        ring/ring {:mvn/version "1.8.1"}
+        datascript/datascript {:mvn/version "1.0.1"}
+        hiccup/hiccup {:mvn/version "1.0.5"}
+        com.atlassian.commonmark/commonmark {:mvn/version "0.14.0"}
+        com.atlassian.commonmark/commonmark-ext-gfm-tables {:mvn/version "0.14.0"}
+        com.atlassian.commonmark/commonmark-ext-yaml-front-matter {:mvn/version "0.14.0"}
+        clygments/clygments {:mvn/version "2.0.2"}}
+ :aliases
+ {:run {:main-opts ["-m" "fr.reuz.main"]}
+  :build {:deps {io.github.clojure/tools.build {:git/tag "v0.1.7"
+                                                :git/sha "8a3abc2"}
+                 com.github.seancorfield/depstar {:mvn/version "2.1.278"}}
+          :ns-default build}}}

@@ -7,11 +7,12 @@ This repository contains the source for generating mthl's
 ## How to build
 
 ```sh
-lein uberjar
+clojure -T:build compile
+clojure -T:build package
 ```
 
 ## How to serve the website locally
 
 ```sh
-lein run
+clojure -M:run
 ```
