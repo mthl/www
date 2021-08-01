@@ -34,12 +34,13 @@
    [:h2 "Articles"]
    [:p
     [:ul
-     (for [{:keys [http/slug dcterms/title]} articles]
-       [:li [:a {:href (str "/blog/" slug)} title]])]]))
+     (for [{:keys [http/slug dcterms/title dcterms/date]} articles]
+       [:li [:a {:href (str "/blog/" slug)} title]
+        " - " (reuz/render-date date)])]]))
 
 (defn blog-router
   [db]
-  (let [articles (find-articles db)]
+  (let [articles (sort-by :dcterms/date #(compare %2 %1) (find-articles db))]
     [["/blog"
       {:name ::index
        :get (constantly

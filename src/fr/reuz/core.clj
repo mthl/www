@@ -36,6 +36,10 @@
    (map (fn [[label href]] (iref href label)))
    (interpose ", ")))
 
+(defn render-date
+  [^java.util.Date d]
+  (some-> d .toGMTString str))
+
 (def desc-ref
   "describe link data transducer"
   (comp

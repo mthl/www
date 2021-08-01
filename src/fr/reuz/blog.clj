@@ -2,11 +2,11 @@
   (:gen-class)
   (:require
    [fr.reuz.cmark :as cmark]
+   [fr.reuz.core :as reuz]
    [datascript.core :as d]
    [hiccup.page :as hp]
    [clojure.java.io :as io]
-   [clojure.instant :as inst])
-  (:import java.time.OffsetDateTime))
+   [clojure.instant :as inst]))
 
 (defmulti parse-value (fn [p o] p))
 
@@ -14,7 +14,7 @@
 
 (defmethod parse-value :dcterms/date
   [_ date]
-  (inst/read-instant-calendar date))
+  (inst/read-instant-date date))
 
 (def meta-context
   "Mapping of markdown metadata keys to unambiguous namespaced keys"
@@ -53,10 +53,7 @@
      [:body
       [:header
        [:h2 title]
-       [:h3 "by " (first creator) " - "
-        (when-not (nil? date)
-          (-> (.toZonedDateTime ^java.util.GregorianCalendar date)
-              (.format java.time.format.DateTimeFormatter/RFC_1123_DATE_TIME)))]
+       [:h3 "by " (first creator) " - " (reuz/render-date date)]
        (into [:ul] (map #(vector :li %)) subject)]
       (into [:content] content)])))
 
