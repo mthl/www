@@ -75,13 +75,13 @@
                    :foaf/homepage "https://www.oscaro.com"
                    :org/has-site
                    {:rdf/type 'org/Site
-                    :rdf/id "https://www.openstreetmap.org/node/8019260241"
+                    :rdf/id "https://www.openstreetmap.org/node/8987859088"
                     :org/site-address
                     {:rdf/type 'vcard/Address
-                     :vcard/geo "geo:48.8723959,2.3388095"
-                     :vcard/street-address "6-8 boulevard Haussmann"
-                     :vcard/postal-code "75009"
-                     :vcard/locality "Paris"
+                     :vcard/geo "geo:48.9198151,2.2989956"
+                     :vcard/street-address "34-40 rue Henri Barbusse"
+                     :vcard/postal-code "92230"
+                     :vcard/locality "Gennevilliers"
                      :vcard/region "Île de france"
                      :vcard/country-name "France"}}}}
     ;; {:rdf/type 'org/Post
