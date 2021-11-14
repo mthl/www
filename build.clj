@@ -29,7 +29,6 @@
            :exclude ["org/commonmark/.*"
                      "org/python/.*"
                      "clygments/.*"
-                     "pygments.*"
                      "Pygments.*"
                      "posts/.*\\.md$"
                      ".*\\.cljc?$"
