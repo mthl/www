@@ -23,16 +23,16 @@
    :date :dcterms/date
    :subject :dcterms/subject})
 
-(derive :http/slug 'owl/FunctionalProperty)
-(derive :dcterms/date 'owl/FunctionalProperty)
-(derive :dcterms/title 'owl/FunctionalProperty)
+(derive :http/slug :owl/FunctionalProperty)
+(derive :dcterms/date :owl/FunctionalProperty)
+(derive :dcterms/title :owl/FunctionalProperty)
 
 (defn normalize
   [content]
   (reduce-kv (fn [m k v]
                (let [k* (meta-context k k)
                      v* (map #(parse-value k* %) v)
-                     v** (if (and (isa? k* 'owl/FunctionalProperty))
+                     v** (if (and (isa? k* :owl/FunctionalProperty))
                            (first v*)
                            v*)]
                  (assoc m k* v**)))

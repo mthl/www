@@ -66,7 +66,7 @@ Web."])
 
 (defn free-software-desc
   [db me]
-  (let [gh (find-github-forge db 'fr.reuz/github-account)]
+  (let [gh (find-github-forge db ::github-account)]
     [:p
      "I have been involved in the development of several free software projects."
      " The source code of those projects can be found on my "
@@ -133,7 +133,7 @@ experience as a student in 2017."])
 
 (defn index
   [db]
-  (let [me [:rdf/about 'fr.reuz/me]
+  (let [me [:rdf/about ::me]
         name (full-name db me)
         emails (find-emails db me)
         work-data (job-info db me)]
