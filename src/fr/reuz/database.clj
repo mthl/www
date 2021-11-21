@@ -21,7 +21,9 @@
    :org/site-address {:db/valueType :db.type/ref}
    :http/slug {:db/unique :db.unique/identity}
    :foaf/publications {:db/cardinality :db.cardinality/many
-                       :db/valueType :db.type/ref}})
+                       :db/valueType :db.type/ref}
+   :doap/developer {:db/cardinality :db.cardinality/many
+                    :db/valueType :db.type/ref}})
 
 (defdata facts
   (require '[fr.reuz.blog :as blog])
@@ -112,34 +114,34 @@
     :doap/name "OFBiz"
     :doap/homepage "https://ofbiz.apache.org/"
     :doap/programming-language #{"Java", "XML", "Groovy", "Freemarker"}
-    :doap/developer 14}
+    :doap/developer [:rdf/about ::reuz/me]}
    {:doap/vendor "GNU"
     :doap/name "Automake"
     :doap/homepage "https://www.gnu.org/software/automake"
     :doap/programming-language "Perl"
-    :doap/developer 14}
+    :doap/developer [:rdf/about ::reuz/me]}
    {:doap/vendor "GNU"
     :doap/name "Guix"
     :doap/homepage "https://www.gnu.org/software/guix"
     :doap/programming-language "Scheme"
-    :doap/developer 14}
+    :doap/developer [:rdf/about ::reuz/me]}
    {:doap/vendor "GNU"
     :doap/name "JWhois"
     :doap/homepage "https://www.gnu.org/software/jwhois"
     :doap/programming-language "C"
-    :doap/developer 14}
+    :doap/developer [:rdf/about ::reuz/me]}
    {:doap/vendor "GNU"
     :doap/name "Mcron"
     :doap/homepage "https://www.gnu.org/software/mcron"
     :doap/programming-language "Scheme"
-    :doap/developer 14}
+    :doap/developer [:rdf/about ::reuz/me]}
    {:doap/vendor "GNU"
     :doap/name "Shepherd"
     :doap/homepage "https://www.gnu.org/software/shepherd"
     :doap/programming-language "Scheme"
-    :doap/developer 14}
+    :doap/developer [:rdf/about ::reuz/me]}
    {:doap/vendor "GNU"
     :doap/name "Texinfo"
     :doap/homepage "https://www.gnu.org/software/texinfo"
     :doap/programming-language #{"Perl", "C"}
-    :doap/developer 14}])
+    :doap/developer [:rdf/about ::reuz/me]}])
