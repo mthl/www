@@ -81,19 +81,19 @@ reports I have made during my last "
 experience as a student in 2017."])
 
 (defn address-link
-  [{:keys [rdf/id org/site-address]}]
-  (let [{:vcard/keys [postal-code locality]} site-address
+  [{:keys [rdf/id org/siteAddress]}]
+  (let [{:vcard/keys [postal-code locality]} siteAddress
         city (str postal-code " " locality)
-        {:vcard/keys [street-address region country-name]} site-address]
+        {:vcard/keys [street-address region country-name]} siteAddress]
     (xref id (str/join ", " [street-address city region country-name]))))
 
 (defn contact-info
-  [workplace emails]
+  [work workplace emails]
   (let [emails* (into [:dd] mailto emails)
         pgp (iref "/mthl.asc"
                   "F2A3 8D7E EB2B 6640 5761  070D 0ADE E100 9460 4D37")]
     [:dl
-     [:dt "Oscaro postal address"] [:dd (address-link workplace)]
+     [:dt work " postal address"] [:dd (address-link workplace)]
      [:dt "Email"] emails*
      [:dt "PGP"] [:dd pgp]]))
 
@@ -117,18 +117,20 @@ experience as a student in 2017."])
 (defn job-info
   [db who]
   (d/q '[:find [?job-title ?occupation ?work ?homepage
-                (pull ?site [:rdf/id {:org/site-address [*]}])]
+                (pull ?site [:rdf/id {:org/siteAddress [*]}])]
          :keys job-title occupation work homepage workplace
          :in $ ?who
          :where
-         [?who :org/holds ?pos]
-         [?pos :org/role ?role]
-         [?role-id :rdfs/label ?job-title]
-         [?role-id :rdfs/comment ?occupation]
-         [?pos :org/post-in ?org]
+         [?who :org/hasMembership ?mem]
+         [?mem :org/role ?role]
+         [?role :rdfs/label ?job-title]
+         [?role :rdfs/comment ?occupation]
+         [?mem :org/organization ?org]
          [?org :foaf/name ?work]
          [?org :foaf/homepage ?homepage]
-         [?org :org/has-site ?site]]
+         [?org :org/hasSite ?site]
+         [?mem :org/memberDuring ?period]
+         (not [?period :time/hasEnd _])]
        db who))
 
 (defn index
@@ -153,7 +155,9 @@ experience as a student in 2017."])
        (blog-desc)]
       [:footer
        [:h4 "Contact Information"]
-       (contact-info (:workplace work-data) emails)]])))
+       (contact-info (:work work-data)
+                     (:workplace work-data)
+                     emails)]])))
 
 (defn router
   [db]
