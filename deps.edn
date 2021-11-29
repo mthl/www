@@ -11,6 +11,5 @@
  :aliases
  {:run {:main-opts ["-m" "fr.reuz.main"]}
   :build {:deps {io.github.clojure/tools.build {:git/tag "v0.6.5"
-                                                :git/sha "7d21086"}
-                 com.github.seancorfield/depstar {:mvn/version "2.1.303"}}
+                                                :git/sha "7d21086"}}
           :ns-default build}}}

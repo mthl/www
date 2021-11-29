@@ -1,8 +1,7 @@
 (ns build
   (:refer-clojure :exclude [compile])
   (:require
-   [clojure.tools.build.api :as b]
-   [hf.depstar.api :as d]))
+   [clojure.tools.build.api :as b]))
 
 (def basis (b/create-basis {:project "deps.edn"}))
 (def class-dir "target/classes")
@@ -11,6 +10,9 @@
   (b/delete {:path "target"}))
 
 (defn compile [_]
+  (b/copy-dir
+   {:src-dirs ["resources"]
+    :target-dir class-dir})
   (b/compile-clj
    {:basis basis
     :src-dirs ["src"]
@@ -22,7 +24,7 @@
   "Construct an uberjar containing only useful class and resource files
   that are used at runtime."
   [_]
-  (d/uber {:basis basis
+  (b/uber {:basis basis
            :class-dir class-dir
            :uber-file "target/reuz-standalone.jar"
            :main 'fr.reuz.main
