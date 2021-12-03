@@ -4,9 +4,8 @@
    [clojure.java.io :as io]
    [clojure.edn :as edn]
    [fr.reuz.core :as reuz]
-   [fr.reuz.database :refer [schema facts]]
+   [fr.reuz.database :as db]
    [datascript.core :as d]
-   [datascript.db :as db]
    [hiccup.page :as hp]
    [reitit.ring :as ring]
    [ring.adapter.jetty :as jetty]))
@@ -62,26 +61,27 @@
   (ring/router
    (concat
     (reuz/router db)
-    (blog-router db))))
+    (blog-router db)
+    (db/router db))))
 
 (defn make-handler
-  []
-  (let [db (-> (db/empty-db schema) (d/db-with facts))]
-    (ring/ring-handler
-     (router db)
-     (ring/routes
-      (ring/redirect-trailing-slash-handler {:method :strip})
-      (ring/create-resource-handler {:path "/" :root ""})
-      (ring/create-default-handler)))))
+  [db]
+  (ring/ring-handler
+   (router db)
+   (ring/routes
+    (ring/redirect-trailing-slash-handler {:method :strip})
+    (ring/create-resource-handler {:path "/" :root ""})
+    (ring/create-default-handler))))
 
 (defn start-server!
   []
-  (let [port (Integer/parseInt (or (System/getenv "PORT") "8080"))]
-    (jetty/run-jetty #((make-handler) %) {:port port :join? false})))
+  (let [port (Integer/parseInt (or (System/getenv "PORT") "8080"))
+        db-ref #'db/db]
+    (jetty/run-jetty #((make-handler @db-ref) %) {:port port :join? false})))
 
 (defn -main
   "Start the web server."
   [& args]
   (let [port (Integer/parseInt (or (System/getenv "PORT") "8080"))
-        app (make-handler)]
+        app (make-handler db/db)]
     (jetty/run-jetty app {:port port :join? false})))

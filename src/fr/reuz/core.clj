@@ -1,4 +1,6 @@
 (ns fr.reuz.core
+  {:vann/preferredNamespacePrefix "reuz"
+   :vann/preferredNamespaceUri "https://reuz.fr/#"}
   (:require
    [datascript.core :as d]
    [hiccup.core :as h]
@@ -66,11 +68,11 @@ Web."])
 
 (defn free-software-desc
   [db me]
-  (let [gh (find-github-forge db ::github-account)]
+  (let [[url label] (find-github-forge db ::github-account)]
     [:p
      "I have been involved in the development of several free software projects."
      " The source code of those projects can be found on my "
-     (apply xref gh) " account."]))
+     (xref url label) " account."]))
 
 (defn blog-desc
   []
