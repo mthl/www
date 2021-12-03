@@ -28,7 +28,14 @@
            :class-dir class-dir
            :uber-file "target/reuz-standalone.jar"
            :main 'fr.reuz.main
-           :exclude ["org/commonmark/.*"
+           :exclude ["grafter.*"
+                     "grafter_2/.*"
+                     "ont_app/.*"
+                     "org/eclipse/rdf4j/.*"
+                     "Lib/.*"
+                     "cljs/.*"
+                     "com/opencsv/.*"
+                     "org/commonmark/.*"
                      "org/python/.*"
                      "clygments/.*"
                      "Pygments.*"
