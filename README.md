@@ -1,7 +1,7 @@
 # Mthl's personal website
 
 This repository contains the source for generating mthl's
-[website](https://reuz.fr).  The pages are generated using custome
+[website](https://reuz.fr).  The pages are generated using custom
 [Clojure](https://clojure.org) code.
 
 ## How to build
