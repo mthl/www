@@ -160,11 +160,3 @@ experience as a student in 2017."])
        (contact-info (:work work-data)
                      (:workplace work-data)
                      emails)]])))
-
-(defn router
-  [db]
-  [["/"
-    {:get (constantly
-           {:status 200
-            :headers {"Content-Type" "text/html"}
-            :body (index db)})}]])

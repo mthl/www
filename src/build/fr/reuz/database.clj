@@ -1,9 +1,53 @@
 (ns fr.reuz.database
   (:require
+   [clojure.edn :as edn]
+   [clojure.java.io :as io]
    [datascript.core :as d]
    [datascript.db :as db]
-   [fr.reuz.static :refer [defdata]]
-   [fr.reuz.core :as reuz]))
+   [hiccup.page :as hp]
+   [fr.reuz.cmark :as cmark]
+   [fr.reuz.core :as-alias reuz]))
+
+(defn render-date
+  [^java.util.Date d]
+  (some-> d .toGMTString str))
+
+(defn article
+  [props]
+  (let [{:dcterms/keys [title creator date subject] :keys [content]} props]
+    (hp/html5
+     {:lang "en"}
+     [:head
+      [:meta {:name "viewport" :content "width=device-width, initial-scale=1.0"}]
+      [:meta {:charset "utf-8"}]
+      [:title title]
+      [:link {:rel "stylesheet" :href "/style.css"}]
+      [:link {:rel "stylesheet" :href "/pygments.css"}]]
+     [:body
+      [:header
+       [:h2 title]
+       [:h3 "by " (first creator) " - " (render-date date)]
+       (into [:ul] (map #(vector :li %)) subject)]
+      (into [:content] content)])))
+
+(defn render
+  [props]
+  (assoc props :html (article props)))
+
+(def blog-posts
+  (mapv (fn [path]
+          (let [f (str "resources/posts/" path)]
+            (-> f cmark/markdown->data render)))
+        ["gsoc-2017-week-1.md"
+         "gsoc-2017-week-2+3.md"
+         "gsoc-2017-week-4.md"
+         "gsoc-2017-week-5.md"
+         "gsoc-2017-week-6.md"
+         "gsoc-2017-week-7+8.md"
+         "gsoc-2017-week-9.md"
+         "gsoc-2017-week-10+11.md"
+         "gsoc-2017-week-12.md"
+         "gsoc-2017-final-report.md"]))
 
 (def schema
   {:foaf/member {:db/cardinality :db.cardinality/many
@@ -36,8 +80,7 @@
    :doap/developer {:db/cardinality :db.cardinality/many
                     :db/valueType :db.type/ref}})
 
-(defdata facts
-  (require '[fr.reuz.blog :as blog])
+(def facts
   [{:rdf/id "https://reuz.fr/#me"
     :rdf/about ::reuz/me
     :rdf/type #{{:rdf/about :foaf/Person}
@@ -76,7 +119,7 @@
                     :rdf/id "https://savannah.gnu.org/users/mthl"}
                    {:rdfs/label "Notabug"
                     :rdf/id "https://notabug.org/mthl"}]
-    :foaf/publications blog/posts
+    :foaf/publications (set blog-posts)
     :org/hasMembership
     #{{:rdf/type {:rdf/about :org/Membership}
        :org/role
@@ -173,15 +216,3 @@
 (def db
   (-> (db/empty-db schema)
       (d/db-with facts)))
-
-(defdata rdf-facts
-  (require '[fr.reuz.rdf :as rdf])
-  (with-out-str (rdf/rdf-triples db)))
-
-(defn router
-  [db]
-  [["/data/index.ttl"
-    {:get (constantly
-           {:status 200
-            :headers {"Content-Type" "text/turtle"}
-            :body rdf-facts})}]])

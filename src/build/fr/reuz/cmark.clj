@@ -1,12 +1,9 @@
 (ns fr.reuz.cmark
-  (:gen-class)
   (:require
    [clojure.string :as str]
-   [clojure.java.shell :as shell]
-   [hiccup.core :as hiccup]
    [hiccup.util :as util]
+   [clojure.instant :as inst]
    [clojure.java.io :as io]
-   [clojure.walk :as walk]
    [clygments.core :as clygments])
   (:import
    org.commonmark.node.Node
@@ -113,18 +110,49 @@
   (read-hiccup [yn]
     [(keyword (.getKey yn)) (.getValues yn)]))
 
+(defmulti parse-value (fn [p o] p))
+
+(defmethod parse-value :default [_ o] o)
+
+(defmethod parse-value :dcterms/date
+  [_ date]
+  (inst/read-instant-date date))
+
+(def meta-context
+  "Mapping of markdown metadata keys to unambiguous namespaced keys"
+  {:title :dcterms/title
+   :creator :dcterms/creator
+   :date :dcterms/date
+   :subject :dcterms/subject})
+
+(derive :http/slug :owl/FunctionalProperty)
+(derive :dcterms/date :owl/FunctionalProperty)
+(derive :dcterms/title :owl/FunctionalProperty)
+
+(defn normalize
+  [content]
+  (reduce-kv (fn [m k v]
+               (let [k* (meta-context k k)
+                     v* (map #(parse-value k* %) v)
+                     v** (if (and (isa? k* :owl/FunctionalProperty))
+                           (first v*)
+                           v*)]
+                 (assoc m k* v**)))
+             {}
+             content))
+
 (defn markdown->data
   "Takes a string of markdown and a renderer configuration and converts the string
   to a hiccup-compatible data structure."
-  [^java.net.URL s]
+  [f]
   (let [ext [(TablesExtension/create) (YamlFrontMatterExtension/create)]
-        parser (-> (Parser/builder) (.extensions ext) (.build))
-        slug (-> s .getFile io/file .getName (str/replace-first #".md$" ""))
-        tree (.parse parser (slurp s))
+        parser (-> (Parser/builder) (.extensions ext) .build)
+        slug (-> f io/file .getName (str/replace-first #".md$" ""))
+        tree (.parse parser (slurp f))
         [metadata & data :as all] (read-hiccup tree)]
-    (if (map? metadata)
-      (assoc metadata
-             :content data
-             :http/slug [slug])
-      {:http/slug [slug]
-       :content all})))
+    (normalize (if (map? metadata)
+                 (assoc metadata
+                        :content data
+                        :http/slug [slug])
+                 {:http/slug [slug]
+                  :content all}))))
