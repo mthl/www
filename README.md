@@ -7,6 +7,7 @@ This repository contains the source for generating mthl's
 ## How to build
 
 ```sh
+clojure -T:build generate
 clojure -T:build compile
 clojure -T:build package
 ```
@@ -14,5 +15,6 @@ clojure -T:build package
 ## How to serve the website locally
 
 ```sh
+clojure -T:build generate
 clojure -M:run
 ```
