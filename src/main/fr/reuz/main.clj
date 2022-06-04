@@ -94,7 +94,6 @@
 (defn make-db []
   (let [schema (edn-resource "schema.edn")
         facts (edn-resource "facts.edn")]
-    (print "hello")
     (-> (db/empty-db schema)
         (d/db-with facts))))
 
