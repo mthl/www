@@ -1,13 +1,11 @@
 (ns fr.reuz.database
   (:require
-   [clojure.edn :as edn]
-   [clojure.java.io :as io]
    [datascript.core :as d]
    [datascript.db :as db]
-   [hiccup.page :as hp]
-   [fr.reuz.util :as util]
    [fr.reuz.cmark :as cmark]
-   [fr.reuz.core :as-alias reuz]))
+   [fr.reuz.core :as-alias reuz]
+   [fr.reuz.util :as util]
+   [hiccup.page :as hp]))
 
 (defn article
   [props]

@@ -33,6 +33,8 @@ jobs:
 
     - name: Install dependencies
       run: clojure -X:deps prep
+    - name: Lint code
+      run: clojure -M:clj-kondo --lint src
     - name: Generate
       run: clojure -X:gen
     - name: Compile

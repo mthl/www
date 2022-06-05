@@ -1,10 +1,10 @@
 (ns fr.reuz.cmark
   (:require
-   [clojure.string :as str]
-   [hiccup.util :as util]
    [clojure.instant :as inst]
    [clojure.java.io :as io]
-   [clygments.core :as clygments])
+   [clojure.string :as str]
+   [clygments.core :as clygments]
+   [hiccup.util :as util])
   (:import
    org.commonmark.node.Node
    org.commonmark.parser.Parser
@@ -110,7 +110,7 @@
   (read-hiccup [yn]
     [(keyword (.getKey yn)) (.getValues yn)]))
 
-(defmulti parse-value (fn [p o] p))
+(defmulti parse-value (fn [p _] p))
 
 (defmethod parse-value :default [_ o] o)
 
@@ -134,7 +134,7 @@
   (reduce-kv (fn [m k v]
                (let [k* (meta-context k k)
                      v* (map #(parse-value k* %) v)
-                     v** (if (and (isa? k* :owl/FunctionalProperty))
+                     v** (if (isa? k* :owl/FunctionalProperty)
                            (first v*)
                            v*)]
                  (assoc m k* v**)))

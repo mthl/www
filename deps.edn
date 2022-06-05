@@ -27,4 +27,9 @@
   ;; Compile and package files into an executable JAR.
   {:deps {io.github.clojure/tools.build {:git/tag "v0.8.2"
                                          :git/sha "ba1a2bf"}}
-   :ns-default build}}}
+   :ns-default build}
+
+  :clj-kondo
+  ;; Lint code.
+  {:extra-deps {clj-kondo/clj-kondo {:mvn/version "RELEASE"}}
+   :main-opts ["-m" "clj-kondo.main"]}}}

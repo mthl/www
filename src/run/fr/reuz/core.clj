@@ -2,11 +2,9 @@
   {:vann/preferredNamespacePrefix "reuz"
    :vann/preferredNamespaceUri "https://reuz.fr/#"}
   (:require
+   [clojure.string :as str]
    [datascript.core :as d]
-   [hiccup.core :as h]
-   [hiccup.page :as hp]
-   [clojure.java.io :as io]
-   [clojure.string :as str]))
+   [hiccup.page :as hp]))
 
 (defn stylesheet
   [file]
@@ -63,7 +61,7 @@ Web."])
        db id))
 
 (defn free-software-desc
-  [db me]
+  [db]
   (let [[url label] (find-github-forge db ::github-account)]
     [:p
      "I have been involved in the development of several free software projects."
@@ -149,7 +147,7 @@ experience as a student in 2017."])
       [:main
        [:img {:src "/images/mthl.png" :alt "portrait"}]
        (presentation work-data)
-       (free-software-desc db me)
+       (free-software-desc db)
        (blog-desc)]
       [:footer
        [:h4 "Contact Information"]

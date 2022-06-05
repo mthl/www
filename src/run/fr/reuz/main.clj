@@ -1,12 +1,12 @@
 (ns fr.reuz.main
   (:gen-class)
   (:require
-   [clojure.java.io :as io]
    [clojure.edn :as edn]
+   [clojure.java.io :as io]
+   [datascript.core :as d]
+   [datascript.db :as db]
    [fr.reuz.core :as reuz]
    [fr.reuz.util :as util]
-   [datascript.db :as db]
-   [datascript.core :as d]
    [hiccup.page :as hp]
    [reitit.ring :as ring]
    [ring.adapter.jetty :as jetty]))
@@ -107,7 +107,7 @@
 
 (defn -main
   "Start the web server."
-  [& args]
+  [& _args]
   (let [port (Integer/parseInt (or (System/getenv "PORT") "8080"))
         app (make-handler (make-db))]
     (jetty/run-jetty app {:port port :join? false})))
