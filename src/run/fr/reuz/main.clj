@@ -4,6 +4,7 @@
    [clojure.java.io :as io]
    [clojure.edn :as edn]
    [fr.reuz.core :as reuz]
+   [fr.reuz.util :as util]
    [datascript.db :as db]
    [datascript.core :as d]
    [hiccup.page :as hp]
@@ -44,7 +45,7 @@
     [:ul
      (for [{:keys [http/slug dcterms/title dcterms/date]} articles]
        [:li [:a {:href (str "/blog/" slug)} title]
-        " - " (reuz/render-date date)])]]))
+        " - " (util/render-date date)])]]))
 
 (defn get-article
   [db req]

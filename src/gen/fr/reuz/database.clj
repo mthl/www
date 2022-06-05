@@ -5,12 +5,9 @@
    [datascript.core :as d]
    [datascript.db :as db]
    [hiccup.page :as hp]
+   [fr.reuz.util :as util]
    [fr.reuz.cmark :as cmark]
    [fr.reuz.core :as-alias reuz]))
-
-(defn render-date
-  [^java.util.Date d]
-  (some-> d .toGMTString str))
 
 (defn article
   [props]
@@ -26,7 +23,7 @@
      [:body
       [:header
        [:h2 title]
-       [:h3 "by " (first creator) " - " (render-date date)]
+       [:h3 "by " (first creator) " - " (util/render-date date)]
        (into [:ul] (map #(vector :li %)) subject)]
       (into [:content] content)])))
 

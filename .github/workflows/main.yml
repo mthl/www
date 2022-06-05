@@ -34,7 +34,7 @@ jobs:
     - name: Install dependencies
       run: clojure -X:deps prep
     - name: Generate
-      run: clojure -T:build generate
+      run: clojure -X:gen
     - name: Compile
       run: clojure -T:build compile
     - name: Package
