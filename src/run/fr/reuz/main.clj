@@ -98,8 +98,6 @@
     (-> (db/empty-db schema)
         (d/db-with facts))))
 
-(def db* (make-db))
-
 (defn start-server!
   []
   (let [port (Integer/parseInt (or (System/getenv "PORT") "8080"))]
