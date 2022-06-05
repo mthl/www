@@ -75,11 +75,11 @@
        :get #(get-article db %)}]
 
      ["/data/index.ttl"
-       {:name ::data
-        :get (constantly
-              {:status 200
-               :headers {"Content-Type" "text/turtle"}
-               :body (-> "data.ttl" io/resource slurp)})}]]))
+      {:name ::data
+       :get (constantly
+             {:status 200
+              :headers {"Content-Type" "text/turtle"}
+              :body (-> "data.ttl" io/resource slurp)})}]]))
 
 (defn make-handler
   [db]

@@ -46,7 +46,7 @@
   "Introduce myself by describing my job and general interest."
   [{:keys [job-title occupation work homepage]}]
   [:p "I am a " job-title " at " (xref homepage work) " doing "
-occupation ". My topics of interest are Programming Languages, Network
+   occupation ". My topics of interest are Programming Languages, Network
 Based Software Architecture, Software packaging and the World Wide
 Web."])
 

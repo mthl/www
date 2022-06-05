@@ -14,8 +14,8 @@
 
 (v/put-ns-meta!
  'doap
-  {:vann/preferredNamespacePrefix "doap"
-   :vann/preferredNamespaceUri "http://usefulinc.com/ns/doap#"})
+ {:vann/preferredNamespacePrefix "doap"
+  :vann/preferredNamespaceUri "http://usefulinc.com/ns/doap#"})
 
 (v/put-ns-meta!
  'org
@@ -24,13 +24,13 @@
 
 (v/put-ns-meta!
  'dcterms
-  {:vann/preferredNamespacePrefix "dcterms"
-   :vann/preferredNamespaceUri "http://purl.org/dc/terms/"})
+ {:vann/preferredNamespacePrefix "dcterms"
+  :vann/preferredNamespaceUri "http://purl.org/dc/terms/"})
 
 (v/put-ns-meta!
  'time
-  {:vann/preferredNamespacePrefix "time"
-   :vann/preferredNamespaceUri "http://www.w3.org/2006/time#"})
+ {:vann/preferredNamespacePrefix "time"
+  :vann/preferredNamespaceUri "http://www.w3.org/2006/time#"})
 
 (defn subjects-uri-mapping
   "Construct a mapping between :db/id and URI other will be blank nodes."
