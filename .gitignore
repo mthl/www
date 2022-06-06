@@ -1,5 +1,5 @@
 /site/
-/target/
-/.nrepl-*
-/.cpcache/
+target
+.nrepl-*
+.cpcache/
 /.clj-kondo/.cache/

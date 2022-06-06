@@ -34,11 +34,9 @@ jobs:
     - name: Install dependencies
       run: clojure -X:deps prep
     - name: Check code format
-      run: clojure -M:cljfmt check src
+      run: clojure -M:cljfmt check .
     - name: Lint code
-      run: clojure -M:clj-kondo --lint src
-    - name: Generate
-      run: clojure -X:gen
+      run: clojure -M:clj-kondo --lint .
     - name: Compile
       run: clojure -T:build compile
     - name: Package

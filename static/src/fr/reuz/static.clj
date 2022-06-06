@@ -9,7 +9,7 @@
 
 (defn generate
   "Generate static resources required at runtime"
-  [{:keys [output-dir]}]
+  [{:keys [output-dir] :or {output-dir "target/resources"}}]
   (mkdir output-dir)
   (spit (io/file output-dir "schema.edn") db/schema)
   (spit (io/file output-dir "facts.edn") db/facts)

@@ -1,33 +1,36 @@
 (ns build
   (:refer-clojure :exclude [compile])
   (:require
+   [clojure.java.io :as io]
    [clojure.tools.build.api :as b]))
 
-(def run (b/create-basis {:project "deps.edn"
-                          :aliases [:run]}))
+(def webapp
+  (binding [b/*project-root* "webapp"]
+    (b/create-basis {:project "deps.edn"})))
 
-(def class-dir "target/classes")
-(def built-resources "target/resources")
+(def class-dir (-> "target/classes" io/file .getAbsolutePath))
 
 (defn clean [_]
-  (b/delete {:path "target"}))
+  (b/delete {:path "target"})
+  (b/delete {:path "static/target/resources"}))
 
 (defn compile [_]
   (b/copy-dir
-   {:src-dirs ["resources" "target/resources"]
+   {:src-dirs ["webapp/resources"]
     :target-dir class-dir})
-  (b/compile-clj
-   {:basis run
-    :src-dirs ["src/run"]
-    :class-dir class-dir
-    :compile-opts {:elide-meta [:doc :file :line :added]
-                   :direct-linking true}}))
+  (binding [b/*project-root* "webapp"]
+    (b/compile-clj
+     {:basis webapp
+      :src-dirs ["src"]
+      :class-dir class-dir
+      :compile-opts {:elide-meta [:doc :file :line :added]
+                     :direct-linking true}})))
 
 (defn package
   "Construct an uberjar containing only useful class and resource files
   that are used at runtime."
   [_]
-  (b/uber {:basis run
+  (b/uber {:basis webapp
            :class-dir class-dir
            :uber-file "target/reuz-standalone.jar"
            :main 'fr.reuz.main}))
