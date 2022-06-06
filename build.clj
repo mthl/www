@@ -1,7 +1,6 @@
 (ns build
   (:refer-clojure :exclude [compile])
   (:require
-   [clojure.java.io :as io]
    [clojure.tools.build.api :as b]))
 
 (def run (b/create-basis {:project "deps.edn"
