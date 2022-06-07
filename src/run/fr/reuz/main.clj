@@ -3,6 +3,8 @@
   (:require
    [clojure.edn :as edn]
    [clojure.java.io :as io]
+   [clojure.string :as str]
+   [clojure.tools.cli :as cli]
    [datascript.core :as d]
    [datascript.db :as db]
    [fr.reuz.core :as reuz]
@@ -103,9 +105,38 @@
   (let [port (Integer/parseInt (or (System/getenv "PORT") "8080"))]
     (jetty/run-jetty #((make-handler (make-db)) %) {:port port :join? false})))
 
+(def cli-params
+  [["-p" "--port PORT" "HTTP server port number"
+    :default 8080
+    :default-fn (fn [{:keys [port]}]
+                  (or (some-> (System/getenv "PORT") parse-long)
+                      port))
+    :parse-fn parse-long
+    :validate [#(< 0 % 0x10000) "Must be a number between 0 and 65536"]]
+   ["-h" "--help"]])
+
+(defn help
+  "Return the string representation of --help output"
+  [summary]
+  (->> ["Usage: reuz [OPTION]..."
+        "Run a webserver serving Mthl's homepage."
+        (str \newline summary \newline)
+        "Report bugs to: <https://github.com/mthl/www/issues>"
+        "Project home page: <https://github.com/mthl/www>."]
+       (str/join \newline)))
+
+(defn exit [status msg]
+  (println msg)
+  (System/exit status))
+
 (defn -main
   "Start the web server."
-  [& _args]
-  (let [port (Integer/parseInt (or (System/getenv "PORT") "8080"))
-        app (make-handler (make-db))]
-    (jetty/run-jetty app {:port port :join? false})))
+  [& args]
+  (let [opts (cli/parse-opts args cli-params)
+        {:keys [options errors summary]} opts]
+    (cond
+      (:help options) (exit 0 (help summary))
+      (some? errors) (exit 1 (str/join \newline  errors))
+      :else (let [app (make-handler (make-db))]
+              (jetty/run-jetty app {:port (:port options)
+                                    :join? false})))))

@@ -21,7 +21,8 @@
   ;; Start the Web application.
   {:extra-paths ["src/run" "target/resources"]
    :extra-deps {metosin/reitit-ring {:mvn/version "0.5.18"}
-                ring/ring-jetty-adapter {:mvn/version "1.9.5"}}
+                ring/ring-jetty-adapter {:mvn/version "1.9.5"}
+                org.clojure/tools.cli {:mvn/version "1.0.206"}}
    :main-opts ["-m" "fr.reuz.main"]}
 
   :dev
