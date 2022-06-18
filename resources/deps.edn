@@ -1,0 +1,6 @@
+{:paths ["target/resources"]
+ :deps/prep-lib {:alias :resources
+                 :fn fr.reuz.static/generate
+                 :ensure "target/resources"}
+ :aliases
+ {:resources {:deps {fr.reuz/reuz-static {:local/root "../static"}}}}}

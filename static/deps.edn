@@ -1,16 +1,8 @@
-{:paths ["target/resources" "resources"]
- :deps/prep-lib {:alias :resources
-                 :fn fr.reuz.static/generate
-                 :ensure "target/resources"}
- :aliases
- {:resources
-  ;; Generate static resources used at runtime.
-  {:paths ["src"]
-   :deps {fr.reuz/reuz-core {:local/root "../core"}
-          com.atlassian.commonmark/commonmark {:mvn/version "0.17.0"}
-          com.atlassian.commonmark/commonmark-ext-gfm-tables {:mvn/version "0.17.0"}
-          com.atlassian.commonmark/commonmark-ext-yaml-front-matter {:mvn/version "0.17.0"}
-          clygments/clygments {:mvn/version "2.0.2"}
-          grafter/grafter {:mvn/version "2.1.18"}
-          ont-app/vocabulary {:mvn/version "0.1.7"}}
-   :ns-default fr.reuz.static}}}
+{:paths ["src" "resources"]
+ :deps {fr.reuz/reuz-core {:local/root "../core"}
+        com.atlassian.commonmark/commonmark {:mvn/version "0.17.0"}
+        com.atlassian.commonmark/commonmark-ext-gfm-tables {:mvn/version "0.17.0"}
+        com.atlassian.commonmark/commonmark-ext-yaml-front-matter {:mvn/version "0.17.0"}
+        clygments/clygments {:mvn/version "2.0.2"}
+        grafter/grafter {:mvn/version "2.1.18"}
+        ont-app/vocabulary {:mvn/version "0.1.7"}}}

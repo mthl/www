@@ -1,5 +1,6 @@
 (ns fr.reuz.database
   (:require
+   [clojure.java.io :as io]
    [datascript.core :as d]
    [datascript.db :as db]
    [fr.reuz.cmark :as cmark]
@@ -31,7 +32,7 @@
 
 (def blog-posts
   (mapv (fn [path]
-          (let [f (str "resources/posts/" path)]
+          (let [f (io/resource (str "posts/" path))]
             (-> f cmark/markdown->data render)))
         ["gsoc-2017-week-1.md"
          "gsoc-2017-week-2+3.md"
