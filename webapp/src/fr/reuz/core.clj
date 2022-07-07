@@ -44,11 +44,10 @@
 
 (defn presentation
   "Introduce myself by describing my job and general interest."
-  [{:keys [job-title occupation work homepage]}]
-  [:p "I am a " job-title " at " (xref homepage work) " doing "
-   occupation ". My topics of interest are Programming Languages, Network
-Based Software Architecture, Software packaging and the World Wide
-Web."])
+  []
+  [:p "I am an independent software developper and part-time
+  teacher. My main topics of interest are functional programming,
+  information systems and formal logic."])
 
 (defn find-github-forge
   [db id]
@@ -146,7 +145,7 @@ experience as a student in 2017."])
        [:h1 name]]
       [:main
        [:img {:src "/images/mthl.png" :alt "portrait"}]
-       (presentation work-data)
+       (presentation)
        (free-software-desc db)
        (blog-desc)]
       [:footer
