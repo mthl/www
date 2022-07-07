@@ -12,7 +12,7 @@
 
 (defn clean [_]
   (b/delete {:path "target"})
-  (b/delete {:path "static/target/resources"}))
+  (b/delete {:path "resources/target/resources"}))
 
 (defn compile [_]
   (b/copy-dir
