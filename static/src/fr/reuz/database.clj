@@ -99,9 +99,6 @@
     :vcard/email #{{:rdf/id "mailto:mthl@reuz.fr"
                     :rdfs/label "mthl@reuz.fr"
                     :rdf/type {:rdf/about :vcard/Email}}
-                   {:rdf/id "mailto:mathieu.lirzin@oscaro.com"
-                    :rdfs/label "mathieu.lirzin@oscaro.com"
-                    :rdf/type {:rdf/about :vcard/Email}}
                    {:rdf/id "mailto:mthl@gnu.org"
                     :rdfs/label "mthl@gnu.org"
                     :rdf/type {:rdf/about :vcard/Email}}}
@@ -142,7 +139,8 @@
           :vcard/region "Île de france"
           :vcard/country-name "France"}}}
        :org/memberDuring {:rdf/type {:rdf/about :time/Interval}
-                          :time/hasBeginning #inst "2020-10-01T00:00:00Z"}}
+                          :time/hasBeginning #inst "2020-10-01T00:00:00Z"
+                          :time/hasEnd #inst "2022-07-02T00:00:00Z"}}
       {:rdf/type {:rdf/about :org/Membership}
        :org/role
        {:rdfs/label "software engineer"
