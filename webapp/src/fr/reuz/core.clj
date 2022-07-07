@@ -76,21 +76,26 @@ reports I have made during my last "
 experience as a student in 2017."])
 
 (defn address-link
-  [{:keys [rdf/id org/siteAddress]}]
-  (let [{:vcard/keys [postal-code locality]} siteAddress
-        city (str postal-code " " locality)
-        {:vcard/keys [street-address region country-name]} siteAddress]
-    (xref id (str/join ", " [street-address city region country-name]))))
+  [address]
+  (let [{:vcard/keys [locality region country-name]} address]
+    (xref (:rdf/id address) (str/join ", " [locality region country-name]))))
 
 (defn contact-info
-  [work workplace emails]
+  [address emails]
   (let [emails* (into [:dd] mailto emails)
         pgp (iref "/mthl.asc"
                   "F2A3 8D7E EB2B 6640 5761  070D 0ADE E100 9460 4D37")]
     [:dl
-     [:dt work " postal address"] [:dd (address-link workplace)]
+     [:dt "Location"] [:dd (address-link address)]
      [:dt "Email"] emails*
      [:dt "PGP"] [:dd pgp]]))
+
+(defn address-info
+  [db who]
+  (d/q '[:find (pull ?addr [*]) .
+         :in $ ?who
+         :where [?who :vcard/address ?addr]]
+       db who))
 
 (defn full-name
   [db who]
@@ -131,9 +136,9 @@ experience as a student in 2017."])
 (defn index
   [db]
   (let [me [:rdf/about ::me]
+        address (address-info db me)
         name (full-name db me)
-        emails (find-emails db me)
-        work-data (job-info db me)]
+        emails (find-emails db me)]
     (hp/html5
      {:lang "en"}
      [:head
@@ -150,6 +155,4 @@ experience as a student in 2017."])
        (blog-desc)]
       [:footer
        [:h4 "Contact Information"]
-       (contact-info (:work work-data)
-                     (:workplace work-data)
-                     emails)]])))
+       (contact-info address emails)]])))

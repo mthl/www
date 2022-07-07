@@ -90,10 +90,11 @@
     :foaf/img "/images/mthl.png"
     :foaf/homepage "https://reuz.fr"
     :foaf/weblog "/blog"
-    :vcard/address {:rdf/type {:rdf/about :vcard/Address}
-                    :vcard/locality "Saint Cyr sur Loire"
-                    :vcard/postal-code "37540"
-                    :vcard/region "Centre-Val de Loire"
+    :vcard/address {:rdf/id "https://www.openstreetmap.org/relation/31339"
+                    :rdf/type {:rdf/about :vcard/Address}
+                    :vcard/locality "Chaville"
+                    :vcard/postal-code "92370"
+                    :vcard/region "Hauts-de-seine"
                     :vcard/country-name "France"}
     :vcard/email #{{:rdf/id "mailto:mthl@reuz.fr"
                     :rdfs/label "mthl@reuz.fr"
